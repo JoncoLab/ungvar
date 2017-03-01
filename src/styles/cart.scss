@@ -12,11 +12,26 @@ body {
   display: flex;
   flex-direction: column;
 
-  * {
-    border: 2px solid green;
-  }
-
   main {
     flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+
+    border: 2px solid green;
+
+    .add {
+      background: skyblue;
+      align-self: center;
+      height: $line * 30;
+      width: $line * 10;
+    }
+
+    .content {
+      border: 2px solid red;
+      flex: {
+        grow: 1;
+      }
+      max-width: 80%;
+    }
   }
 }
