@@ -17,5 +17,13 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoncoLab/ungvar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoncoLab/ungvar/issues"
+  },
+  "homepage": "https://github.com/JoncoLab/ungvar#readme",
   "description": ""
 }

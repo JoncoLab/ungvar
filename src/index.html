@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Ungvar Online</title>
     <link href="styles/catalog.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="scripts/js/jquery-3.1.1.js"></script>
+    <script src="scripts/js/catalog.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 <header>
@@ -18,7 +22,67 @@
 </header>
 <main>
     <aside class="add">Place for your add</aside>
-    <section class="content"></section>
+    <fieldset class="content meat">
+        <legend>Мясні вироби</legend>
+        <table class="users">
+            <label fot="search">Пошук</label><input type="text" name="search" id="search">
+            <thead style="display: none;"> <!--Для розтяжки таблиці і коректної роботи каталога-->
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+                <tr>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                    <td class="id">23456</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </fieldset>
     <aside class="add">Place for your add</aside>
 </main>
 <footer>

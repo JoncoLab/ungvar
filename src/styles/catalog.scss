@@ -1,3 +1,5 @@
+@import "templates/variables";
+
 body,
 html {
   width: 100%;
@@ -11,11 +13,85 @@ body {
   display: flex;
   flex-direction: column;
 
-  * {
-    border: 2px solid red;
-  }
+  background-color: $background;
+  align-items: center;
 
   main {
     flex-grow: 1;
+    width: 70%;
+    .content {
+      text-align: center;
+      width: 100%;
+      table.users {
+        border-collapse: separate;
+        margin: 0 auto;
+        width: 100%;
+        td,
+        th {
+          border: $line / 10 solid grey;
+          padding: $line;
+          input {
+            width: 100%;
+            border: none;
+          }
+        }
+        thead {
+          z-index: 2;
+          tr {
+            th {
+              background-color: lightblue;
+            }
+            &.sum {
+              th {
+                background-color: darken(lightblue, 25px);
+              }
+            }
+          }
+        }
+        tbody {
+          width: 100%;
+
+          tr {
+            box-sizing: border-box;
+            td {
+              background-color: white;
+              border: none;
+
+              margin: $line * 2;
+            }
+
+            text-align-last: center;
+          }
+        }
+
+      }
+    }
+  }
+}
+#DataTables_Table_0_wrapper {
+  text-align: center;
+  margin: $line * 3;
+  .dataTables_filter,
+  .dataTables_length,
+  .dataTables_paginate,
+  .dataTables_info {
+    display: inline-block;
+    float: none;
+    text-align: center;
+
+
+    font: {
+      size: $line * 1.5;
+      family: Arial;
+      weight: bold;
+    }
+  }
+  .dataTables_length,
+  .dataTables_info,
+  .dataTables_filter{
+    display: none;
+  }
+  .dataTables_paginate{
+    display: block;
   }
 }
