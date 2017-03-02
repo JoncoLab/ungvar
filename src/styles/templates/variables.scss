@@ -4,3 +4,29 @@ $time: 0.3s;
 $dark: grey;
 $light: skyblue;
 $context: lightgreen;
+
+@mixin button() {
+  font: {
+    weight: bold;
+  }
+
+  border: none;
+  border: {
+    radius: $line / 2;
+  }
+
+  background: {
+    image: linear-gradient(lighten($context, 5%), darken($context, 5%));
+  }
+  outline: none;
+
+  transition: {
+    duration: $time;
+  }
+
+  &:active {
+    background: {
+      image: linear-gradient(darken($context, 5%), lighten($context, 5%));
+    }
+  }
+}

@@ -53,23 +53,27 @@ body main .content .items
 
     border-collapse: collapse;
 }
-body main .content .items thead tr td.img
+body main .content .items thead tr th
+{
+    text-align: center;
+}
+body main .content .items thead tr th.img
 {
     width: 10%;
 }
-body main .content .items thead tr td.name
+body main .content .items thead tr th.name
 {
     width: 60%;
 }
-body main .content .items thead tr td.amount
+body main .content .items thead tr th.amount
 {
     width: 10%;
 }
-body main .content .items thead tr td.price
+body main .content .items thead tr th.price
 {
     width: 10%;
 }
-body main .content .items thead tr td.remove
+body main .content .items thead tr th.remove
 {
     width: 10%;
 }
@@ -88,9 +92,15 @@ body main .content .items tbody tr:last-of-type td
 }
 body main .content .items tbody tr td
 {
+    padding: 0;
+
     text-align: center; 
 
     border-bottom: 1px solid grey;
+}
+body main .content .items tbody tr td.img
+{
+    width: 10%;
 }
 body main .content .items tbody tr td.img img
 {
@@ -98,11 +108,17 @@ body main .content .items tbody tr td.img img
 }
 body main .content .items tbody tr td.name
 {
+    width: 60%;
+
     text-align: left;
 }
 body main .content .items tbody tr td.name small
 {
     font-weight: normal;
+}
+body main .content .items tbody tr td.amount
+{
+    width: 10%;
 }
 body main .content .items tbody tr td.amount input
 {
@@ -112,14 +128,21 @@ body main .content .items tbody tr td.amount input
 }
 body main .content .items tbody tr td.price
 {
+    width: 10%;
+
     -webkit-transition-timing-function: linear;
+
             transition-timing-function: linear; 
     -webkit-transition-duration: .3s; 
             transition-duration: .3s;
 }
+body main .content .items tbody tr td.remove
+{
+    width: 10%;
+}
 body main .content .items tbody tr td.remove img
 {
-    height: 30px;
+    height: 20px;
 
     cursor: pointer;
 }
@@ -141,12 +164,42 @@ body main .content .items tfoot td.button
 }
 body main .content .items tfoot td.button #submit-button
 {
+    font-weight: bold;
+
     width: 100%;
     height: 100%;
+
+    -webkit-transition-duration: .3s;
+
+            transition-duration: .3s; 
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content .items tfoot td.button #submit-button:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content .items tfoot td.button #submit-button:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
 }
 
 body footer,
 body header
 {
     min-height: 15%;
+}
+
+body footer .add
+{
+    width: 400px;
+    height: 100px;
+    margin: 10px; 
+
+    background-color: skyblue;
 }
