@@ -7,6 +7,50 @@ body
     padding: 0;
 }
 
+body header
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body header .logo
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body header .menu
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
+}
+body header .menu .menu-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-flex: 1;
+
+        -ms-flex-positive: 1;
+
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+body header .menu .menu-item .ico
+{
+    height: 20px;
+}
+
 body main
 {
     display: -webkit-box;
@@ -31,6 +75,13 @@ body main .add
         -ms-grid-row-align: center;
 
         align-self: center;
+}
+body main .add a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
 }
 body main .content
 {
@@ -195,6 +246,12 @@ body header
     min-height: 15%;
 }
 
+body footer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 body footer .add
 {
     width: 400px;
@@ -202,4 +259,36 @@ body footer .add
     margin: 10px; 
 
     background-color: skyblue;
+}
+body footer .add a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+body footer .contacts
+{
+    margin: 10px 10px 10px auto;
+}
+body footer .contacts .name
+{
+    font-weight: bold;
+
+    text-align: right;
+}
+body footer .contacts .icon img
+{
+    height: 20px;
+}
+body footer .contacts .addresses
+{
+    vertical-align: top;
+}
+body footer .contacts .addresses ul
+{
+    margin: 0; 
+    padding: 0;
+
+    list-style: none;
 }

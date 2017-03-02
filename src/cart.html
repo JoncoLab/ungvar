@@ -278,6 +278,50 @@
             </tr>
             </tfoot>
         </table>
+        <dialog open>
+            <form id="confirmation">
+                <fieldset id="order-summary">
+                    <label for="order-number">Ви підтверджуєте замовлення №</label>
+                    <input type="text" id="order-number" name="order-number">
+                    <label for="order-number"> - </label>
+                    <input type="number" id="items-amount" name="items-amount">
+                    <label for="items-amount"> позицій</label>
+                    <label for="total-sum"> на суму</label>
+                    <input type="number" id="total-sum" name="total-sum">
+                    <label for="total-sum"> грн.</label>
+                </fieldset>
+                <fieldset id="payment">
+                    <legend>Як ви бажаєте здійснити оплату?</legend>
+                    <input type="radio" name="payment-method" id="payment-method-cash" value="cash">
+                    <label for="payment-method-cash">Готівкою</label>
+                    <input type="radio" name="payment-method" id="payment-method-card" value="card">
+                    <label for="payment-method-card">Приват 24</label>
+                </fieldset>
+                <fieldset id="contact-info">
+                    <legend>Ваші контактні дані:</legend>
+                    <label for="name">Прізвище та ім'я:</label>
+                    <input type="text" name="name" id="name">
+                    <label for="tel">Контактний телефон:</label>
+                    <input type="tel" name="tel" id="tel">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" name="email" id="email">
+                </fieldset>
+                <fieldset id="order-address">
+                    <legend>Адреса доставки</legend>
+                    <label for="city">Місто:</label>
+                    <input type="text" id="city" name="city">
+                    <label for="street">Вулиця:</label>
+                    <input type="text" id="street" name="street">
+                    <label for="building">Будинок</label>
+                    <input type="text" id="building" name="building">
+                </fieldset>
+                <p>
+                    * Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення
+                </p>
+                <input type="submit" name="submit" id="submit">
+                <label for="submit"></label>
+            </form>
+        </dialog>
     </section>
     <aside class="add">
         <a href="#">

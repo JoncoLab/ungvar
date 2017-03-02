@@ -1,5 +1,5 @@
 footer {
-
+  display: flex;
   .add {
     width: $line * 40;
     height: $line * 10;
@@ -9,5 +9,40 @@ footer {
     }
 
     margin: $line;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contacts {
+    margin: $line $line $line auto;
+
+    .name {
+      font: {
+        weight: bold;
+      }
+      text: {
+        align: right;
+      }
+    }
+
+    .icon {
+      img {
+        height: $line * 2;
+      }
+    }
+
+    .addresses {
+      vertical-align: top;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 }
