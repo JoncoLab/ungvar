@@ -239,6 +239,179 @@ body main .content .items tfoot td.button #submit-button:hover
 {
     box-shadow: 2px 2px 0 0 grey;
 }
+body main .content dialog
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    text-align: left; 
+
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+body main .content dialog #confirmation
+{
+    position: relative;
+
+    width: 70%;
+    margin: 30px auto;
+    padding: 0 60px 10px;
+
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 5px 5px 0 0 lightgreen;
+}
+body main .content dialog #confirmation fieldset
+{
+    margin: 10px 0 0 0; 
+
+    border: none;
+}
+body main .content dialog #confirmation fieldset legend
+{
+    font-size: 20px; 
+    font-weight: bold;
+}
+body main .content dialog #confirmation fieldset legend small
+{
+    font-weight: normal;
+}
+body main .content dialog #confirmation fieldset#order-summary
+{
+    text-align: center;
+}
+body main .content dialog #confirmation fieldset#order-summary p
+{
+    font-size: 20px;
+    font-weight: bold; 
+
+    margin: 0;
+    padding: 10px;
+
+    color: #676767;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+body main .content dialog #confirmation fieldset#payment input
+{
+    display: none;
+}
+body main .content dialog #confirmation fieldset#payment input + label
+{
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: 0 20px 0 0; 
+    padding: 10px;
+
+    -webkit-transition-duration: .3s;
+
+            transition-duration: .3s;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content dialog #confirmation fieldset#payment input + label:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content dialog #confirmation fieldset#payment input + label:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
+}
+body main .content dialog #confirmation fieldset#payment input:checked + label
+{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+body main .content dialog #confirmation fieldset#contact-info label,
+body main .content dialog #confirmation fieldset#order-address label
+{
+    font-weight: bold; 
+
+    display: inline-block;
+
+    margin: 5px 0;
+    padding: 5px;
+
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+body main .content dialog #confirmation fieldset#contact-info input,
+body main .content dialog #confirmation fieldset#order-address input
+{
+    font-weight: bold; 
+
+    padding: 5px;
+
+    color: #676767;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #e6e6e6;
+}
+body main .content dialog #confirmation #submit
+{
+    display: none;
+}
+body main .content dialog #confirmation #submit + label
+{
+    font-weight: bold;
+
+    display: block;
+
+    padding: 10px; 
+
+    -webkit-transition-duration: .3s; 
+
+            transition-duration: .3s;
+    text-align: center;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content dialog #confirmation #submit + label:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content dialog #confirmation #submit + label:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
+}
+body main .content dialog #confirmation .close
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    height: 20px;
+
+    cursor: pointer;
+}
+body main .content dialog #confirmation > p
+{
+    font-weight: bold; 
+
+    margin: 0 0 10px 0;
+    padding: 0;
+}
 
 body footer,
 body header

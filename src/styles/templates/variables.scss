@@ -29,4 +29,8 @@ $context: lightgreen;
       image: linear-gradient(darken($context, 5%), lighten($context, 5%));
     }
   }
+
+  &:hover {
+    box-shadow: $line / 5 $line / 5 0 0 $dark;
+  }
 }

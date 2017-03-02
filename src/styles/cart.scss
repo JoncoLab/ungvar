@@ -187,11 +187,161 @@ body {
                 height: 100%;
 
                 @include button;
+              }
+            }
+          }
+        }
+      }
 
-                &:hover {
-                  box-shadow: $line / 5 $line / 5 0 0 $dark;
+      dialog {
+        background: {
+          color: fade_out(black, 0.5);
+        }
+        position: fixed;
+        padding: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text: {
+          align: left;
+        }
+
+        #confirmation {
+          margin: $line * 3 auto;
+          padding: 0 $line * 6 $line;
+          width: 70%;
+          background: {
+            color: white;
+          }
+          border: {
+            radius: $line * 5;
+          }
+          position: relative;
+
+          box-shadow: $line / 2 $line / 2 0 0 $context;
+
+          fieldset {
+            border: none;
+            margin: $line 0 0 0;
+
+            legend {
+              font: {
+                weight: bold;
+                size: $line * 2;
+              }
+
+              small {
+                font: {
+                  weight: normal;
                 }
               }
+            }
+
+            &#order-summary {
+              text-align: center;
+
+              p {
+                margin: 0;
+                background: {
+                  color: lighten($dark, 40%);
+                }
+                color: darken($dark, 10%);
+                padding: $line;
+                border: {
+                  radius: $line;
+                }
+                font: {
+                  size: $line * 2;
+                  weight: bold;
+                }
+              }
+            }
+
+            &#payment {
+
+              input {
+                display: none;
+
+                + label {
+                  @include button;
+                  display: inline-block;
+                  padding: $line;
+                  margin: 0 $line * 2 0 0;
+                }
+
+                &:checked + label {
+                  transform: scale(1.2);
+                }
+              }
+            }
+
+            &#contact-info,
+            &#order-address {
+
+              label {
+                display: inline-block;
+                background: {
+                  color: $context;
+                }
+                padding: $line / 2;
+                margin: $line / 2 0;
+                border: {
+                  radius: $line / 2;
+                }
+                font: {
+                  weight: bold;
+                }
+              }
+
+              input {
+                background: {
+                  color: lighten($dark, 40%);
+                }
+                border: {
+                  radius: $line / 2;
+                  top: none;
+                  left: none;
+                  bottom: none;
+                  right: none;
+                }
+                padding: $line / 2;
+                outline: none;
+                color: darken($dark, 10%);
+                font: {
+                  weight: bold;
+                }
+              }
+            }
+          }
+
+          #submit {
+            display: none;
+
+            + label {
+              display: block;
+              text: {
+                align: center;
+              }
+              @include button;
+              padding: $line;
+            }
+          }
+
+          .close {
+            height: $line * 2;
+            position: absolute;
+            top: $line * 2;
+            right: $line * 3;
+            cursor: pointer;
+          }
+
+          > p {
+            margin: 0 0 $line 0;
+            padding: 0;
+            font: {
+              weight: bold;
             }
           }
         }
