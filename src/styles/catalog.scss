@@ -17,15 +17,19 @@ body {
   display: flex;
   flex-direction: column;
 
-  //background-color: $background;
+  background:{
+    image: url("../images/paper-1.png");
+  }
 
   @import "templates/header";
 
   .now-easier{
+    display: none;
+
     align-self: stretch;
     padding: 0;
     background-color: #4baac8;
-    background-image: linear-gradient(to right, white,  $light 3%, $light 97%, white);
+    background-image: linear-gradient(to right, transparent,  $light 3%, $light 97%, transparent);
     text: {
       transform: uppercase;
       shadow: #e6e6e6;
@@ -67,13 +71,18 @@ body {
 
 
         li{
-         margin: 0;
-        text-align: left;
+         margin: $line / 2;
+         text-align: center;
 
           padding:0;
 
-          border-bottom: 2px solid $light;
+          //border-bottom: 2px solid $light;
+          border-radius: 10%;
 
+          background: {
+            color: $header;
+          }
+        
           &::before{
 
             margin-left: -$line*4;
@@ -90,13 +99,15 @@ body {
           }
 
           a{
-            color: black;
+            color: rgba(250, 255, 216, 1);
             font: {
               size: $line * 1.7;
             }
             text: {
               decoration: none;
             }
+
+            padding: $line*2;
 
           }
         }
@@ -108,36 +119,12 @@ body {
 
 
 
-      table.users {
+      table{
         border-collapse: separate;
         border-spacing: $line * 1.9;
         margin: 0 auto;
         width: 100%;
 
-        td,
-        th {
-          border: $line / 10 solid grey;
-          padding: $line;
-          input {
-            width: 100%;
-            border: none;
-          }
-        }
-        thead {
-          z-index: 2;
-          tr {
-            th {
-              background-color: lightblue;
-            }
-            &.sum {
-              th {
-                background-color: darken(lightblue, 25px);
-              }
-            }
-          }
-        }
-        tbody {
-          width: 100%;
 
           tr {
             box-sizing: border-box;
@@ -196,14 +183,14 @@ body {
 
                 border-radius: 0 0 0 50%;
                 border: {
-                  left: 3px solid black;
-                  bottom: 3px solid black;
+                  left: 1px solid black;
+                  bottom: 1px solid black;
                 }
 
                 padding: 2%;
                 padding-top: .5%;
 
-                background-color: $light;
+                background-color: $context;
 
                 font: {
                   size: $line * 2;
@@ -253,62 +240,16 @@ body {
 
       }
     section {
-      background: {
-        repeat: no-repeat;
-        color: white;
-      };
-      background-blend-mode: darken($light, 5%);
-      &#meat{
-        background-image: url("http://wallpaperbackgrounds.com/Content/wallpapers/food/meat/barbecue-meat-30533.jpg");
-      }
-      &#bulki {
-        background-image: url("http://bgfons.com/upload/bread_texture1626.jpg");
-      }
-      &#beer{
-        background-image: url("https://images8.alphacoders.com/413/413078.jpg");
-      }
+
     }
     }
-  }
+
   footer,
   header {
     min-height: 15%;
+
 
   }
 
   @import "templates/footer";
 
-#DataTables_Table_0_wrapper {
-  display: none;
-  text-align: center;
-  margin: $line * 3;
-  .dataTables_filter,
-  .dataTables_length,
-  .dataTables_paginate,
-  .dataTables_info {
-    display: inline-block;
-    float: none;
-    text-align: center;
-
-
-    font: {
-      size: $line * 1.5;
-      family: Arial;
-      weight: bold;
-    }
-  }
-  .dataTables_length,
-  .dataTables_info,
-  .dataTables_filter{
-    display: none;
-  }
-  .dataTables_paginate{
-    display: block;
-  }
-  footer,
-  header {
-    min-height: 15%;
-  }
-
-  @import "templates/footer";
-}

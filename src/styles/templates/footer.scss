@@ -1,5 +1,10 @@
 footer {
   display: flex;
+  justify-content: space-around;
+
+  background-color: $header;
+
+  margin-top: $line * 2;
   .add {
     width: $line * 40;
     height: $line * 10;
