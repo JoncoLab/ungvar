@@ -6,6 +6,10 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+
+  font: {
+
+  }
 }
 
 
@@ -13,19 +17,103 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-color: $background;
-  align-items: center;
+  //background-color: $background;
 
-  main {
-    flex-grow: 1;
-    width: 70%;
-    .content {
-      text-align: center;
+  @import "templates/header";
+
+  .now-easier{
+    align-self: stretch;
+    padding: 0;
+    background-color: #4baac8;
+    background-image: linear-gradient(to right, white,  $light 3%, $light 97%, white);
+    text: {
+      transform: uppercase;
+      shadow: #e6e6e6;
+      align: center;
+      shadow: 1px 1px 3px black;
+    }
+    vertical-align: middle;
+
+    color: white;
+
+    h1{
       width: 100%;
+      font:{
+        size: $line * 3.6;
+      }
+    }
+
+
+    margin: {
+      bottom: 3%;
+    };
+
+
+  }
+  main {
+
+    flex-grow: 1;
+    text-align: center;
+    .page-navigation{
+      margin: $line;
+
+      position: fixed;
+
+      font: {
+          family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      ul{
+        list-style: none;
+
+
+        li{
+         margin: 0;
+        text-align: left;
+
+          padding:0;
+
+          border-bottom: 2px solid $light;
+
+          &::before{
+
+            margin-left: -$line*4;
+            content: '';
+            position: absolute;
+            width: $line *3 ;
+            height: $line * 3;
+            background: {
+              image: url("../SVG/bird (1).svg");
+              repeat: no-repeat;
+              size: contain;
+
+            }
+          }
+
+          a{
+            color: black;
+            font: {
+              size: $line * 1.7;
+            }
+            text: {
+              decoration: none;
+            }
+
+          }
+        }
+      }
+    }
+    .content {
+
+      text-align: center;
+
+
+
       table.users {
         border-collapse: separate;
+        border-spacing: $line * 1.9;
         margin: 0 auto;
         width: 100%;
+
         td,
         th {
           border: $line / 10 solid grey;
@@ -54,21 +142,144 @@ body {
           tr {
             box-sizing: border-box;
             td {
-              background-color: white;
-              border: none;
+              position: relative;
+              box-sizing: border-box;
 
-              margin: $line * 2;
+              min-height: $line*3;
+
+              border: 2px solid black;
+              border-radius: 10%;
+
+              padding: 0;
+
+              overflow: hidden;
+              &:hover img{
+                border-color: $light;;
+              }
+
+              @include item;
+              img{
+                width: 100%;
+                border-bottom:1px solid black;
+
+
+
+
+              }
+              .name,
+              .price{
+
+                margin: 0;
+
+
+              }
+              .name {
+                margin-bottom: 0;
+                width: 100%;
+                padding:$line / 3;
+
+                font: {
+                  weight: normal;
+                  size: $line * 1.4;
+                }
+
+
+              }
+              .price{
+                position: absolute;
+
+                z-index: 2;
+
+                right: 0;
+                top: 0;
+                margin: 0;
+
+                border-radius: 0 0 0 50%;
+                border: {
+                  left: 3px solid black;
+                  bottom: 3px solid black;
+                }
+
+                padding: 2%;
+                padding-top: .5%;
+
+                background-color: $light;
+
+                font: {
+                  size: $line * 2;
+                }
+                span{
+                  font-size: $line*1.2;
+                }
+              }
             }
 
             text-align-last: center;
           }
         }
 
+
+      }
+      label{
+        display: inline-block;
+        background-color: white;
+
+
+
+        input{
+          border: 3px solid black;
+          border-radius: 20%;
+        }
+      };
+      
+    }
+    fieldset{
+      border: {
+        left: none;
+        right: none;
+        bottom: none;
+      }
+      width: 70%;
+      margin: 0 auto;
+      legend{
+        font:{
+          size: $line * 2.5;
+          family: "Lucida Console", Monaco, monospace;
+          }
+        text:{
+          transform: uppercase;
+        }
+      }
+
+      }
+    section {
+      background: {
+        repeat: no-repeat;
+        color: white;
+      };
+      background-blend-mode: darken($light, 5%);
+      &#meat{
+        background-image: url("http://wallpaperbackgrounds.com/Content/wallpapers/food/meat/barbecue-meat-30533.jpg");
+      }
+      &#bulki {
+        background-image: url("http://bgfons.com/upload/bread_texture1626.jpg");
+      }
+      &#beer{
+        background-image: url("https://images8.alphacoders.com/413/413078.jpg");
       }
     }
+    }
   }
-}
+  footer,
+  header {
+    min-height: 15%;
+
+  }
+
+  @import "templates/footer";
+
 #DataTables_Table_0_wrapper {
+  display: none;
   text-align: center;
   margin: $line * 3;
   .dataTables_filter,
@@ -94,4 +305,10 @@ body {
   .dataTables_paginate{
     display: block;
   }
+  footer,
+  header {
+    min-height: 15%;
+  }
+
+  @import "templates/footer";
 }

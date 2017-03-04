@@ -27,6 +27,18 @@ var main = function () {
                 sumToBe += parseFloat($(this).text());
             });
             sum.text(sumToBe);
+        },
+        dialogButton = $('#submit-button'),
+        dialog = $('.content dialog'),
+        dialogCloseButton = $('dialog .close'),
+        setConfirmationParagraph = function () {
+            var requiredSum = sum.text(),
+                orderNumber = $('strong.order-number'),
+                totalSum = $('strong.total-sum'),
+                orderNumberInput = $('#order-number'),
+                totalSumInput = $('#total-sum');
+            totalSum.text(requiredSum);
+            totalSumInput.val(requiredSum);
         };
     removeButtons.click(function () {
         var cell = $(this).parents('td'),
@@ -40,6 +52,13 @@ var main = function () {
         }
         setPrices();
         setSum();
+    });
+    dialogButton.click(function () {
+        dialog.fadeIn(300);
+        setConfirmationParagraph();
+    });
+    dialogCloseButton.click(function () {
+        dialog.fadeOut(300);
     });
     setPrices();
     setSum();

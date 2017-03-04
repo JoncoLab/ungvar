@@ -10,11 +10,13 @@
     </head>
 </head>
 <body>
-<header>
-
-</header>
+//= modules/header.html
 <main>
-    <aside class="add">Place for your add (300 * 100)</aside>
+    <aside class="add">
+        <a href="#">
+            Place for your add (100 * 300)
+        </a>
+    </aside>
     <section class="content">
         <table class="items">
             <thead>
@@ -27,174 +29,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="img">
-                    <img src="images/beer-tmp.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross.svg">
-                </td>
-            </tr>
             <tr>
                 <td class="img">
                     <img src="images/beer-tmp.png">
@@ -276,11 +110,60 @@
             </tr>
             </tfoot>
         </table>
+        <dialog>
+            <form id="confirmation">
+                <img class="close" src="SVG/cross.svg">
+                <fieldset id="order-summary">
+                    <input type="hidden" id="order-number" name="order-number">
+                    <input type="hidden" id="total-sum" name="total-sum">
+                    <p>
+                        <span>Ви підтверджуєте замовлення</span>
+                        <strong class="order-number">№234234</strong>
+                        <span> на загальну суму </span>
+                        <strong class="total-sum"></strong>
+                        <span> грн.</span>
+                    </p>
+                </fieldset>
+                <fieldset id="payment">
+                    <legend>Як ви бажаєте здійснити оплату?</legend>
+                    <input type="radio" name="payment-method" id="payment-method-cash" value="cash">
+                    <label for="payment-method-cash">Готівкою</label>
+                    <input type="radio" name="payment-method" id="payment-method-card" value="card">
+                    <label for="payment-method-card">Приват 24</label>
+                </fieldset>
+                <fieldset id="contact-info">
+                    <legend>Ваші контактні дані:</legend>
+                    <label for="name">Прізвище та ім'я:</label>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="tel">Контактний телефон:</label>
+                    <input type="tel" name="tel" id="tel"><br>
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" name="email" id="email">
+                </fieldset>
+                <fieldset id="order-address">
+                    <legend>
+                        <span>Адреса доставки:</span><br>
+                        <small>Доставка здійснюється лише в м. Ужгороді</small>
+                    </legend>
+                    <label for="street">Вулиця:</label>
+                    <input type="text" id="street" name="street"><br>
+                    <label for="building">Будинок:</label>
+                    <input type="text" id="building" name="building">
+                </fieldset>
+                <p>
+                    Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення
+                </p>
+                <input type="submit" name="submit" id="submit">
+                <label for="submit">Підтвердити</label>
+            </form>
+        </dialog>
     </section>
-    <aside class="add">Place for your add (300 * 100)</aside>
+    <aside class="add">
+        <a href="#">
+            Place for your add (100 * 300)
+        </a>
+    </aside>
 </main>
-<footer>
-
-</footer>
+//= modules/footer.html
 </body>
 </html>

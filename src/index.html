@@ -10,22 +10,23 @@
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="#">
-        <h1>Ungvar</h1>
-    </div>
-    <nav>
-        <a href="index.html">Catalog</a>
-        <a href="cart.html">Cart</a>
-    </nav>
+//= modules/header.html
+<header class="now-easier">
+    <h1>Купувати продукти тепер стало ще зручніше!</h1>
 </header>
 <main>
-    <aside class="add">Place for your add</aside>
-    <fieldset class="content meat">
+    <nav class="page-navigation">
+        <ul>
+            <li><a href="#meat">Мнясо</a></li>
+            <li><a href="#bulki">Bulki</a></li>
+            <li><a href="#beer">Pivo</a></li>
+        </ul>
+    </nav>
+    <section  id="meat">
+    <fieldset class="content">
         <legend>Мясні вироби</legend>
         <table class="users">
-            <label fot="search">Пошук</label><input type="text" name="search" id="search">
+            <label for="search">Якщо знаєте, що шукаєте<input type="text" name="search" id="search" placeholder="Шукайте"></label>
             <thead style="display: none;"> <!--Для розтяжки таблиці і коректної роботи каталога-->
             <tr>
                 <th></th>
@@ -37,57 +38,294 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
+                    <td class="item">
+                        <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                        <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                </tr>
-                <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                </tr>
-                <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                </tr>
-                <tr>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                    <td class="id">23456</td>
-                </tr>
-
             </tbody>
         </table>
 
     </fieldset>
+    </section>
+    <section  id="bulki">
+    <fieldset class="content">
+        <legend>Булочки </legend>
+        <table class="users">
+
+            <thead style="display: none;"> <!--Для розтяжки таблиці і коректної роботи каталога-->
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr>
+                <td class="item">
+                    <img src="https://images.lady.mail.ru/469852/">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </fieldset>
+    </section>
+    <section  id="beer">
+    <fieldset class="content">
+        <legend>Пивко</legend>
+        <table class="users">
+
+            <thead style="display: none;"> <!--Для розтяжки таблиці і коректної роботи каталога-->
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr>
+                <td class="item">
+                    <img src="http://www.pivko66.ru/images/logo_top.png">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+                <td class="item">
+                    <img src="http://kolbasa.in.ua/image/374728-svetik.jpg">
+                    <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+                    <h4 class="price">11s54.90 <span>грн/шт</span></h4>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </fieldset>
+    </section>
     <aside class="add">Place for your add</aside>
 </main>
-<footer>
-    <table class="contacts"></table>
-    <aside class="add"></aside>
-</footer>
+//= modules/footer.html
 </body>
 </html>

@@ -4,4 +4,50 @@ $time: 0.3s;
 $dark: grey;
 $light: skyblue;
 $context: lightgreen;
+//<<<<<<< HEAD
 $background: rgba(255, 231, 162, 1);
+//=======
+
+@mixin button() {
+  font: {
+    weight: bold;
+  }
+
+  border: none;
+  border: {
+    radius: $line / 2;
+  }
+
+  background: {
+    image: linear-gradient(lighten($context, 5%), darken($context, 5%));
+  }
+  outline: none;
+
+  transition: {
+    duration: $time;
+  }
+
+  &:active {
+    background: {
+      image: linear-gradient(darken($context, 5%), lighten($context, 5%));
+    }
+  }
+
+  &:hover {
+    box-shadow: $line / 5 $line / 5 0 0 $dark;
+  }
+}
+//>>>>>>> origin/master
+@mixin item(){
+  transition: {
+    duration: $time / 1.3;
+    property: background-color, transform;
+  }
+
+  &:hover{
+    background-color: $light;
+    border: 3px solid $light;
+    cursor: pointer;
+    //transform: scale(1.1);
+  }
+}

@@ -7,6 +7,50 @@ body
     padding: 0;
 }
 
+body header
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body header .logo
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body header .menu
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
+}
+body header .menu .menu-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-flex: 1;
+
+        -ms-flex-positive: 1;
+
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+body header .menu .menu-item .ico
+{
+    height: 20px;
+}
+
 body main
 {
     display: -webkit-box;
@@ -32,6 +76,13 @@ body main .add
 
         align-self: center;
 }
+body main .add a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
 body main .content
 {
     max-width: 80%;
@@ -53,23 +104,27 @@ body main .content .items
 
     border-collapse: collapse;
 }
-body main .content .items thead tr td.img
+body main .content .items thead tr th
+{
+    text-align: center;
+}
+body main .content .items thead tr th.img
 {
     width: 10%;
 }
-body main .content .items thead tr td.name
+body main .content .items thead tr th.name
 {
     width: 60%;
 }
-body main .content .items thead tr td.amount
+body main .content .items thead tr th.amount
 {
     width: 10%;
 }
-body main .content .items thead tr td.price
+body main .content .items thead tr th.price
 {
     width: 10%;
 }
-body main .content .items thead tr td.remove
+body main .content .items thead tr th.remove
 {
     width: 10%;
 }
@@ -88,9 +143,15 @@ body main .content .items tbody tr:last-of-type td
 }
 body main .content .items tbody tr td
 {
+    padding: 0;
+
     text-align: center; 
 
     border-bottom: 1px solid grey;
+}
+body main .content .items tbody tr td.img
+{
+    width: 10%;
 }
 body main .content .items tbody tr td.img img
 {
@@ -98,11 +159,17 @@ body main .content .items tbody tr td.img img
 }
 body main .content .items tbody tr td.name
 {
+    width: 60%;
+
     text-align: left;
 }
 body main .content .items tbody tr td.name small
 {
     font-weight: normal;
+}
+body main .content .items tbody tr td.amount
+{
+    width: 10%;
 }
 body main .content .items tbody tr td.amount input
 {
@@ -112,14 +179,21 @@ body main .content .items tbody tr td.amount input
 }
 body main .content .items tbody tr td.price
 {
+    width: 10%;
+
     -webkit-transition-timing-function: linear;
+
             transition-timing-function: linear; 
     -webkit-transition-duration: .3s; 
             transition-duration: .3s;
 }
+body main .content .items tbody tr td.remove
+{
+    width: 10%;
+}
 body main .content .items tbody tr td.remove img
 {
-    height: 30px;
+    height: 20px;
 
     cursor: pointer;
 }
@@ -141,12 +215,253 @@ body main .content .items tfoot td.button
 }
 body main .content .items tfoot td.button #submit-button
 {
+    font-weight: bold;
+
     width: 100%;
     height: 100%;
+
+    -webkit-transition-duration: .3s;
+
+            transition-duration: .3s; 
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content .items tfoot td.button #submit-button:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content .items tfoot td.button #submit-button:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
+}
+body main .content dialog
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    text-align: left; 
+
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+body main .content dialog #confirmation
+{
+    position: relative;
+
+    width: 70%;
+    margin: 30px auto;
+    padding: 0 60px 10px;
+
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 5px 5px 0 0 lightgreen;
+}
+body main .content dialog #confirmation fieldset
+{
+    margin: 10px 0 0 0; 
+
+    border: none;
+}
+body main .content dialog #confirmation fieldset legend
+{
+    font-size: 20px; 
+    font-weight: bold;
+}
+body main .content dialog #confirmation fieldset legend small
+{
+    font-weight: normal;
+}
+body main .content dialog #confirmation fieldset#order-summary
+{
+    text-align: center;
+}
+body main .content dialog #confirmation fieldset#order-summary p
+{
+    font-size: 20px;
+    font-weight: bold; 
+
+    margin: 0;
+    padding: 10px;
+
+    color: #676767;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+body main .content dialog #confirmation fieldset#payment input
+{
+    display: none;
+}
+body main .content dialog #confirmation fieldset#payment input + label
+{
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: 0 20px 0 0; 
+    padding: 10px;
+
+    -webkit-transition-duration: .3s;
+
+            transition-duration: .3s;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content dialog #confirmation fieldset#payment input + label:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content dialog #confirmation fieldset#payment input + label:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
+}
+body main .content dialog #confirmation fieldset#payment input:checked + label
+{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+body main .content dialog #confirmation fieldset#contact-info label,
+body main .content dialog #confirmation fieldset#order-address label
+{
+    font-weight: bold; 
+
+    display: inline-block;
+
+    margin: 5px 0;
+    padding: 5px;
+
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+body main .content dialog #confirmation fieldset#contact-info input,
+body main .content dialog #confirmation fieldset#order-address input
+{
+    font-weight: bold; 
+
+    padding: 5px;
+
+    color: #676767;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #e6e6e6;
+}
+body main .content dialog #confirmation #submit
+{
+    display: none;
+}
+body main .content dialog #confirmation #submit + label
+{
+    font-weight: bold;
+
+    display: block;
+
+    padding: 10px; 
+
+    -webkit-transition-duration: .3s; 
+
+            transition-duration: .3s;
+    text-align: center;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-image: -webkit-linear-gradient(#a6f1a6, #7aeb7a);
+    background-image: linear-gradient(#a6f1a6, #7aeb7a);
+}
+body main .content dialog #confirmation #submit + label:active
+{
+    background-image: -webkit-linear-gradient(#7aeb7a, #a6f1a6);
+    background-image: linear-gradient(#7aeb7a, #a6f1a6);
+}
+body main .content dialog #confirmation #submit + label:hover
+{
+    box-shadow: 2px 2px 0 0 grey;
+}
+body main .content dialog #confirmation .close
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    height: 20px;
+
+    cursor: pointer;
+}
+body main .content dialog #confirmation > p
+{
+    font-weight: bold; 
+
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
 body footer,
 body header
 {
     min-height: 15%;
+}
+
+body footer
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body footer .add
+{
+    width: 400px;
+    height: 100px;
+    margin: 10px; 
+
+    background-color: skyblue;
+}
+body footer .add a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+body footer .contacts
+{
+    margin: 10px 10px 10px auto;
+}
+body footer .contacts .name
+{
+    font-weight: bold;
+
+    text-align: right;
+}
+body footer .contacts .icon img
+{
+    height: 20px;
+}
+body footer .contacts .addresses
+{
+    vertical-align: top;
+}
+body footer .contacts .addresses ul
+{
+    margin: 0; 
+    padding: 0;
+
+    list-style: none;
 }
