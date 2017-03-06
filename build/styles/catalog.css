@@ -225,18 +225,19 @@ body main .content table tr td
 
     border: 2px solid black;
     border-radius: 10%;
-    background-color: white !important;
+    background-color: white;
 }
 body main .content table tr td:hover img
 {
     border-color: skyblue;
+    background-color: skyblue;
 }
 body main .content table tr td:hover
 {
     cursor: pointer; 
 
     border: 3px solid skyblue;
-    background-color: skyblue;
+    background-color: skyblue !important;
 }
 body main .content table tr td img
 {
@@ -251,14 +252,12 @@ body main .content table tr td .price
 }
 body main .content table tr td .name
 {
-    font-size: 14px;
+    font-size: 14px; 
     font-weight: normal;
 
     width: 100%;
     margin-bottom: 0;
     padding: 3.33333px;
-
-    background-color: white !important;
 }
 body main .content table tr td .price
 {
@@ -334,9 +333,7 @@ footer .add
 {
     width: 400px;
     height: 100px;
-    margin: 10px; 
-
-    background-color: skyblue;
+    margin: 10px;
 }
 footer .add a
 {

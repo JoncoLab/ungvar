@@ -131,7 +131,7 @@ body {
               position: relative;
               box-sizing: border-box;
 
-              background-color: white !important;
+              background-color: white;
 
               min-height: $line*3;
 
@@ -142,7 +142,8 @@ body {
 
               overflow: hidden;
               &:hover img{
-                border-color: $light;;
+                border-color: $light;
+                background-color: $light;
               }
 
               @include item;
@@ -170,7 +171,6 @@ body {
                   weight: normal;
                   size: $line * 1.4;
                 }
-                background-color: white !important;
 
 
               }
