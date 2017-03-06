@@ -12,12 +12,34 @@ body header
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    margin-bottom: 20px; 
+
+    background-color: rgba(14, 0, 0, .95);
+
+    -ms-flex-pack: distribute;
+
+        justify-content: space-around;
 }
 body header .logo
 {
+    font-family: 'Monotype Corsiva';
+    font-size: 30px;
+
     display: -webkit-box;
+
     display: -ms-flexbox;
+
     display: flex;
+
+    color: #faffd8;
+}
+body header .logo h1
+{
+    margin: 0;
+    margin-top: 5px;
+
+    text-shadow: 2px 2px 2px #8f4c00;
 }
 body header .menu
 {
@@ -33,9 +55,25 @@ body header .menu
 }
 body header .menu .menu-item
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    font-family: 'Monotype Corsiva';
+    font-size: 30px;
+    font-weight: 900; 
+
+    display: -webkit-box; 
+
+    display: -ms-flexbox; 
+
     display: flex;
+
+    margin-right: 20px;
+    padding: 10px;
+
+    text-decoration: none;
+
+    color: black;
+    border-radius: 10%;
+    background-color: #faffd8;
+    box-shadow: 0 0 1px 3px #b4b996;
 
     -webkit-box-flex: 1;
 
@@ -424,6 +462,14 @@ body footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    margin-top: 20px; 
+
+    background-color: rgba(14, 0, 0, .95);
+
+    -ms-flex-pack: distribute;
+
+        justify-content: space-around;
 }
 body footer .add
 {
