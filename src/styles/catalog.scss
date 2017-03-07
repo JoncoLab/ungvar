@@ -6,10 +6,6 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-
-  font: {
-
-  }
 }
 
 
@@ -22,83 +18,36 @@ body {
   }
 
   @import "templates/header";
-
-  .now-easier{
-    display: none;
-
-    align-self: stretch;
-    padding: 0;
-    background-color: #4baac8;
-    background-image: linear-gradient(to right, transparent,  $light 3%, $light 97%, transparent);
-    text: {
-      transform: uppercase;
-      shadow: #e6e6e6;
-      align: center;
-      shadow: 1px 1px 3px black;
-    }
-    vertical-align: middle;
-
-    color: white;
-
-    h1{
-      width: 100%;
-      font:{
-        size: $line * 3.6;
-      }
-    }
-
-
-    margin: {
-      bottom: 3%;
-    };
-
-
-  }
+    
   main {
-
     flex-grow: 1;
     text-align: center;
-    .page-navigation{
+      
+    .page-navigation {
       margin: $line;
-
       position: fixed;
-
       font: {
           family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
-      ul{
+        
+      ul {
         list-style: none;
 
 
         li{
-         margin: $line / 2;
-         text-align: left;
+          margin: $line / 2;
+          text-align: left;
 
           padding:0;
 
-          //border-bottom: 2px solid $light;
           border-radius: 10%;
 
           background: {
             color: $header;
           }
-        
-          &::before{
 
-            margin-left: -$line*5;
-            content: '';
-            position: absolute;
-            width: $line *3 ;
-            height: $line * 3;
-            background: {
-              repeat: no-repeat;
-              size: contain;
-
-            }
-          }
-
-          a{
-            color: rgba(250, 255, 216, 1);
+          a {
+            color: $header-text;
             font: {
               size: $line * 1.7;
             }
@@ -106,74 +55,69 @@ body {
               decoration: none;
             }
 
-            padding: $line*2;
+            padding: $line * 2;
 
           }
         }
       }
     }
+    
     .content {
-
       text-align: center;
-
-
-
-      table{
-        border-collapse: separate;
-        border-spacing: $line * 1.9;
-        margin: 0 auto;
-        width: 100%;
-
-
-          tr {
+      border-collapse: separate;
+      border-spacing: $line * 2;
+      margin: 0 auto;
+      width: 70%;
+      
+      caption {
+        display: flex;
+        font: {
+          weight: bold;
+          size: $line * 1.5;
+        }
+        
+        hr {
+          flex-grow: 1;
+        }
+      }
+      
+        tr {
+          box-sizing: border-box;
+            
+          td {
+            position: relative;
             box-sizing: border-box;
-            td {
-              position: relative;
-              box-sizing: border-box;
+            background-color: white;
+            min-height: $line * 3;
+            border: $line / 5 solid black;
+            border-radius: 10%;
 
-              background-color: white;
+            padding: 0;
 
-              min-height: $line*3;
+            overflow: hidden;
 
-              border: 2px solid black;
-              border-radius: 10%;
-
-              padding: 0;
-
-              overflow: hidden;
-              &:hover img{
-                border-color: $light;
-                background-color: $light;
-              }
-
-              @include item;
-              img{
-                width: 100%;
-                border-bottom:1px solid black;
-
-
-
-
-              }
-              .name,
-              .price{
-
-                margin: 0;
-
-
-              }
-              .name {
-                margin-bottom: 0;
-                width: 100%;
-                padding:$line / 3;
-
+            @include item;
+              
+            img {
+              width: 100%;
+            }
+              
+            .name,
+            .price {
+              margin: 0;
+            }
+              
+            .name {
+              margin-bottom: 0;
+              width: 100%;
+              padding:$line / 3;
+              
                 font: {
                   weight: normal;
-                  size: $line * 1.4;
+                  size: $line * 1.5;
                 }
-
-
               }
+            
               .price{
                 position: absolute;
 
@@ -205,7 +149,6 @@ body {
 
             text-align-last: center;
           }
-        }
 
 
       }
@@ -235,23 +178,12 @@ body {
           size: $line * 2.5;
           family: "Lucida Console", Monaco, monospace;
           }
-        text:{
+        text: {
           transform: uppercase;
         }
       }
 
-      }
-    section {
-
     }
-    }
-
-  footer,
-  header {
-    min-height: 15%;
-
-
-  }
-
   @import "templates/footer";
+}
 

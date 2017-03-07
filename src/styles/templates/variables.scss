@@ -4,11 +4,9 @@ $time: 0.3s;
 $dark: grey;
 $light: skyblue;
 $context: lightgreen;
-//<<<<<<< HEAD
 $background: rgba(255, 231, 162, 1);
 $header: rgba(14, 0, 0, 0.95);
 $header-text: rgba(250, 255, 216, 1);
-//=======
 
 @mixin button() {
   font: {
@@ -39,8 +37,8 @@ $header-text: rgba(250, 255, 216, 1);
     box-shadow: $line / 5 $line / 5 0 0 $dark;
   }
 }
-//>>>>>>> origin/master
-@mixin item(){
+
+@mixin item() {
   transition: {
     duration: $time / 1.3;
     property: background-color, transform;
@@ -48,8 +46,7 @@ $header-text: rgba(250, 255, 216, 1);
 
   &:hover{
     background-color: $light !important;
-    border: 3px solid $light;
+    border: $line / 5 solid $light;
     cursor: pointer;
-    //transform: scale(1.1);
   }
 }
