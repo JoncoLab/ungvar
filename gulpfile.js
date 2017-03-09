@@ -6,7 +6,8 @@ var gulp = require("gulp"),
     image = require("gulp-image"),
     compileSass = require("gulp-sass"),
     rigger = require("gulp-rigger"),
-    rimraf = require("rimraf");
+    rimraf = require("rimraf"),
+    jsMinify = require("gulp-minify");
 
 var path = {
     
@@ -75,6 +76,12 @@ gulp.task('php:build', function () {
 //Збірка JS
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
+        .pipe(jsMinify({
+            ext: {
+                min: '.js'
+            },
+            noSource: '*.js'
+        }))
         .pipe(gulp.dest(path.build.js));
 });
 

@@ -128,7 +128,7 @@
             </tr>
             </tfoot>
         </table>
-        <dialog open>
+        <div class="full-screen-confirmation">
             <form id="confirmation" action="scripts/php/confirm.php" method="post">
                 <img class="close" src="SVG/cross.svg">
                 <fieldset id="order-summary">
@@ -173,7 +173,7 @@
                 <input type="submit" name="submit" id="submit">
                 <label for="submit">Підтвердити</label>
             </form>
-        </dialog>
+        </div>
     </section>
     <aside class="add">
         <a href="#">

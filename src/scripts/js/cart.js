@@ -28,9 +28,9 @@ var main = function () {
             });
             sum.text(sumToBe);
         },
-        dialogButton = $('#submit-button'),
-        dialog = $('.content dialog'),
-        dialogCloseButton = $('dialog .close'),
+        fullScreenConfirmationButton = $('#submit-button'),
+        fullScreenConfirmation = $('.content .full-screen-confirmation'),
+        fullScreenConfirmationCloseButton = $('.full-screen-confirmation .close'),
         setConfirmationParagraph = function () {
             var requiredSum = sum.text(),
                 totalSum = $('strong.total-sum'),
@@ -51,17 +51,17 @@ var main = function () {
         setPrices();
         setSum();
     });
-    dialogButton.click(function () {
+    fullScreenConfirmationButton.click(function () {
         if (parseInt(sum.text()) < 200) {
             alert('Мінімальна вартість замовлення складає 200 грн.!');
         } else {
             setConfirmationParagraph();
-            dialog.fadeIn(300);
-            dialog.css('display', 'flex');
+            fullScreenConfirmation.fadeIn(300);
+            fullScreenConfirmation.css('display', 'flex');
         }
     });
-    dialogCloseButton.click(function () {
-        dialog.fadeOut(300);
+    fullScreenConfirmationCloseButton.click(function () {
+        fullScreenConfirmation.fadeOut(300);
     });
     setPrices();
     setSum();
