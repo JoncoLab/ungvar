@@ -151,11 +151,11 @@
                     <label for="building">Будинок:</label>
                     <input type="text" id="building" name="building" required>
                 </fieldset>
+                <div class="g-recaptcha" data-sitekey="6Lf_WhgUAAAAAGpeD-cO3aEm4zT_GLC-9uuSmIon"></div>
                 <p>
                     Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення.
                 </p>
                 <input type="submit" name="submit" id="submit">
-                <div class="g-recaptcha" data-sitekey="6Lf_WhgUAAAAAGpeD-cO3aEm4zT_GLC-9uuSmIon"></div>
                 <label for="submit">Підтвердити</label>
             </form>
         </dialog>
