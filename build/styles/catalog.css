@@ -10,10 +10,15 @@ html
 body
 {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
 
@@ -22,6 +27,8 @@ body
 body header
 {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
 
@@ -29,9 +36,11 @@ body header
 
     background-color: rgba(14, 0, 0, .95);
 
-    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
 
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+
+            justify-content: space-around;
 }
 body header .logo
 {
@@ -39,6 +48,10 @@ body header .logo
     font-size: 30px;
 
     display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -moz-box;
 
     display: -ms-flexbox;
 
@@ -56,10 +69,16 @@ body header .logo h1
 body header .menu
 {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
 
     -webkit-box-align: center;
+
+    -webkit-align-items: center;
+
+       -moz-box-align: center;
 
         -ms-flex-align: center;
 
@@ -73,6 +92,10 @@ body header .menu .menu-item
 
     display: -webkit-box; 
 
+    display: -webkit-flex; 
+
+    display: -moz-box; 
+
     display: -ms-flexbox; 
 
     display: flex;
@@ -83,16 +106,24 @@ body header .menu .menu-item
     text-decoration: none;
 
     color: black;
-    border-radius: 10%;
+    -webkit-border-radius: 10%;
+            border-radius: 10%;
     background-color: #faffd8;
-    box-shadow: 0 0 1px 3px #b4b996;
+    -webkit-box-shadow: 0 0 1px 3px #b4b996;
+            box-shadow: 0 0 1px 3px #b4b996;
 
     -webkit-box-flex: 1;
+
+    -webkit-flex-grow: 1;
+
+       -moz-box-flex: 1;
 
         -ms-flex-positive: 1;
 
             flex-grow: 1;
     -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
 }
@@ -105,6 +136,10 @@ body main
     text-align: center; 
 
     -webkit-box-flex: 1; 
+
+    -webkit-flex-grow: 1; 
+
+       -moz-box-flex: 1; 
 
         -ms-flex-positive: 1; 
 
@@ -129,7 +164,9 @@ body main .page-navigation ul li
 
     text-align: left;
 
-    border-radius: 10%;
+    -webkit-border-radius: 10%;
+
+            border-radius: 10%;
     background-color: rgba(14, 0, 0, .95);
 }
 body main .page-navigation ul li a
@@ -159,6 +196,10 @@ body main .content caption
 
     display: -webkit-box;
 
+    display: -webkit-flex;
+
+    display: -moz-box;
+
     display: -ms-flexbox;
 
     display: flex;
@@ -166,12 +207,16 @@ body main .content caption
 body main .content caption hr
 {
     -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+       -moz-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
 }
 body main .content tr
 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 
     -moz-text-align-last: center;
 
@@ -183,20 +228,31 @@ body main .content tr td
 
     overflow: hidden;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+       -moz-box-sizing: border-box;
+
+            box-sizing: border-box;
     min-height: 30px;
     padding: 0;
 
     -webkit-transition-duration: .23077s;
 
+       -moz-transition-duration: .23077s;
+
+         -o-transition-duration: .23077s;
+
             transition-duration: .23077s;
     -webkit-transition-property: background-color, -webkit-transform;
     transition-property: background-color, -webkit-transform;
+    -o-transition-property: background-color, -o-transform;
+    -moz-transition-property: background-color, transform, -moz-transform;
     transition-property: background-color, transform;
-    transition-property: background-color, transform, -webkit-transform; 
+    transition-property: background-color, transform, -webkit-transform, -moz-transform, -o-transform; 
 
     border: 2px solid black;
-    border-radius: 10%;
+    -webkit-border-radius: 10%;
+            border-radius: 10%;
     background-color: white;
 }
 body main .content tr td:hover
@@ -239,7 +295,8 @@ body main .content tr td .price
 
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-radius: 0 0 0 50%;
+    -webkit-border-radius: 0 0 0 50%;
+            border-radius: 0 0 0 50%;
     background-color: skyblue;
 }
 body main .content tr td .price span
@@ -255,7 +312,8 @@ body main label
 body main label input
 {
     border: 3px solid black;
-    border-radius: 20%;
+    -webkit-border-radius: 20%;
+            border-radius: 20%;
 }
 body fieldset
 {
@@ -276,6 +334,8 @@ body fieldset legend
 body footer
 {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
 
@@ -283,9 +343,11 @@ body footer
 
     background-color: rgba(14, 0, 0, .95);
 
-    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
 
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+
+            justify-content: space-around;
 }
 body footer .add
 {

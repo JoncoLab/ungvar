@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html>
 <head>
@@ -7,25 +9,11 @@
         <link href="styles/cart.css" rel="stylesheet">
         <script src="scripts/js/jquery-3.1.1.js"></script>
         <script src="scripts/js/cart.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="#">
-        <h1>Ungvar</h1>
-    </div>
-    <nav class="menu">
-        <a class="menu-item" href="index.html">
-            <img class="ico" src="SVG/catalog.svg">
-            <span>Catalog</span>
-        </a>
-        <a class="menu-item" href="cart.html">
-            <img class="ico" src="SVG/cart.svg">
-            <span>Cart</span>
-        </a>
-    </nav>
-</header>
+//= modules/header.html
 <main>
     <aside class="add">
         <a href="#">
@@ -39,7 +27,7 @@
                 <th class="img"></th>
                 <th class="name">Найменування</th>
                 <th class="amount">Кількість</th>
-                <th class="price">Вартість</th>
+                <th class="price">Вартість, грн.</th>
                 <th class="remove">Видалити</th>
             </tr>
             </thead>
@@ -111,10 +99,10 @@
             <tfoot>
             <tr>
                 <td colspan="3">
-                    <span>Загальна вартість:</span>
+                    <span>Загальна вартість:</span><br>
                 </td>
                 <td>
-                    <strong class="sum"></strong>
+                    <strong class="sum"></strong><span> грн.</span>
                 </td>
             </tr>
             <tr>
@@ -125,33 +113,31 @@
             </tr>
             </tfoot>
         </table>
-        <dialog>
-            <form id="confirmation">
+        <dialog open>
+            <form id="confirmation" action="scripts/php/confirm.php" method="post">
                 <img class="close" src="SVG/cross.svg">
                 <fieldset id="order-summary">
                     <input type="hidden" id="order-number" name="order-number">
                     <input type="hidden" id="total-sum" name="total-sum">
                     <p>
-                        <span>Ви підтверджуєте замовлення</span>
-                        <strong class="order-number">№234234</strong>
-                        <span> на загальну суму </span>
+                        <span>Ви підтверджуєте замовлення на загальну суму </span>
                         <strong class="total-sum"></strong>
                         <span> грн.</span>
                     </p>
                 </fieldset>
                 <fieldset id="payment">
                     <legend>Як ви бажаєте здійснити оплату?</legend>
-                    <input type="radio" name="payment-method" id="payment-method-cash" value="cash">
+                    <input type="radio" name="payment-method" id="payment-method-cash" value="cash" required>
                     <label for="payment-method-cash">Готівкою</label>
-                    <input type="radio" name="payment-method" id="payment-method-card" value="card">
+                    <input type="radio" name="payment-method" id="payment-method-card" value="card" required>
                     <label for="payment-method-card">Приват 24</label>
                 </fieldset>
                 <fieldset id="contact-info">
                     <legend>Ваші контактні дані:</legend>
                     <label for="name">Прізвище та ім'я:</label>
-                    <input type="text" name="name" id="name"><br>
+                    <input type="text" name="name" id="name" required pattern="^[А-Яа-яЁёІіЇї\s]+$"><br>
                     <label for="tel">Контактний телефон:</label>
-                    <input type="tel" name="tel" id="tel"><br>
+                    <input type="tel" name="tel" id="tel" required><br>
                     <label for="email">Електронна пошта:</label>
                     <input type="email" name="email" id="email">
                 </fieldset>
@@ -161,14 +147,15 @@
                         <small>Доставка здійснюється лише в м. Ужгороді</small>
                     </legend>
                     <label for="street">Вулиця:</label>
-                    <input type="text" id="street" name="street"><br>
+                    <input type="text" id="street" name="street" required><br>
                     <label for="building">Будинок:</label>
-                    <input type="text" id="building" name="building">
+                    <input type="text" id="building" name="building" required>
                 </fieldset>
                 <p>
-                    Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення
+                    Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення.
                 </p>
                 <input type="submit" name="submit" id="submit">
+                <div class="g-recaptcha" data-sitekey="6Lf_WhgUAAAAAGpeD-cO3aEm4zT_GLC-9uuSmIon"></div>
                 <label for="submit">Підтвердити</label>
             </form>
         </dialog>
@@ -179,37 +166,6 @@
         </a>
     </aside>
 </main>
-<footer>
-    <aside class="add">
-        <a href="#">
-            Place for your add (400 * 100)
-        </a>
-    </aside>
-    <table class="contacts">
-        <tbody>
-        <tr class="mail">
-            <td class="name">Електронна пошта:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
-            <td class="value">info@ungvar.com</td>
-        </tr>
-        <tr class="tel">
-            <td class="name">Телефон:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
-            <td class="value">+380 (95) 498 82 73 (Олексій)</td>
-        </tr>
-        <tr class="addresses">
-            <td class="name">Адреси:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
-            <td class="value">
-                <ul>
-                    <li>Ужгород, вул. Донського, 1</li>
-                    <li>Ужгород, просп. Свободи, 50</li>
-                    <li>Ужгород, вул. Минайська, 2</li>
-                </ul>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</footer>
+//= modules/footer.html
 </body>
 </html>

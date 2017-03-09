@@ -33,9 +33,7 @@ var main = function () {
         dialogCloseButton = $('dialog .close'),
         setConfirmationParagraph = function () {
             var requiredSum = sum.text(),
-                orderNumber = $('strong.order-number'),
                 totalSum = $('strong.total-sum'),
-                orderNumberInput = $('#order-number'),
                 totalSumInput = $('#total-sum');
             totalSum.text(requiredSum);
             totalSumInput.val(requiredSum);
@@ -54,8 +52,13 @@ var main = function () {
         setSum();
     });
     dialogButton.click(function () {
-        dialog.fadeIn(300);
-        setConfirmationParagraph();
+        if (parseInt(sum.text()) < 200) {
+            alert('Мінімальна вартість замовлення складає 200 грн.!');
+        } else {
+            setConfirmationParagraph();
+            dialog.fadeIn(300);
+            dialog.css('display', 'flex');
+        }
     });
     dialogCloseButton.click(function () {
         dialog.fadeOut(300);

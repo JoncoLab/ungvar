@@ -179,8 +179,34 @@ body {
               }
             }
 
+            &.min-sum-alert {
+
+            }
+
             &.button {
               padding: 0;
+              position: relative;
+
+              &::before {
+                content: 'Мінімальна вартість замовлення складає 200 грн.!';
+                position: absolute;
+                bottom: 50%;
+                right: 150%;
+                width: $line * 50;
+                background: {
+                  color: rgba(255, 0, 0, 0.51);
+                }
+                padding: $line;
+                border: {
+                  radius: $line;
+                  width: $line / 5;
+                  style: solid;
+                  color: black;
+                }
+                font: {
+                  weight: bold;
+                }
+              }
 
               #submit-button {
                 width: 100%;
@@ -204,6 +230,7 @@ body {
         height: 100%;
         top: 0;
         left: 0;
+        align-items: center;
         text: {
           align: left;
         }
@@ -225,6 +252,7 @@ body {
           fieldset {
             border: none;
             margin: $line 0 0 0;
+            padding-left: 0;
 
             legend {
               font: {

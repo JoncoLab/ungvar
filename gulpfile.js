@@ -83,7 +83,10 @@ gulp.task('css:build', function () {
     gulp.src(path.src.css)
         .pipe(compileSass().on('error', compileSass.logError))
         .pipe(cssComb())
-        .pipe(autoPrefix())
+        .pipe(autoPrefix({
+            browsers: ['last 40 versions', '> 90%'],
+            remove: false
+        }))
         .pipe(gulp.dest(path.build.css));
 });
 
