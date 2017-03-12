@@ -1,16 +1,16 @@
 header {
+  //position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-
   background-color: rgba(14, 0, 0, 0.95);
+  padding: $line 0;
 
-  margin-bottom: $line * 2;
   .logo {
     display: flex;
     font: {
       family: "Monotype Corsiva";
       size: $line * 3;
-
     }
     color: $header-text;
     h1{

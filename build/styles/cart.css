@@ -16,7 +16,8 @@ body header
     display: -ms-flexbox;
     display: flex;
 
-    margin-bottom: 20px; 
+    width: 100%;
+    padding: 10px 0; 
 
     background-color: rgba(14, 0, 0, .95);
 

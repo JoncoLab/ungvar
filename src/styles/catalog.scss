@@ -10,9 +10,6 @@ html {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-
   background:{
     image: url("../images/paper-1.png");
   }
@@ -20,16 +17,18 @@ body {
   @import "templates/header";
     
   main {
-    flex-grow: 1;
     text-align: center;
-      
+    width: 70%;
+    margin: 0 auto;
+
     .page-navigation {
+      display: none;
       margin: $line;
       position: fixed;
       font: {
-          family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
-        
+
       ul {
         list-style: none;
 
@@ -61,13 +60,35 @@ body {
         }
       }
     }
+
+    .lending-nav {
+      height: 100%;
+      width: 100%;
+
+      border: {
+        spacing: $line * 2;
+      }
+
+      td {
+        background: {
+          color: rebeccapurple;
+        }
+      }
+
+      .item {
+        height: $line * 15;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
     
     .content {
       text-align: center;
       border-collapse: separate;
       border-spacing: $line * 2;
       margin: 0 auto;
-      width: 70%;
       
       caption {
         display: flex;
@@ -127,7 +148,7 @@ body {
                 top: 0;
                 margin: 0;
 
-                border-radius: 0 0 0 50%;
+                border-radius: 0 0 0 $line *2;
                 border: {
                   left: 1px solid black;
                   bottom: 1px solid black;

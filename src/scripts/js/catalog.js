@@ -1,12 +1,17 @@
-'use strict';
-var main;
-main = function () {
-    $('table').DataTable({
-        "iDisplayLength": 3
-    });
+// 'use strict';
+// var main;
+// main = function () {
+//     var header = $('header'),
+//         main = $('main');
+//     main.css({
+//         'padding-top': header.css('height'),
+//         'transition': '1s linear'
+//     })
+// };
+// $(document).ready(main);
 
-    var searchField = $("#search").val();
-};
-$(document).ready(main);/**
- * Created by Василий on 01.03.2017.
- */
+$(document).ready(function () {
+  $('#input1').change(function () {
+    $('#input2').val($(this).val());
+  });
+});

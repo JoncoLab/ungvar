@@ -1,1 +1,1 @@
-"use strict";var main;main=function(){$("table").DataTable({iDisplayLength:3});$("#search").val()},$(document).ready(main);
+$(document).ready(function(){$("#input1").change(function(){$("#input2").val($(this).val())})});
