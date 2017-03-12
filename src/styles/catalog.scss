@@ -13,6 +13,7 @@ body {
   background:{
     image: url("../images/paper-1.png");
   }
+  min-width: $line * 74;
 
   @import "templates/header";
     
@@ -21,40 +22,71 @@ body {
     width: 70%;
     margin: 0 auto;
 
+    min-width: $line * 74;
+
+    position: relative;
+
     .page-navigation {
-      display: none;
-      margin: $line;
-      position: fixed;
+      //position: absolute;
+
+      width: 100%;
+      margin: 0;
       font: {
         family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
 
+
+      height: 0;
+      visibility: hidden;
+
+
+
+      .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+
+        z-index: 3;
+
+        text-align: center;
+
+        background-color: lighten(white, 40px);
+      }
+
+
       ul {
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin: 0;
+        padding: 0;
+
+        width: 100%;
 
 
         li{
-          margin: $line / 2;
-          text-align: left;
+          margin: 0;
+          text-align: center;
+          display: inline-block;
 
-          padding:0;
-
-          border-radius: 10%;
+          padding: $line;
+          //border-radius: 10px;
 
           background: {
-            color: $header;
+            color: $light;
           }
 
           a {
             color: $header-text;
             font: {
-              size: $line * 1.7;
+              size: $line * 1.2;
             }
             text: {
               decoration: none;
             }
-
-            padding: $line * 2;
 
           }
         }
@@ -70,18 +102,59 @@ body {
       }
 
       td {
+        overflow: hidden;
+        cursor: pointer;
+
         background: {
-          color: rebeccapurple;
+          image: url("../images/374728-svetik.png");
+          size: 100% 100%;
+        }
+        height: $line * 10;
+        vertical-align: bottom;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-shadow: $line/5 0  $line / 5 $line / 5 grey;
+        -moz-box-shadow: $line/5 0  $line / 5 $line / 5 grey    ;
+        box-shadow: $line/5 0  $line / 5 $line / 5 grey    ;
+
+        border-radius: $line * 2;
+        
+        
+        &:hover{
+          vertical-align: middle;
+
+          background-image: none;
+
+          background-color: $light;
+
+          color: darken($light, 20px);
+          text-shadow: 0 0 2px #000;
         }
       }
+      h4{
+        margin: 0;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.6);
 
-      .item {
-        height: $line * 15;
+        padding: $line;
+
+        font: {
+          size: $line * 3.2;
+          family: Arial;
+
+        }
+        text: {
+          transform: uppercase;
+        };
+      }
+
 
         img {
           height: 100%;
         }
-      }
+
     }
     
     .content {
@@ -89,6 +162,8 @@ body {
       border-collapse: separate;
       border-spacing: $line * 2;
       margin: 0 auto;
+
+      display: none;
       
       caption {
         display: flex;
@@ -206,5 +281,6 @@ body {
 
     }
   @import "templates/footer";
+
 }
 

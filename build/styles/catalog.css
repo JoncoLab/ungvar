@@ -9,6 +9,8 @@ html
 
 body
 {
+    min-width: 740px; 
+
     background-image: url('../images/paper-1.png');
 }
 body header
@@ -121,44 +123,78 @@ body header .menu .menu-item .ico
 }
 body main
 {
+    position: relative; 
+
     width: 70%;
-    margin: 0 auto; 
+    min-width: 740px;
+    margin: 0 auto;
 
     text-align: center;
 }
 body main .page-navigation
 {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; 
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 
+    visibility: hidden; 
+
+    width: 100%;
+    height: 0;
+    margin: 0;
+}
+body main .page-navigation .fixed
+{
     position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
 
-    display: none;
+    margin: 0;
 
-    margin: 10px;
+    text-align: center;
+
+    background-color: white;
 }
 body main .page-navigation ul
 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+
+    -webkit-flex-wrap: wrap;
+
+        -ms-flex-wrap: wrap;
+
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 body main .page-navigation ul li
 {
-    margin: 5px;
-    padding: 0;
+    display: inline-block;
 
-    text-align: left;
+    margin: 0;
+    padding: 10px;
 
-    -webkit-border-radius: 10%;
+    text-align: center;
 
-            border-radius: 10%;
-    background-color: rgba(14, 0, 0, .95);
+    background-color: skyblue;
 }
 body main .page-navigation ul li a
 {
-    font-size: 17px;
+    font-size: 12px;
 
-    padding: 20px; 
-
-    text-decoration: none;
+    text-decoration: none; 
 
     color: #faffd8;
 }
@@ -171,19 +207,57 @@ body main .lending-nav
 }
 body main .lending-nav td
 {
-    background-color: rebeccapurple;
+    overflow: hidden;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100px;
+
+    cursor: pointer;
+    vertical-align: bottom;
+
+    -webkit-border-radius: 20px;
+
+            border-radius: 20px; 
+    background-image: url('../images/374728-svetik.png');
+    -o-background-size: 100% 100%;
+       background-size: 100% 100%;
+    -webkit-box-shadow: 2px 0 2px 2px grey;
+       -moz-box-shadow: 2px 0 2px 2px grey;
+            box-shadow: 2px 0 2px 2px grey;
 }
-body main .lending-nav .item
+body main .lending-nav td:hover
 {
-    height: 150px;
+    vertical-align: middle;
+
+    color: #30aadc;
+    background-color: skyblue;
+    background-image: none;
+    text-shadow: 0 0 2px #000;
 }
-body main .lending-nav .item img
+body main .lending-nav h4
+{
+    font-family: Arial;
+    font-size: 32px;
+
+    height: auto;
+    margin: 0;
+    padding: 10px;
+
+    text-transform: uppercase; 
+
+    background-color: rgba(255, 255, 255, .6);
+}
+body main .lending-nav img
 {
     height: 100%;
 }
 body main .content
 {
-    margin: 0 auto; 
+    display: none; 
+
+    margin: 0 auto;
 
     border-spacing: 20px;
     border-collapse: separate;
