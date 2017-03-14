@@ -7,6 +7,9 @@
   <link href="styles/catalog.css" rel="stylesheet">
   <script src="scripts/js/jquery-3.1.1.js"></script>
   <script src="scripts/js/catalog.js"></script>
+  <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
 </head>
 
 <body> 
@@ -27,6 +30,7 @@
       </nav>
   </header>
   <main>
+
     <nav class="page-navigation">
       <ul  id="page">
         <li><a href="#meat">М'ясо</a></li>
@@ -59,27 +63,16 @@
       </tr>
     </table>
     <table class="content">
-      <caption>
-        <hr>
-        <span>Мяско і рибка</span>
-        <hr>
-      </caption>
-    <!--<input type="search" id="input1">-->
-    <!--<input type="search" id="input2">-->
+
+      <thead style="display: none">
       <tr>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">54.90 <span>грн/шт</span></h4> </td>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
+      </thead>
+      <tbody>
       <tr>
         <td class="item"> <img src="images/374728-svetik.png">
           <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
@@ -122,6 +115,8 @@
           <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
           <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
       </tr>
+      </tbody>
+
     </table>
   </main> 
   <footer>

@@ -462,3 +462,16 @@ body footer .contacts .addresses ul
 
     list-style: none;
 }
+body #DataTables_Table_0_wrapper
+{
+    display: none;
+
+    margin-top: 40px;
+}
+body #DataTables_Table_0_wrapper > *
+{
+    display: inline-block;
+    float: none;
+
+    text-align: center;
+}

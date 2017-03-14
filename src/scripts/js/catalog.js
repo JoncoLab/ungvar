@@ -16,6 +16,11 @@ $(document).ready(function () {
   });
 
 
+    $('table.content').DataTable({
+        "iDisplayLength": 2
+    });
+
+
   var avatarElem = document.getElementById('page'),
       avatarSourceTop = avatarElem.getBoundingClientRect().top + window.pageYOffset;
     window.onscroll = function() {
@@ -35,11 +40,17 @@ $(document).ready(function () {
        });
 
           $('.content').css('display', 'table');
+          $('#DataTables_Table_0_wrapper ').css('display', 'block');
       });
+
   };
   showingCatalog();
 
   var catalogMarginTop = $('.page-navigation ul').css('height');
     $('table.content').css('margin-top', catalogMarginTop);
 
+
+
 });
+
+

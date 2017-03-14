@@ -163,7 +163,7 @@ body {
       border-spacing: $line * 2;
       margin: 0 auto;
 
-      display: none;
+       display: none;
       
       caption {
         display: flex;
@@ -281,6 +281,21 @@ body {
 
     }
   @import "templates/footer";
+
+  #DataTables_Table_0_wrapper {
+    display: none;
+
+    margin-top: $line * 4;
+
+    &>* {
+      display: inline-block;
+      float: none;
+      text-align: center;
+    }
+
+  }
+
+
 
 }
 
