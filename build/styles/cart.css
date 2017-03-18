@@ -42,7 +42,7 @@ body header .logo
 
     display: flex;
 
-    color: #faffd8;
+    color: rgba(250, 255, 216, .8);
 }
 body header .logo h1
 {
@@ -93,7 +93,7 @@ body header .menu .menu-item
     color: black;
     -webkit-border-radius: 10%;
             border-radius: 10%;
-    background-color: #faffd8;
+    background-color: rgba(250, 255, 216, .8);
     -webkit-box-shadow: 0 0 1px 3px #b4b996;
             box-shadow: 0 0 1px 3px #b4b996;
 

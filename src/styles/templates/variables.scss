@@ -6,7 +6,9 @@ $light: skyblue;
 $context: lightgreen;
 $background: rgba(255, 231, 162, 1);
 $header: rgba(14, 0, 0, 0.95);
-$header-text: rgba(250, 255, 216, 1);
+$nav-element: rgba(234,255,145, 0.9);
+$header-text: rgba(250, 255, 216, 0.8);
+$red: #6f0300;
 
 @mixin button() {
   font: {
