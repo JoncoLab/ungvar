@@ -7,8 +7,6 @@
   <link href="styles/catalog.css" rel="stylesheet">
   <script src="scripts/js/jquery-3.1.1.js"></script>
   <script src="scripts/js/catalog.js"></script>
-  <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
 </head>
 
@@ -34,7 +32,7 @@
     <ul  class="main-navigation">
       <li>
         <a href="#category" id="category-button">Інша категорія <img src="SVG/back.svg" class="category"></a>
-        <a href="#start" id="start">На початок <img src="SVG/back.svg" class="start"></a>
+        <a href="#start" id="start">Вверх<img src="SVG/back.svg" class="start"></a>
 
         <ul class="category-nav">
           <li>pisya</li>
@@ -43,7 +41,7 @@
           <li>pisya</li>
         </ul>
       </li>
-      <li><a href="#cart">Корзина <img src="SVG/cart.svg" class="cart"></a></li>
+      <li><a href="../cart.php">Корзина <img src="SVG/cart.svg" class="cart"></a></li>
     </ul>
     </nav>
   </header>
@@ -51,6 +49,14 @@
 
 
     <table class="lending-nav">
+      <tr>
+        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
+        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
+        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
+        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
+        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
+
+      </tr>
       <tr>
         <td class="item bulki"><h4>Salo</h4></td>
         <td class="item"><h4>Salo</h4></td>
@@ -60,91 +66,69 @@
 
       </tr>
       <tr>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
+        <td class="item bulki"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+
       </tr>
       <tr>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
-        <td class="item">Salo</td>
+        <td class="item bulki"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+        <td class="item"><h4>Salo</h4></td>
+
       </tr>
     </table>
 
     <section class="category">
       <div class="category-manage">
-
         <h2>
           <hr>
           Мясо
           <hr>
         </h2>
-
-        <label>Пошук по категорії:<input type="search" name="search" placeholder="Введіть запит"></label>
-
-
-
+        <label>Пошук по категорії:<input type="search" name="search" placeholder="Введіть запит" id="search"></label>
       </div>
-    <table class="content">
-
-      <thead style="display: none">
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name"></h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-      </tr>
-      <tr>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-      </tr>
-      <tr>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-        <td class="item"> <img src="images/374728-svetik.png">
-          <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-          <h4 class="price">11s54.90 <span>грн/шт</span></h4> </td>
-      </tr>
-      </tbody>
-
-    </table>
+    <ul class="content">
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">класний пацан був</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">хуй сушений</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+      <li class="item">
+        <img src="images/374728-svetik.png">
+        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
+        <h4 class="price">1154.90 <span>грн/шт</span></h4>
+      </li>
+    </ul>
     </section>
   </main> 
   <footer>

@@ -231,7 +231,7 @@ body {
       }
     }
   }
-    
+
   main {
     text-align: center;
     width: 70%;
@@ -255,6 +255,8 @@ body {
         overflow: hidden;
         cursor: pointer;
 
+        width: 20%;
+
         background: {
           image: url("../images/374728-svetik.png");
           size: 100% 100%;
@@ -265,13 +267,13 @@ body {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        -webkit-box-shadow: $line/5 0  $line / 5 $line / 5 grey;
-        -moz-box-shadow: $line/5 0  $line / 5 $line / 5 grey    ;
-        box-shadow: $line/5 0  $line / 5 $line / 5 grey    ;
+        -webkit-box-shadow: $line/10 0  $line / 5 $line / 5 $header;
+        -moz-box-shadow: $line/5 0  $line / 5 $line / 5 $header ;
+        box-shadow: $line/10 0  $line / 2 $line / 10 $header;
 
         border-radius: $line * 2;
-        
-        
+
+
         &:hover{
           vertical-align: middle;
 
@@ -281,6 +283,11 @@ body {
 
           color: darken($light, 20px);
           text-shadow: 0 0 2px #000;
+          h4{
+            img{
+              display: inline-block;
+            }
+          }
         }
       }
       h4{
@@ -293,11 +300,15 @@ body {
         font: {
           size: $line * 3.2;
           family: Arial;
-
         }
         text: {
           transform: uppercase;
         };
+
+        img{
+          height: $line * 2.4;
+          display: none;
+        }
       }
 
 
@@ -316,32 +327,38 @@ body {
       .category-manage{
 
         display: flex;
+        flex-direction: column;
         //position: fixed;
         align-items: center;
 
         margin-top: $line * 5;
-        padding-left: $line * 6;
+        margin-bottom: 0;
 
         width: 100%;
 
         h2{
           display: flex;
+          width: 30%;
 
           color: $red;
           margin: $line * 1.5;
+          margin-bottom: 0;
 
           font: {
-            weight: normal;
-            size: $line * 1.8;
+            weight: bold;
+            size: $line * 3;
           }
           text: {
             transform: uppercase;
+            shadow: 1px 1px 1px $header-text;
           }
 
           hr {
             flex-grow: 1;
             height: $line / 7;
             background-color: $red;
+
+            margin: auto $line;
           }
 
         }
@@ -355,12 +372,18 @@ body {
             transform: lowercase;
           }
 
+          margin-top: $line;
+
           input{
             border: none;
             margin-left: $line;
             background-color: $header-text;
 
             padding: $line / 2;
+
+            text: {
+              transform: capitalize;
+            }
 
           }
         }
@@ -371,114 +394,95 @@ body {
         border-collapse: separate;
         border-spacing: $line * 2;
         margin: 0 auto;
+        padding: 0;
 
+        margin-top: $line;
+
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
         //display: none;
-
-
-        tr {
-          box-sizing: border-box;
-
-          td {
+          li {
             position: relative;
+
+            width: 15%;
             box-sizing: border-box;
-            background-color: white;
             min-height: $line * 3;
-            border: $line / 5 solid black;
-            border-radius: 10%;
+            padding: $line / 2;
 
-            padding: 0;
-
-            overflow: hidden;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 $line $line / 4;
 
             @include item;
 
             img {
               width: 100%;
+              //border: $line / 5 solid black;
+              border-radius: 40px;
+
+              -webkit-box-shadow: 1px 1px 1px 0 $header;
+              -moz-box-shadow: 1px 1px 1px 0 $header;
+              -moz-box-shadow: 1px 1px 1px 0 $header;
+              box-shadow: 1px 1px 1px 0 $header;
+
             }
 
             .name,
             .price {
               margin: 0;
+              margin-bottom: $line / 2;
+
+              text: {
+                transform: capitalize;
+              }
             }
 
             .name {
-              margin-bottom: 0;
               width: 100%;
               padding: $line / 3;
+              padding-top: 0;
+              margin-top: $line / 2;
 
               font: {
-                weight: normal;
-                size: $line * 1.5;
+                weight: bold;
+                size: $line * 1.2;
               }
             }
 
             .price {
-              position: absolute;
+              border-radius: $line *2;
+              //border: 1px solid black;
+              -webkit-box-shadow: 1px 1px 1px 1px $header;
+              -moz-box-shadow:  1px 1px 1px 1px $header    ;
+              box-shadow:  1px 1px 1px 1px $header    ;
 
-              z-index: 2;
+              background-color: $red;
+              color: $header-text;
 
-              right: 0;
-              top: 0;
-              margin: 0;
-
-              border-radius: 0 0 0 $line *2;
-              border: {
-                left: 1px solid black;
-                bottom: 1px solid black;
-              }
-
-              padding: 2%;
-              padding-top: .5%;
-
-              background-color: $light;
-
+              padding: $line / 2;
               font: {
-                size: $line * 2;
+                size: $line * 1.4;
               }
+
               span {
-                font-size: $line*1.2;
+                font-size: $line;
+
+                text-transform: lowercase;
               }
             }
           }
 
           text-align-last: center;
-        }
 
       }
     }
-      
+
     }
   @import "templates/footer";
-
-  #DataTables_Table_0_wrapper {
-
-    &>* {
-      display: inline-block;
-      float: none;
-      text-align: center;
-    }
-
-    .dataTables_info,
-    .dataTables_length{
-      display: none;
-    }
-
-    .dataTable {
-      border-bottom: none !important;
-    }
-    .paginate_button.previous,
-    .paginate_button.next {
-      display: none;
-    }
-
-    .dataTables_filter{
-      display: none;
-
-    }
-
-  }
-
-
-
 }
 

@@ -11,14 +11,13 @@
 // $(document).ready(main);
 
 $(document).ready(function () {
-  $('#input1').change(function () {
-    $('#input2').val($(this).val());
+  $('#search').change(function () {
+      var userSearch = $(this).val();
+      // alert(userSearch);
+
+      $('.content li').hide();
+      $('.content li:contains(' + userSearch + ')').show();
   });
-
-
-    $('table.content').DataTable({
-        "iDisplayLength": 2
-    });
 
 
   var avatarElem = document.getElementById('page'),
@@ -36,7 +35,7 @@ $(document).ready(function () {
 
     var liftSize = $('header').css('height');
     $('#start').click(function () {
-        window.scrollTo(0, liftSize);
+        window.scrollTo(0, 0);
     });
 
 
@@ -61,12 +60,6 @@ $(document).ready(function () {
 
   var catalogMarginTop = $('.page-navigation ul').css('height');
     $('section.category').css('margin-top', catalogMarginTop);
-
-
-
-
-
-
 
 });
 
