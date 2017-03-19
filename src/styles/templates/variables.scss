@@ -8,6 +8,7 @@ $background: rgba(255, 231, 162, 1);
 $header: rgba(14, 0, 0, 0.95);
 $nav-element: rgba(234,255,145, 0.9);
 $header-text: rgba(250, 255, 216, 0.8);
+$item-light: rgba(250, 255, 216, 0.9);
 $red: #6f0300;
 $white: rgba(255,255,255,0.5);
 
@@ -61,4 +62,34 @@ $white: rgba(255,255,255,0.5);
 
     cursor: pointer;
   }
+}
+
+@mixin button-2 {
+  border-radius: $line *2;
+  //border: 1px solid black;
+  -webkit-box-shadow: 1px 1px 1px 1px $header;
+  -moz-box-shadow: 1px 1px 1px 1px $header;
+  box-shadow: 1px 1px 1px 1px $header;
+
+  background-color: $red;
+  color: $header-text;
+
+  padding: $line / 2;
+  font: {
+    size: $line * 1.4;
+  }
+}
+
+@mixin input {
+    border: none;
+    border-radius: $line * 2;
+
+    margin-left: $line;
+    background-color: $header-text;
+
+    padding: $line / 2;
+
+    text: {
+      transform: capitalize;
+    }
 }

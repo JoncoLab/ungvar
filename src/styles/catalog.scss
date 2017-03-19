@@ -47,7 +47,7 @@ body {
       top: 0;
       left: 0;
       margin: 0;
-      z-index: 3;
+      z-index: 21;
 
       text-align: center;
 
@@ -279,13 +279,16 @@ body {
 
           background-image: none;
 
-          background-color: $light;
+          background-color: $item-light;
 
-          color: darken($light, 20px);
-          text-shadow: 0 0 2px #000;
+          color: white;
+          text-shadow: 0 0 1px $header;
           h4{
+            background-color: transparent;
+            color: $red;
             img{
               display: inline-block;
+
             }
           }
         }
@@ -318,11 +321,8 @@ body {
 
     }
     section {
-
       display: none;
       position: relative;
-
-
 
       .category-manage{
 
@@ -332,7 +332,7 @@ body {
         align-items: center;
 
         margin-top: $line * 5;
-        margin-bottom: 0;
+        margin-bottom: $line * 2;
 
         width: 100%;
 
@@ -372,19 +372,10 @@ body {
             transform: lowercase;
           }
 
-          margin-top: $line;
+          margin-top: $line / 2;
 
           input{
-            border: none;
-            margin-left: $line;
-            background-color: $header-text;
-
-            padding: $line / 2;
-
-            text: {
-              transform: capitalize;
-            }
-
+            @include input();
           }
         }
 
@@ -418,7 +409,95 @@ body {
             justify-content: space-between;
             margin: 0 $line $line / 4;
 
+            //overflow: hidden;
             @include item;
+
+            .details{
+              position: absolute;
+              width: 120%;
+              background-color: $item-light;
+
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+
+              box-shadow: $line / 10 $line / 10 $line / 2 $line / 10 $header;
+
+              padding: $line;
+
+              z-index: 20;
+
+              border-radius: $line;
+
+              opacity: 0;
+
+              h4{
+                color: $red;
+
+                margin-bottom: 0;
+
+                font: {
+                  size: $line * 1.2;
+                }
+                text: {
+                  transform: uppercase;
+                }
+              }
+              small {
+                font: {
+                  weight: bold;
+                }
+                text: {
+                  decoration: underline;
+                }
+                margin-bottom: $line / 2;
+              }
+
+              p{
+                padding: 0;
+                margin: 0;
+
+                font: {
+                  size: $line * 1.1;
+                }
+              }
+
+              label{
+                margin-top: $line / 5;
+
+                font: {
+                  size: $line * 1.2;
+                }
+                text: {
+                  transform: lowercase;
+                }
+              }
+
+              input#amount {
+                @include input();
+
+                width: 40%;
+                margin-left: 0;
+                //margin-top: $line / 2;
+
+                box-shadow: 0 0 $line / 10 $line / 10 $header
+              }
+
+              .add {
+                @include button-2;
+                border: none;
+                text-shadow: 1px 1px 1px $header;
+
+                margin-top: $line;
+
+                width: 70%;
+
+                font: {
+                  size: $line * 2;
+                }
+              }
+            }
 
             img {
               width: 100%;
@@ -429,9 +508,7 @@ body {
               -moz-box-shadow: 1px 1px 1px 0 $header;
               -moz-box-shadow: 1px 1px 1px 0 $header;
               box-shadow: 1px 1px 1px 0 $header;
-
             }
-
             .name,
             .price {
               margin: 0;
@@ -455,19 +532,11 @@ body {
             }
 
             .price {
-              border-radius: $line *2;
-              //border: 1px solid black;
-              -webkit-box-shadow: 1px 1px 1px 1px $header;
-              -moz-box-shadow:  1px 1px 1px 1px $header    ;
-              box-shadow:  1px 1px 1px 1px $header    ;
+              @include button-2;
+              background-color: $light;
+              color: $header;
 
-              background-color: $red;
-              color: $header-text;
 
-              padding: $line / 2;
-              font: {
-                size: $line * 1.4;
-              }
 
               span {
                 font-size: $line;

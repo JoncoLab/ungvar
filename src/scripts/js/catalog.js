@@ -61,6 +61,13 @@ $(document).ready(function () {
   var catalogMarginTop = $('.page-navigation ul').css('height');
     $('section.category').css('margin-top', catalogMarginTop);
 
+    $('.item').click(function () {
+        $(this).children($('.details')).css('opacity', 1);
+    });
+    $('.details').mouseleave(function () {
+        $(this).css('opacity', 0);
+    })
+
 });
 
 
