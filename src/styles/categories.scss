@@ -1,0 +1,243 @@
+@import "templates/variables";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include body-style();
+  @import "templates/header";
+  @import "templates/catalog-navigation";
+
+  main {
+    transition: {
+      duration: $time;
+      timing-function: linear;
+    }
+
+    .add {
+      @include add();
+      top: $line * 15;
+      right: $line;
+    }
+
+    .content {
+      position: relative;
+
+      .content-manage {
+        display: flex;
+        flex-direction: column;
+        margin: $line * 2 0 0;
+        width: 100%;
+
+        .heading {
+          width: 60%;
+          display: flex;
+          align-items: center;
+          margin: 0 auto;
+
+          h2 {
+            color: $red;
+            margin: 0 $line * 1.5;
+
+            font: {
+              weight: bold;
+              size: $line * 3;
+            }
+          }
+
+          hr {
+            flex-grow: 1;
+            border: {
+              color: $red;
+            }
+          }
+        }
+
+        .search {
+          margin: $line auto 0;
+          label {
+            font: {
+              size: $line * 1.5;
+              weight: bold;
+            }
+            color: $red;
+
+            margin: 0 $line / 2 0 0;
+          }
+
+          #search {
+            @include input();
+            border: {
+              top-right-radius: 0;
+              bottom-right-radius: 0;
+            }
+          }
+
+          #search-button {
+            @include button();
+            padding: $line;
+            border: {
+              top-left-radius: 0;
+              bottom-left-radius: 0;
+            }
+            margin-left: $line / -2;
+          }
+        }
+      }
+
+      .items {
+        text: {
+          align: center;
+        }
+        margin: $line auto 0;
+        padding: 0;
+        width: 80%;
+
+        list-style: none;
+        justify-content: center;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .item {
+          position: relative;
+
+          width: 15%;
+          min-height: $line * 15;
+          padding: $line / 2;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 0 $line $line * 3;
+
+          @include item();
+
+          .details {
+            position: absolute;
+            width: 120%;
+            background-color: $light;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: $line / 10 $line / 10 $line / 2 $line / 10 $dark;
+
+            padding: $line;
+
+            z-index: 20;
+
+            border-radius: $line;
+
+            opacity: 0;
+
+            h4 {
+              color: $red;
+
+              margin-bottom: 0;
+
+              font: {
+                size: $line * 1.2;
+              }
+              text: {
+                transform: uppercase;
+              }
+            }
+
+            small {
+              font: {
+                weight: bold;
+              }
+              text: {
+                decoration: underline;
+              }
+              margin-bottom: $line / 2;
+            }
+
+            p {
+              padding: 0;
+              margin: 0;
+
+              font: {
+                size: $line * 1.1;
+              }
+            }
+
+            label {
+              margin-top: $line / 5;
+
+              font: {
+                size: $line * 1.2;
+              }
+              text: {
+                transform: lowercase;
+              }
+            }
+
+            input#amount {
+              @include input();
+
+              width: 40%;
+              margin-left: 0;
+              //margin-top: $line / 2;
+
+              box-shadow: 0 0 $line / 10 $line / 10 $dark
+            }
+
+            .add {
+              @include button-2();
+              border: none;
+              text-shadow: 1px 1px 1px $dark;
+
+              margin-top: $line;
+
+              width: 70%;
+
+              font: {
+                size: $line * 2;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            border: {
+              radius: $line * 2;
+            }
+            box-shadow: $line / 10 $line / 10 $line / 10 0 $dark;
+          }
+
+          .name {
+            width: 100%;
+            padding: 0;
+            margin: $line / 2 0;
+
+            font: {
+              weight: bold;
+              size: $line * 1.5;
+            }
+          }
+
+          .price {
+            @include button-2();
+            font: {
+              size: $line * 1.5;
+            }
+            margin: $line / 5;
+          }
+        }
+
+        text-align-last: center;
+      }
+    }
+  }
+
+  @import "templates/footer";
+}

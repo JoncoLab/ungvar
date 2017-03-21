@@ -1,177 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <title>Ungvar Online</title>
   <link href="styles/catalog.css" rel="stylesheet">
   <script src="scripts/js/jquery-3.1.1.js"></script>
   <script src="scripts/js/catalog.js"></script>
-
 </head>
-
-<body> 
-  <header>
-      <div class="logo">
-          <img src="#">
-          <h1>Ungvar</h1>
-      </div>
-      <nav class="menu">
-          <a class="menu-item" href="index.html">
-              <img class="ico" src="SVG/catalog.svg">
-              <span>Catalog</span>
-          </a>
-          <a class="menu-item" href="../cart.php">
-              <img class="ico" src="SVG/cart.svg">
-              <span>Cart</span>
-          </a>
-      </nav>
-  </header>
-  <header class="page-navigation">
-    <nav id="page">
-    <ul  class="main-navigation">
-      <li>
-        <a href="#category" id="category-button">Інша категорія <img src="SVG/back.svg" class="category"></a>
-        <a href="#start" id="start">Вверх<img src="SVG/back.svg" class="start"></a>
-
-        <ul class="category-nav">
-          <li>pisya</li>
-          <li>pisya</li>
-          <li>pisya</li>
-          <li>pisya</li>
-        </ul>
-      </li>
-      <li><a href="../cart.php">Корзина <img src="SVG/cart.svg" class="cart"></a></li>
-    </ul>
+<body>
+<header id="main-header">
+    <div class="logo">
+        <h1>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="title">
+                <small class="dot">⦁</small>
+                <span>UNGVAR</span>
+                <small class="dot">⦁</small>
+                <span>ONLINE</span>
+                <small class="dot">⦁</small>
+            </span>
+        </h1>
+        <div class="corner"></div>
+        <div class="corner"></div>
+        <div class="corner"></div>
+        <div class="corner"></div>
+    </div>
+    <nav id="customers-info">
+        <p>
+            <span>Звертаємо увагу користувачів те, що </span>
+            <strong>мінімальна сума замовлення становить 200 грн.</strong><br>
+            <span>Приємних покупок в</span>
+            <strong class="ungvar">Ungvar'і!</strong>
+        </p>
+        <p>
+            <span>Якщо у вас виникли запитання, скарги, чи пропозиції, зв'яжіться з наит одразу за допомогою</span>
+            <a href="feedback.html">електронної форми</a>,
+            <span>або скористайтеся одним з контактів, які ви знайдете у</span>
+            <b class="to-footer">підвалі сайту</b>.
+        </p>
     </nav>
-  </header>
-  <main>
-
-
-    <table class="lending-nav">
-      <tr>
-        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
-        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
-        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
-        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
-        <td class="item"><h4>Salo <img src="SVG/play-button.svg"></h4></td>
-
-      </tr>
-      <tr>
-        <td class="item bulki"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-
-      </tr>
-      <tr>
-        <td class="item bulki"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-
-      </tr>
-      <tr>
-        <td class="item bulki"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-        <td class="item"><h4>Salo</h4></td>
-
-      </tr>
+</header>
+<main>
+  <aside class="add empty"></aside>
+  <table class="landing-nav">
+    <tr>
+      <td class="item">
+        <a class="item-container" href="category-water.html">
+          <h4>
+            <span>Вода</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-juice.html">
+          <h4>
+            <span>Cоки</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-drinks.html">
+          <h4>
+            <span>Інші напої</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-tea.html">
+          <h4>
+            <span>Чай</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-coffee.html">
+          <h4>
+            <span>Кава</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-confectionery.html">
+          <h4>
+            <span>Кондитерські вироби</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">
+        <a class="item-container" href="category-bread.html">
+          <h4>
+            <span>Хліб</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-meat.html">
+          <h4>
+            <span>М'ясні вироби</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-seafood.html">
+          <h4>
+            <span>Риба та морепродукти</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-grocery.html">
+          <h4>
+            <span>Бакалія</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-cheese.html">
+          <h4>
+            <span>Сири</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-dairy.html">
+          <h4>
+            <span>Молочна продукція</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">
+        <a class="item-container" href="category-fruits.html">
+          <h4>
+            <span>Фрукти</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-vegetables.html">
+          <h4>
+            <span>Овочі</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-frozen.html">
+          <h4>
+            <span>Напівфабрикати</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-chemicals.html">
+          <h4>
+            <span>Побутова хімія</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-spirits.html">
+          <h4>
+            <span>Міцні напої</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+      <td class="item">
+        <a class="item-container" href="category-tobacco.html">
+          <h4>
+            <span>Тютюнові вироби</span>
+            <img src="SVG/continue-arrow.svg">
+          </h4>
+        </a>
+      </td>
+    </tr>
+  </table>
+  <aside class="add empty"></aside>
+</main>
+<footer>
+    <aside class="add empty"></aside>
+    <table class="contacts">
+        <tbody>
+        <tr class="mail">
+            <td class="name">Електронна пошта:</td>
+            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="value">info@ungvar.com</td>
+        </tr>
+        <tr class="tel">
+            <td class="name">Телефон:</td>
+            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="value">+380 (95) 498 82 73 (Олексій)</td>
+        </tr>
+        <tr class="addresses">
+            <td class="name">Адреси:</td>
+            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="value">
+                <ul>
+                    <li>Ужгород, вул. Донського, 1</li>
+                    <li>Ужгород, просп. Свободи, 50</li>
+                    <li>Ужгород, вул. Минайська, 2</li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
     </table>
-
-    <section class="category">
-      <div class="category-manage">
-        <h2>
-          <hr>
-          Мясо
-          <hr>
-        </h2>
-        <label>Пошук по категорії:<input type="search" name="search" placeholder="Введіть запит" id="search"></label>
-      </div>
-    <ul class="content">
-      <li class="item">
-        <div class="details">
-          <img src="images/374728-svetik.png">
-          <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
-          <small>1154.90 <span>грн/шт</span></small>
-          <!--<p>*Опис товару*</p>-->
-          <input type="number" id="amount" min="1">
-          <label for="amount">Виберіть кількість</label>
-          <button type="button" class="add">Купити</button>
-        </div>
-        <img src="images/374728-svetik.png">
-        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
-        <h4 class="price button">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <span>Нажми на віконце товару першого</span>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">класний пацан був</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">хуй сушений</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">ковбаса лікарська, дрогобич, напівсушена</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-      <li class="item">
-        <img src="images/374728-svetik.png">
-        <h4 class="name">Ковбаса лікарська, Дрогобич, напівсушена 100г</h4>
-        <h4 class="price">1154.90 <span>грн/шт</span></h4>
-      </li>
-    </ul>
-    </section>
-  </main> 
-  <footer>
-      <aside class="add">
-          <a href="#">
-              Place for your add (400 * 100)
-          </a>
-      </aside>
-      <table class="contacts">
-          <tbody>
-          <tr class="mail">
-              <td class="name">Електронна пошта:</td>
-              <td class="icon"><img src="SVG/cart.svg"></td>
-              <td class="value">info@ungvar.com</td>
-          </tr>
-          <tr class="tel">
-              <td class="name">Телефон:</td>
-              <td class="icon"><img src="SVG/cart.svg"></td>
-              <td class="value">+380 (95) 498 82 73 (Олексій)</td>
-          </tr>
-          <tr class="addresses">
-              <td class="name">Адреси:</td>
-              <td class="icon"><img src="SVG/cart.svg"></td>
-              <td class="value">
-                  <ul>
-                      <li>Ужгород, вул. Донського, 1</li>
-                      <li>Ужгород, просп. Свободи, 50</li>
-                      <li>Ужгород, вул. Минайська, 2</li>
-                  </ul>
-              </td>
-          </tr>
-          </tbody>
-      </table>
-  </footer>
-  </body>
+</footer>
+<script src="scripts/js/adds.js"></script>
+</body>
 </html>

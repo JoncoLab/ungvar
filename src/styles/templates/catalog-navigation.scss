@@ -1,0 +1,256 @@
+.catalog-navigation {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font: {
+    family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+
+  #page {
+    width: 100%;
+    padding: 0;
+    height: 0;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      z-index: 21;
+
+      text-align: center;
+
+      .main-navigation {
+        padding: $line 0 $line / 2;
+      }
+    }
+
+    .main-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      margin: 0;
+      padding: $line / 2 0;
+
+      width: 100%;
+      background: {
+        color: $yellow;
+      }
+
+      border: {
+        bottom: $line / 3 solid $red;
+      }
+
+      transform: translateX(-100%);
+
+      transition: {
+        duration: $time * 2;
+        timing-function: ease-out;
+      }
+
+      li {
+        display: flex;
+        margin: 0;
+        position: relative;
+
+        text-align: center;
+
+        &:first-of-type {
+
+          #start-button,
+          #categories-button {
+            margin-right: $line * 2;
+          }
+        }
+
+        #start-button {
+          opacity: 0;
+        }
+
+        #start-button,
+        #categories-button,
+        a {
+          color: $red;
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 100%;
+
+          font: {
+            size: $line * 1.2;
+            weight: bold;
+          }
+          text: {
+            decoration: none;
+            transform: uppercase;
+          }
+
+          padding: 0;
+
+          cursor: pointer;
+
+          img {
+            padding: $line / 2;
+            margin-left: $line / 2;
+
+            border-radius: 50%;
+            box-shadow: $line / 10 $line / 10 $line / 10 0 $red;
+
+            z-index: 5;
+
+            transition: {
+              duration: $time / 2;
+              timing-function: linear;
+            }
+
+            &.cart {
+              background-color: $red;
+              height: $line * 2.5;
+              padding: $line;
+              margin: $line 0 0 $line;
+              position: absolute;
+            }
+
+            &.categories {
+              transform: rotate(90deg);
+            }
+
+            &.start {
+              transform: rotate(90deg);
+
+              transition: {
+                duration: $time;
+              }
+            }
+
+            &.start,
+            &.categories {
+              height: $line * 1.5;
+              background-color: $darkyellow;
+            }
+          }
+
+          &:hover img {
+
+            &.cart {
+              animation: {
+                name: shake;
+                duration: $time;
+                timing-function: linear;
+              }
+            }
+
+            &.categories {
+              transform: rotate(270deg);
+            }
+
+            &.start {
+              transform: rotate(450deg);
+            }
+          }
+        }
+
+        .categories-nav {
+          z-index: 11;
+          position: absolute;
+          right: 100%;
+          top: 100%;
+          display: none;
+          flex-direction: column;
+          align-content: flex-start;
+          background: {
+            color: transparent;
+          }
+
+          margin: 0;
+          padding: 0;
+          width: 100%;
+
+          overflow: hidden;
+
+          transition: none;
+
+          li {
+            opacity: 0;
+            position: relative;
+            display: list-item;
+            padding: $line / 2 $line;
+            width: 100%;
+
+            background: {
+              color: $yellow;
+            }
+
+            cursor: pointer;
+            color: $red;
+
+            font: {
+              size: $line * 1.4;
+            }
+
+            transition: {
+              property: background-color, opacity;
+              duration: $time / 2, $time / 3;
+              timing-function: linear, linear;
+            }
+
+            &:last-of-type {
+              border: {
+                bottom: $line / 3 solid $red;
+              }
+            }
+
+            &:not(:last-of-type) {
+              border: {
+                bottom: $line / 10 solid $light;
+              }
+            }
+
+            &:hover{
+              background: {
+                color: $darkyellow;
+              }
+
+              &::before {
+                width: $line *2;
+                left: $line;
+                height:  $line * 2;
+                background: {
+                  image: url("../SVG/continue-arrow.svg");
+                }
+                position: absolute;
+                z-index: 100;
+                content: '';
+              }
+            }
+
+            &:active{
+              background: {
+                color: $light;
+              }
+            }
+
+            @for $i from 1 through 18 {
+              &:nth-of-type(#{$i}) {
+                transition: {
+                  delay: 0s, ($time / 6) * $i;
+                }
+              }
+            }
+
+            &.backwards {
+              @for $i from 1 through 18 {
+                &:nth-of-type(#{19 - $i}) {
+                  transition: {
+                    delay: 0s, ($time / 6) * $i;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

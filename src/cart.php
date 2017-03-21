@@ -1,11 +1,9 @@
-
-
 <!doctype html>
 <html>
 <head>
     <head>
         <meta charset="UTF-8">
-        <title>Ungvar Online</title>
+        <title>Ungvar Online - cart</title>
         <link href="styles/cart.css" rel="stylesheet">
         <script src="scripts/js/jquery-3.1.1.js"></script>
         <script src="scripts/js/cart.js"></script>
@@ -15,11 +13,7 @@
 <body>
 //= modules/header.html
 <main>
-    <aside class="add">
-        <a href="#">
-            Place for your add (100 * 300)
-        </a>
-    </aside>
+    <aside class="add empty"></aside>
     <section class="content">
         <table class="items">
             <thead>
@@ -160,12 +154,9 @@
             </form>
         </div>
     </section>
-    <aside class="add">
-        <a href="#">
-            Place for your add (100 * 300)
-        </a>
-    </aside>
+    <aside class="add empty"></aside>
 </main>
 //= modules/footer.html
+<script src="scripts/js/adds.js"></script>
 </body>
 </html>

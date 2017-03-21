@@ -9,7 +9,7 @@ body {
 }
 
 body {
-
+  @include body-style();
   @import "templates/header";
 
   main {
@@ -18,15 +18,16 @@ body {
     justify-content: space-around;
 
     .add {
-      background: $light;
-      align-self: center;
-      height: $line * 30;
-      width: $line * 10;
+      @include add();
 
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
+      &:first-of-type {
+        left: $line;
+        top: $line * 15;
+      }
+
+      &:last-of-type {
+        right: $line;
+        top: $line * 15;
       }
     }
 
@@ -86,7 +87,7 @@ body {
 
             &:hover {
               background: {
-                color: $context;
+                color: $yellow;
               }
 
               transition: {
@@ -208,7 +209,7 @@ body {
                 width: 100%;
                 height: $line * 4;
 
-                @include button;
+                @include button();
               }
             }
           }
@@ -244,7 +245,7 @@ body {
           }
           position: relative;
 
-          box-shadow: $line / 2 $line / 2 0 0 $context;
+          box-shadow: $line / 2 $line / 2 0 0 $yellow;
 
           fieldset {
             border: none;
@@ -290,7 +291,7 @@ body {
                 display: none;
 
                 + label {
-                  @include button;
+                  @include button();
                   display: inline-block;
                   padding: $line;
                   margin: 0 $line * 2 0 0;
@@ -308,7 +309,7 @@ body {
               label {
                 display: inline-block;
                 background: {
-                  color: $context;
+                  color: $yellow;
                 }
                 padding: $line / 2;
                 margin: $line / 2 0;
@@ -349,7 +350,7 @@ body {
               text: {
                 align: center;
               }
-              @include button;
+              @include button();
               padding: $line;
             }
           }
@@ -373,11 +374,5 @@ body {
       }
     }
   }
-
-  footer,
-  header {
-    min-height: 15%;
-  }
-
   @import "templates/footer";
 }

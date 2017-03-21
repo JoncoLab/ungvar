@@ -1,11 +1,9 @@
-
-
 <!doctype html>
 <html>
 <head>
     <head>
         <meta charset="UTF-8">
-        <title>Ungvar Online</title>
+        <title>Ungvar Online - cart</title>
         <link href="styles/cart.css" rel="stylesheet">
         <script src="scripts/js/jquery-3.1.1.js"></script>
         <script src="scripts/js/cart.js"></script>
@@ -13,28 +11,43 @@
     </head>
 </head>
 <body>
-<header>
+<header id="main-header">
     <div class="logo">
-        <img src="#">
-        <h1>Ungvar</h1>
+        <h1>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="title">
+                <small class="dot">⦁</small>
+                <span>UNGVAR</span>
+                <small class="dot">⦁</small>
+                <span>ONLINE</span>
+                <small class="dot">⦁</small>
+            </span>
+        </h1>
+        <div class="corner"></div>
+        <div class="corner"></div>
+        <div class="corner"></div>
+        <div class="corner"></div>
     </div>
-    <nav class="menu">
-        <a class="menu-item" href="index.html">
-            <img class="ico" src="SVG/catalog.svg">
-            <span>Catalog</span>
-        </a>
-        <a class="menu-item" href="../cart.php">
-            <img class="ico" src="SVG/cart.svg">
-            <span>Cart</span>
-        </a>
+    <nav id="customers-info">
+        <p>
+            <span>Звертаємо увагу користувачів те, що </span>
+            <strong>мінімальна сума замовлення становить 200 грн.</strong><br>
+            <span>Приємних покупок в</span>
+            <strong class="ungvar">Ungvar'і!</strong>
+        </p>
+        <p>
+            <span>Якщо у вас виникли запитання, скарги, чи пропозиції, зв'яжіться з наит одразу за допомогою</span>
+            <a href="feedback.html">електронної форми</a>,
+            <span>або скористайтеся одним з контактів, які ви знайдете у</span>
+            <b class="to-footer">підвалі сайту</b>.
+        </p>
     </nav>
 </header>
 <main>
-    <aside class="add">
-        <a href="#">
-            Place for your add (100 * 300)
-        </a>
-    </aside>
+    <aside class="add empty"></aside>
     <section class="content">
         <table class="items">
             <thead>
@@ -175,18 +188,10 @@
             </form>
         </div>
     </section>
-    <aside class="add">
-        <a href="#">
-            Place for your add (100 * 300)
-        </a>
-    </aside>
+    <aside class="add empty"></aside>
 </main>
 <footer>
-    <aside class="add">
-        <a href="#">
-            Place for your add (400 * 100)
-        </a>
-    </aside>
+    <aside class="add empty"></aside>
     <table class="contacts">
         <tbody>
         <tr class="mail">
@@ -213,5 +218,6 @@
         </tbody>
     </table>
 </footer>
+<script src="scripts/js/adds.js"></script>
 </body>
 </html>

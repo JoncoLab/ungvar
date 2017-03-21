@@ -1,25 +1,16 @@
 footer {
   display: flex;
   justify-content: space-around;
-
-  background-color: $header;
-
+  background-color: $dark;
   margin-top: $line * 2;
+
+  position: relative;
+
   .add {
-    width: $line * 40;
-    height: $line * 10;
-
-    //background: {
-    //  color: $light;
-    //}
-
-    margin: $line;
-
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
+    @include add(true, $line * 40, $line * 11);
+    top: $line;
+    left: $line;
+    position: absolute;
   }
 
   .contacts {
