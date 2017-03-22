@@ -270,13 +270,15 @@ body #main-header #customers-info
 {
     position: relative;
 
-    margin: 0; 
+    display: none !important; 
 
-    -webkit-align-self: stretch; 
+    margin: 0;
 
-        -ms-flex-item-align: stretch; 
+    -webkit-align-self: stretch;
 
-                -ms-grid-row-align: stretch; 
+        -ms-flex-item-align: stretch;
+
+                -ms-grid-row-align: stretch;
 
             align-self: stretch;
     -webkit-flex-basis: 50%;
@@ -535,35 +537,40 @@ body footer
 
     margin-top: 20px;
 
-    background-color: #830300;
+    border-top: 2.5px solid #830300;
+    background-color: #530005;
 
-    -webkit-justify-content: space-around;
+    -webkit-box-pack: justify;
 
-        -ms-flex-pack: distribute;
+    -webkit-justify-content: space-between;
 
-            justify-content: space-around;
+       -moz-box-pack: justify;
+
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
 }
 body footer .add
 {
     position: fixed;
-    position: absolute; 
-    top: 10px;
-    left: 10px;
+    position: relative; 
 
-    display: -webkit-box;
+    display: -webkit-box; 
 
-    display: -webkit-flex;
+    display: -webkit-flex; 
 
-    display: -moz-box;
+    display: -moz-box; 
 
-    display: -ms-flexbox;
+    display: -ms-flexbox; 
 
     display: flex;
 
     width: 400px;
     max-width: 400px;
-    height: 110px;
-    max-height: 110px;
+    height: 95px;
+    max-height: 95px;
+    margin-top: 10px;
+    margin-left: 10px;
 
     background: rgba(250, 255, 216, .9);
     -webkit-box-shadow: 2px 2px 0 0 #830300;
@@ -593,11 +600,35 @@ body footer .add h5
 
     color: #830300;
 }
+body footer .jonco-lab
+{
+    max-width: 270px; 
+    margin: 10px auto;
+
+    text-align: center;
+
+    -webkit-align-self: flex-end;
+
+        -ms-flex-item-align: end;
+
+            align-self: flex-end;
+}
+body footer .jonco-lab span
+{
+    font-size: 12px;
+    font-weight: normal;
+
+    display: block;
+
+    margin-top: 5px; 
+
+    color: rgba(250, 255, 216, .9);
+}
 body footer .contacts
 {
     font-size: 12px; 
 
-    margin: 10px 10px 10px auto;
+    margin: 10px 10px 10px 10px;
 
     color: rgba(250, 255, 216, .9);
 }

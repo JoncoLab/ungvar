@@ -192,6 +192,10 @@
 </main>
 <footer>
     <aside class="add empty"></aside>
+    <div class="jonco-lab">
+        <span>Cайт озроблено кампанією "Joncolab"</span>
+        <span>© ПП Ярош О.О. 2017</span>
+    </div>
     <table class="contacts">
         <tbody>
         <tr class="mail">
