@@ -814,7 +814,7 @@ body footer
 
     margin-top: 20px;
 
-    background-color: #0e0000;
+    background-color: #830300;
 
     -webkit-justify-content: space-around;
 
@@ -874,11 +874,15 @@ body footer .add h5
 }
 body footer .contacts
 {
+    font-size: 12px; 
+
     margin: 10px 10px 10px auto;
+
+    color: rgba(250, 255, 216, .9);
 }
 body footer .contacts .name
 {
-    font-weight: bold;
+    font-weight: normal;
 
     text-align: right;
 }

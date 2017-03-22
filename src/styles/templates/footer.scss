@@ -1,11 +1,10 @@
 footer {
   display: flex;
   justify-content: space-around;
-  background-color: $dark;
+  background-color: $red;
   margin-top: $line * 2;
 
   position: relative;
-
   .add {
     @include add(true, $line * 40, $line * 11);
     top: $line;
@@ -15,10 +14,14 @@ footer {
 
   .contacts {
     margin: $line $line $line auto;
+    color: $light;
+   font: {
+     size: $line * 1.2;
+   };
 
     .name {
       font: {
-        weight: bold;
+        weight: normal;
       }
       text: {
         align: right;
@@ -33,11 +36,13 @@ footer {
 
     .addresses {
       vertical-align: top;
+     
 
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        
       }
     }
   }
