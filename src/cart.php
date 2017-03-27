@@ -83,7 +83,6 @@
                         <span>Пиво "Корона Екстра"</span><br>
                         <small>0.5 л.</small>
                     </h3>
-
                 </td>
                 <td class="amount">
                     <input type="number" min="1" maxlength="3" value="1">

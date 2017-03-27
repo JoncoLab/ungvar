@@ -16,6 +16,12 @@ var main = function () {
                 $(this).text(price);
             });
         },
+        setNumbers = function () {
+            var numberCells = $('.items tbody .num');
+            numberCells.each(function (iterator) {
+                $(this).text(iterator + 1);
+            });
+        },
         sum = $('.items .sum'),
         setSum = function () {
             var sumToBe = 0,
@@ -34,6 +40,7 @@ var main = function () {
         var cell = $(this).parents('td'),
             item = cell.parents('tr');
         item.remove();
+        setNumbers();
         setSum();
     });
 
@@ -63,8 +70,7 @@ var main = function () {
         fullScreenConfirmation.fadeOut(300);
     });
 
-    header.append()
-
+    setNumbers();
     setPrices();
     setSum();
 };
