@@ -20,6 +20,10 @@ var main = function () {
             main.css('padding-top', tagetPadding);
         };
 
+    catalogNavMenu.css({
+        'transform': 'none'
+    });
+    setPaddingForMain();
     pageTitle.append(' - ' + currentCategoryName);
     pageHeading.text(currentCategoryName);
 
@@ -74,10 +78,48 @@ var main = function () {
         }
     });
 
-    catalogNavMenu.css({
-        'transform': 'none'
+    items.click(function () {
+        if (!$(this).is('.opened')) {
+            var img = $(this).children('img').attr('src'),
+                name = $(this).children('.name').text(),
+                price = $(this).children('.price').text(),
+                detailsBar = '' +
+                    '<div class="details">' +
+                    '<img src="' + img + '">' +
+                    '<form class="buy-item">' +
+                    '<h4 class="name">' + name + '</h4>' +
+                    '<h4 class="price">' + price + '</h4>' +
+                    '<label for="amount">Кількість: </label>' +
+                    '<input type="number" id="amount" name="1" min="1">' +
+                    '<button class="add-to-cart-button" type="button">В кошик</button>' +
+                    '</form>' +
+                    '</div>',
+                openedDetailsBar = $('.details');
+            openedDetailsBar.hide(300, function () {
+                $(this).remove();
+            });
+            $('.item.opened').removeClass('opened');
+            $(this).addClass('opened');
+            $(this).append(detailsBar);
+            var bar = $(this).children('.details');
+            bar.show({
+                duration: 300,
+                start: function () {
+                    bar.css('display', 'flex');
+                }
+            });
+        }
     });
-    setPaddingForMain();
+
+    $(document).mouseup(function (e) {
+        var detailsBarToClose = $('.details');
+        if (detailsBarToClose.has(e.target).length === 0 && items.has(e.target).length === 0) {
+            detailsBarToClose.hide(300, function () {
+                detailsBarToClose.remove();
+                $('.item.opened').removeClass('opened');
+            });
+        }
+    });
 };
 
 $(document).ready(main);

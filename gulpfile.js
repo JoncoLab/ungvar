@@ -7,7 +7,8 @@ var gulp = require("gulp"),
     compileSass = require("gulp-sass"),
     rigger = require("gulp-rigger"),
     rimraf = require("rimraf"),
-    jsMinify = require("gulp-minify");
+    jsMinify = require("gulp-minify"),
+    zip = require("gulp-zip");
 
 var path = {
     
@@ -50,10 +51,8 @@ var path = {
             'src/styles/*.scss',
             'src/styles/templates/*.scss'
         ],
-        images: [
-            'src/images/*.png',
-            'src/SVG/*.svg'
-        ]
+        images: 'src/images/*.png',
+        svg: 'src/SVG/*.svg'
     },
     
     clean: 'build*'
@@ -115,6 +114,13 @@ gulp.task('fonts:build', function () {
         .pipe(gulp.dest(path.build.font));
 });
 
+//Збірка сайту в архів для хостингу
+gulp.task('build:zip', function () {
+    gulp.src(['build/*', 'build/**/*', 'build/**/**/*'])
+        .pipe(zip('build.zip'))
+        .pipe(gulp.dest('tmp/'));
+});
+
 //Загальна збірка
 gulp.task('project:build', [
     'html:build',
@@ -136,10 +142,8 @@ gulp.task('watch', function () {
         'js:build',
         'php:build'
     ]);
-    gulp.watch(path.watch.images, [
-        'img:build',
-        'svg:build'
-    ]);
+    gulp.watch(path.watch.images, ['img:build']);
+    gulp.watch(path.watch.svg, ['svg:build']);
 });
 
 //Очистка

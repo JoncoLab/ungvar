@@ -5,11 +5,12 @@
     <title>Ungvar Online</title>
     <link href="styles/categories.css" rel="stylesheet">
     <script src="scripts/js/jquery-3.1.1.js"></script>
+    <script src="scripts/js/common.js"></script>
     <script src="scripts/js/categories.js"></script>
 </head>
 <body>
 <header id="main-header">
-    <div class="logo">
+    <a class="logo" href="index.html">
         <h1>
             <span class="corner"></span>
             <span class="corner"></span>
@@ -27,17 +28,19 @@
         <div class="corner"></div>
         <div class="corner"></div>
         <div class="corner"></div>
-    </div>
+    </a>
     <nav id="customers-info">
         <p>
-            <span>Звертаємо увагу користувачів те, що </span>
-            <strong>мінімальна сума замовлення становить 200 грн.</strong><br>
+            <span class="label"></span>
+            <span>Звертаємо увагу користувачів те, що за умови </span>
+            <strong>замовлення на суму від 200 грн. - доставка безкоштовна!</strong><br>
             <span>Приємних покупок в</span>
-            <strong class="ungvar">Ungvar'і!</strong>
+            <strong class="ungvar">Ungvar!</strong>
         </p>
         <p>
-            <span>Якщо у вас виникли запитання, скарги, чи пропозиції, зв'яжіться з наит одразу за допомогою</span>
-            <a href="feedback.html">електронної форми</a>,
+            <span class="label"></span>
+            <span>Якщо у вас виникли запитання, скарги, чи пропозиції, зв'яжіться з нами за допомогою</span>
+            <b class="full-screen-feedback-button">електронної форми</b>,
             <span>або скористайтеся одним з контактів, які ви знайдете у</span>
             <b class="to-footer">підвалі сайту</b>.
         </p>
@@ -47,39 +50,40 @@
     <nav id="page">
         <ul class="main-navigation">
             <li>
-                <div id="start-button">
-                    <span>Вверх</span>
-                    <img src="SVG/back.svg" class="start">
-                </div>
+                <ul class="categories-nav">
+                    <li><a href="category-water.html">Вода</a></li>
+                    <li><a href="category-juice.html">Соки</li>
+                    <li><a href="category-drinks.html">Інші напої</a></li>
+                    <li><a href="category-tea.html">Чай</a></li>
+                    <li><a href="category-coffee.html">Кава</a></li>
+                    <li><a href="category-confectionery.html">Кондитерські вироби</a></li>
+                    <li><a href="category-bread.html">Хліб</a></li>
+                    <li><a href="category-meat.html">М'ясні вироби</a></li>
+                    <li><a href="category-seafood.html">Риба та морепродукти</a></li>
+                    <li><a href="category-grocery.html">Бакалія</a></li>
+                    <li><a href="category-cheese.html">Сири</a></li>
+                    <li><a href="category-dairy.html">Молочна продукція</a></li>
+                    <li><a href="category-fruits.html">Фрукти</a></li>
+                    <li><a href="category-vegetables.html">Овочі</a></li>
+                    <li><a href="category-frozen.html">Напівфабрикати</a></li>
+                    <li><a href="category-chemicals.html">Побутова хімія</a></li>
+                    <li><a href="category-spirits.html">Алкоголь</a></li>
+                    <li><a href="category-tobacco.html">Тютюнові вироби</a></li>
+                </ul>
                 <div id="categories-button">
                     <span>Інша категорія</span>
                     <img src="SVG/back.svg" class="categories">
                 </div>
-                <ul class="categories-nav">
-                    <li>Вода</li>
-                    <li>Соки</li>
-                    <li>Інші напої</li>
-                    <li>Чай</li>
-                    <li>Кава</li>
-                    <li>Кондитерські вироби</li>
-                    <li>Хліб</li>
-                    <li>М'ясні вироби</li>
-                    <li>Риба та морепродукти</li>
-                    <li>Бакалія</li>
-                    <li>Сири</li>
-                    <li>Молочна продукція</li>
-                    <li>Фрукти</li>
-                    <li>Овочі</li>
-                    <li>Напівфабрикати</li>
-                    <li>Побутова хімія</li>
-                    <li>Алкоголь</li>
-                    <li>Тютюнові вироби</li>
-                </ul>
+                <div id="start-button">
+                    <span>Вверх</span>
+                    <img src="SVG/back.svg" class="start">
+                </div>
             </li>
             <li>
                 <a href="cart.php" id="cart-button">
-                    <span>Корзина</span>
+                    <span>Кошик</span>
                     <img src="SVG/cart.svg" class="cart">
+                    <span class="counter">0</span>
                 </a>
             </li>
         </ul>
@@ -101,156 +105,121 @@
         </div>
         <ul class="items">
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9979.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9980.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9981.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9982.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9983.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9984.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9985.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9986.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9987.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9989.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9990.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9991.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9992.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9993.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9994.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9995.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9996.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9997.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9998.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
             <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
-                <h4 class="name">Зразок найменування</h4>
-                <h4 class="price button">11.90 грн.</h4>
-            </li>
-            <li class="item">
-                <img src="images/374728-svetik.png">
+                <img src="images/IMG_9999.png">
                 <h4 class="name">Зразок найменування</h4>
                 <h4 class="price button">11.90 грн.</h4>
             </li>
         </ul>
+    </section>
+    <section class="full-screen-feedback">
+        <form id="feedback" action="scripts/php/confirm.php" method="post">
+            <img class="feedback-close" src="SVG/cross.svg">
+            <label for="feedback-name">Прізвище та ім'я:</label>
+            <input type="text" name="feedback-name" id="feedback-name" minlength="5" required pattern="^[А-Яа-яЁёІіЇї]+[\S\s]+[А-Яа-яЁёІіЇї]+$" placeholder="Олексій Ярош"><br>
+            <label for="feedback-tel">Контактний телефон:</label>
+            <input type="tel" name="feedback-tel" id="feedback-tel" pattern="[+]380[0-9]{9}" placeholder="+380954988273" required><br>
+            <label for="feedback-email">Електронна пошта:</label>
+            <input type="email" name="feedback-email" id="feedback-email" placeholder="example@ungvar.com" required><br>
+            <label for="feedback-message">Ваше повідомлення:</label><br>
+            <textarea required id="feedback-message" name="feedback-massage" cols="50" rows="8" maxlength="500" placeholder="Текст вашого повідомлення..."></textarea>
+            <input type="submit" name="feedback-submit" id="feedback-submit">
+            <label for="feedback-submit">Підтвердити</label>
+        </form>
     </section>
     <aside class="add empty"></aside>
 </main>
@@ -264,17 +233,17 @@
         <tbody>
         <tr class="mail">
             <td class="name">Електронна пошта:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="icon"><img src="SVG/email.svg"></td>
             <td class="value">info@ungvar.com</td>
         </tr>
         <tr class="tel">
             <td class="name">Телефон:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="icon"><img src="SVG/tel.svg"></td>
             <td class="value">+380 (95) 498 82 73 (Олексій)</td>
         </tr>
         <tr class="addresses">
             <td class="name">Адреси:</td>
-            <td class="icon"><img src="SVG/cart.svg"></td>
+            <td class="icon"><img src="SVG/address.svg"></td>
             <td class="value">
                 <ul>
                     <li>Ужгород, вул. Донського, 1</li>
@@ -286,11 +255,5 @@
         </tbody>
     </table>
 </footer>
-<script src="scripts/js/adds.js"></script>
-</body>
-</html>
-</head>
-<body>
-
 </body>
 </html>

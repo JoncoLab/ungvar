@@ -13,21 +13,54 @@ body {
   @import "templates/header";
 
   main {
-    min-height: 70%;
-    display: flex;
-    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+
+    .to-catalog {
+      background: {
+        color: $red;
+      }
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: $line;
+      color: $yellow;
+      text: {
+        decoration: none;
+      }
+      border: {
+        bottom-left-radius: $line * 2;
+      }
+
+      display: flex;
+      align-items: center;
+
+      transition: {
+        duration: $time / 2;
+        timing-function: linear;
+      }
+
+      &:hover {
+        padding-right: $line * 2;
+      }
+
+      img {
+        height: $line * 2.5;
+        margin: 0 $line / 2 0 0;
+      }
+    }
 
     .add {
       @include add();
 
+      top: $line * 16;
+
       &:first-of-type {
         left: $line;
-        top: $line * 15;
       }
 
       &:last-of-type {
         right: $line;
-        top: $line * 15;
       }
     }
 
@@ -35,8 +68,8 @@ body {
       flex: {
         grow: 1;
       }
-      max-width: 80%;
-      margin: $line 0 0;
+      max-width: 70%;
+      margin: $line auto 0;
       padding: $line 0;
 
       text: {
@@ -56,13 +89,28 @@ body {
               text: {
                 align: center;
               }
+              background: {
+                color: $yellow;
+              }
+              border: $line / 10 solid $red;
+              padding: $line / 2;
 
-              &.img {
+              &.num {
                 width: 10%;
               }
 
+              &.img {
+                width: 10%;
+                border: {
+                  right: none;
+                }
+              }
+
               &.name {
-                width: 60%;
+                border: {
+                  left: none;
+                }
+                width: 50%;
               }
 
               &.amount {
@@ -86,6 +134,7 @@ body {
           tr {
 
             &:hover {
+              color: $red;
               background: {
                 color: $yellow;
               }
@@ -98,17 +147,15 @@ body {
 
             &:last-of-type {
               td {
-
+                border: $line / 10 solid $red;
                 border: {
-                  bottom: $line / 2 solid $dark;
+                  bottom-width: $line / 5;
                 }
               }
             }
 
             td {
-              border: {
-                bottom: $line / 10 solid $dark;
-              }
+              border: $line / 10 solid $red;
 
               padding: 0;
 
@@ -116,7 +163,18 @@ body {
                 align: center;
               }
 
+              &.num {
+                width: 10%;
+                font: {
+                  weight: bold;
+                }
+              }
+
+
               &.img {
+                border: {
+                  right: none;
+                }
                 width: 10%;
                 img {
                   height: $line * 7;
@@ -124,14 +182,20 @@ body {
               }
 
               &.name {
+                border: {
+                  left: none;
+                }
                 width: 60%;
                 text: {
                   align: left;
                 }
 
-                small {
-                  font: {
-                    weight: normal;
+                h3 {
+                  margin: 0 0 0 $line;
+                  small {
+                    font: {
+                      weight: normal;
+                    }
                   }
                 }
               }
@@ -142,6 +206,8 @@ body {
                 input {
                   width: 3em;
                   text-align: center;
+                  @include input();
+                  border: $line / 10 solid $red;
                 }
               }
 
@@ -168,7 +234,7 @@ body {
           td {
             padding: $line * 2 $line / 2;
             text: {
-              align: center;
+              align: left;
             }
             font: {
               size: $line * 2;
@@ -183,33 +249,15 @@ body {
             &.button {
               padding: 0;
               position: relative;
-
-              &::before {
-                content: 'Мінімальна вартість замовлення складає 200 грн.!';
-                position: absolute;
-                bottom: 50%;
-                right: 150%;
-                width: $line * 50;
-                background: {
-                  color: rgba(255, 0, 0, 0.51);
-                }
-                padding: $line;
-                border: {
-                  radius: $line;
-                  width: $line / 5;
-                  style: solid;
-                  color: black;
-                }
-                font: {
-                  weight: bold;
-                }
+              text: {
+                align: right;
               }
 
               #submit-button {
-                width: 100%;
+                width: 40%;
                 height: $line * 4;
 
-                @include button();
+                @include button($red, $yellow);
               }
             }
           }
@@ -232,24 +280,24 @@ body {
         text: {
           align: left;
         }
+        z-index: 25;
 
         #confirmation {
           margin: $line * 3 auto;
-          padding: 0 $line * 6 $line;
-          width: 70%;
+          padding: $line $line * 6;
           background: {
-            color: white;
+            color: lighten($red, 15%);
           }
           border: {
             radius: $line * 5;
           }
           position: relative;
 
-          box-shadow: $line / 2 $line / 2 0 0 $yellow;
+          box-shadow: $line / 5 $line / 5 0 0 $dark;
 
           fieldset {
             border: none;
-            margin: $line 0 0 0;
+            margin: $line / 2 0 0 0;
             padding-left: 0;
 
             legend {
@@ -257,6 +305,7 @@ body {
                 weight: bold;
                 size: $line * 2;
               }
+              color: $yellow;
 
               small {
                 font: {
@@ -271,9 +320,9 @@ body {
               p {
                 margin: 0;
                 background: {
-                  color: lighten($dark, 40%);
+                  color: opacify($yellow, 0.2);
                 }
-                color: darken($dark, 10%);
+                color: $dark;
                 padding: $line;
                 border: {
                   radius: $line;
@@ -291,7 +340,7 @@ body {
                 display: none;
 
                 + label {
-                  @include button();
+                  @include button($background);
                   display: inline-block;
                   padding: $line;
                   margin: 0 $line * 2 0 0;
@@ -309,7 +358,7 @@ body {
               label {
                 display: inline-block;
                 background: {
-                  color: $yellow;
+                  color: $background;
                 }
                 padding: $line / 2;
                 margin: $line / 2 0;
@@ -323,7 +372,7 @@ body {
 
               input {
                 background: {
-                  color: lighten($dark, 40%);
+                  color: opacify($yellow, 0.2);
                 }
                 border: {
                   radius: $line / 2;
@@ -332,11 +381,19 @@ body {
                   bottom: none;
                   right: none;
                 }
-                padding: $line / 2;
+                padding: $line / 2.5;
                 outline: none;
-                color: darken($dark, 10%);
                 font: {
                   weight: bold;
+                }
+                color: $dark;
+
+                box-shadow: 0 0 $line / 2 $line / 10 opacify($yellow, 0.2);
+
+                &#building {
+                  text: {
+                    align: center;
+                  }
                 }
               }
             }
@@ -350,29 +407,42 @@ body {
               text: {
                 align: center;
               }
-              @include button();
+              @include button($background);
               padding: $line;
+              cursor: pointer;
             }
           }
 
           .close {
-            height: $line * 2;
+            height: $line * 3;
             position: absolute;
-            top: $line * 2;
-            right: $line * 3;
+            top: $line * 3;
+            right: $line * 2;
             cursor: pointer;
+
+            transition: {
+              duration: $time / 2;
+              timing-function: linear;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+            }
           }
 
           > p {
-            margin: 0 0 $line 0;
+            margin: $line / 2 0;
             padding: 0;
             font: {
               weight: bold;
             }
+            color: $yellow;
           }
         }
       }
     }
+
+    @import "templates/full-screen-feedback";
   }
   @import "templates/footer";
 }

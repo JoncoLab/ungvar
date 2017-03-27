@@ -14,30 +14,65 @@ body {
 
   main {
     text-align: center;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
 
     min-width: $line * 75;
 
     position: relative;
 
+    .to-cart {
+      background: {
+        color: $red;
+      }
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: $line;
+      color: $yellow;
+      text: {
+        decoration: none;
+      }
+      border: {
+        bottom-left-radius: $line * 2;
+      }
+
+      transition: {
+        duration: $time / 2;
+        timing-function: linear;
+      }
+
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        padding-right: $line * 2;
+      }
+
+      img {
+        height: $line * 2.5;
+      }
+    }
+
     .add {
       @include add();
 
+      top: $line * 16;
+
       &:first-of-type {
-        top: $line * 15;
         left: $line;
       }
 
       &:last-of-type {
-        top: $line * 15;
         right: $line;
       }
     }
 
     .landing-nav {
       height: 100%;
-      width: 100%;
+      width: 85%;
+      max-width: $line * 120;
+      margin: 0 auto;
 
       border: {
         spacing: $line * 2;
@@ -62,76 +97,45 @@ body {
           radius: $line * 2;
         }
 
-        .item-container {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          width: 100%;
+        vertical-align: bottom;
 
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-
-          font: {
-            size: $line * 2;
-            family: Arial;
-          }
-
+        a {
           text: {
             decoration: none;
-            transform: none;
+          }
+          color: $dark;
+          background: {
+            color: transparentize($darkyellow, 0.1);
           }
 
-          color: black;
+          height: $line * 5;
+          padding: 0 $line / 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-          h4 {
-            flex-grow: 1;
-            background: {
-              color: fade_out($light, 0.2);
-            }
-
-            transition: {
-              duration: $time / 2;
-              timing-function: linear;
-            }
-
-            margin: 0;
-            padding: $line * 2 0 0;
-
-            height: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            img {
-              height: $line * 2.4;
-              opacity: 0;
-              transition: {
-                duration: $time / 2;
-                timing-function: linear;
-              }
-              margin: $line / 2 0 0;
-            }
+          transition: {
+            duration: $time / 2;
+            timing-function: linear;
           }
 
-          &:hover h4 {
+          font: {
+            weight: bold;
+            size: $line * 2;
+          }
+        }
+
+        &:hover {
+
+          a {
             height: 100%;
             color: $red;
-
-            padding: 0;
-
-            background: {
-              color: $light;
-            }
-
-            img {
-              opacity: 1;
-            }
           }
         }
       }
     }
+
+    @import "templates/full-screen-feedback";
   }
   @import "templates/footer";
 }

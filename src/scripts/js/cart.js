@@ -2,10 +2,7 @@
  * Created by Saladin on 01.03.2017.
  */
 var main = function () {
-    var removeItem = function (item) {
-        item.remove();
-    },
-        items = $('.items tbody tr'),
+    var items = $('.items tbody tr'),
         amountInputs = $('.amount input'),
         removeButtons = $('.items .remove img'),
         prices = $('.items .price strong'),
@@ -31,19 +28,15 @@ var main = function () {
         fullScreenConfirmationButton = $('#submit-button'),
         fullScreenConfirmation = $('.content .full-screen-confirmation'),
         fullScreenConfirmationCloseButton = $('.full-screen-confirmation .close'),
-        setConfirmationParagraph = function () {
-            var requiredSum = sum.text(),
-                totalSum = $('strong.total-sum'),
-                totalSumInput = $('#total-sum');
-            totalSum.text(requiredSum);
-            totalSumInput.val(requiredSum);
-        };
+        header = $('#main-header');
+
     removeButtons.click(function () {
         var cell = $(this).parents('td'),
             item = cell.parents('tr');
-        removeItem(item);
+        item.remove();
         setSum();
     });
+
     amountInputs.change(function () {
         if ($(this).val() <= 0) {
             $(this).val(1);
@@ -51,18 +44,27 @@ var main = function () {
         setPrices();
         setSum();
     });
+
     fullScreenConfirmationButton.click(function () {
-        if (parseInt(sum.text()) < 200) {
-            alert('Мінімальна вартість замовлення складає 200 грн.!');
-        } else {
-            setConfirmationParagraph();
-            fullScreenConfirmation.fadeIn(300);
-            fullScreenConfirmation.css('display', 'flex');
-        }
+        var requiredSum = sum.text(),
+            totalSum = $('strong.total-sum'),
+            totalSumInput = $('#total-sum');
+        totalSum.text(requiredSum);
+        totalSumInput.val(requiredSum);
+        fullScreenConfirmation.fadeIn({
+            duration: 300,
+            start: function () {
+                fullScreenConfirmation.css('display', 'flex');
+            }
+        });
     });
+
     fullScreenConfirmationCloseButton.click(function () {
         fullScreenConfirmation.fadeOut(300);
     });
+
+    header.append()
+
     setPrices();
     setSum();
 };

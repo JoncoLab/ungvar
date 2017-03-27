@@ -1,28 +1,28 @@
 $line: 10px;
 $time: 0.3s;
 
-$background: rgba(255, 231, 162, 1);
+$background: #FFF063;
 $dark: #0E0000;
 $yellow: rgba(234,255,145, 0.9);
 $darkyellow: rgba(250, 255, 216, 0.8);
 $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
-$red-footer: #530005;
 
-@mixin button() {
+@mixin button($color: $yellow, $text-color: black) {
   font: {
     weight: bold;
   }
+  color: $text-color;
 
+  outline: none;
   border: none;
   border: {
     radius: $line * 2;
   }
 
   background: {
-    image: linear-gradient(lighten($yellow, 5%), darken($yellow, 5%));
+    image: linear-gradient(lighten($color, 5%), darken($color, 5%));
   }
-  outline: none;
 
   transition: {
     duration: $time;
@@ -30,7 +30,7 @@ $red-footer: #530005;
 
   &:active {
     background: {
-      image: linear-gradient(darken($yellow, 5%), lighten($yellow, 5%));
+      image: linear-gradient(darken($color, 5%), lighten($color, 5%));
     }
   }
 
@@ -140,6 +140,8 @@ $red-footer: #530005;
   font:{
     family: Arial;
   }
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes shake {
