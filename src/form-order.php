@@ -5,14 +5,17 @@
  * Date: 26.03.2017
  * Time: 20:12
  */
-$host = '127.0.0.1';
-$db = 'admin';
-$userName = 'ungvar';
-$userPassword = '1234';
+
+$host = 'joncolab.mysql.ukraine.com.ua';
+$db = 'joncolab_ungadm';
+$userName = 'joncolab_saladin';
+$userPassword = '2014';
+
 $connection = new mysqli($host, $userName, $userPassword, $db);
 if ($connection->connect_error) {
     die('Помилка підключення до бази!');
 } else {
+    $connection->set_charset('utf8');
     $sql = 'SELECT id FROM archive WHERE id=(SELECT MAX(id) FROM archive)';
     $request = $connection->query($sql);
     $result = $request->fetch_assoc();
@@ -146,29 +149,42 @@ if ($connection->connect_error) {
         return $itemsList;
     }
     $dateAndTime = getUkDay() . ', ' . date("d") . ' ' . getUkMonth() . ' ' . date("Y") . ', о ' . get24hTime();
+    $orderItems = listItems();
+
+    $sql = 'INSERT INTO archive (name, tel, email, address, order_items, sum, payment, time) VALUES (\'' . $name . '\', \'' . $tel . '\', \'' . $email . '\', \'' . $address . '\', \'' . $orderItems . '\', \'' . $totalSum . '\', \'' . $paymentMethod . '\', \'' . $dateAndTime . '\')';
+    $connection->query($sql);
+
     $p = "\r\n";
-    $to = 'nem97.sv@gmail.com';
+    $to = 'orders@ungvar.uz.ua';
     $subject = 'Замовлення №' . $orderNumber;
-    $headers = 'From: ' . $name;
+    $headers = 'From: ' . (($email == '') ? ('Ungvar User <undefined@ungvar.uz.ua>') : ($email)) . $p;
     $message = 'Нове замовлення!' . $p;
     $message .= '№ Замовлення: ' . $orderNumber . $p;
     $message .= 'Замовник: ' . $name . $p;
     $message .= 'Мобільний для зв\'язку: ' . $tel . $p;
     $message .= ($email === '') ? ('Електронної пошти не залишив.' . $p) : ('Електронна пошта: ' . $email . $p);
-    $message .= 'Позиції в замовленні: ' . listItems() . $p;
+    $message .= 'Позиції в замовленні: ' . $orderItems . $p;
     $message .= 'Загальна вартість замовлення: ' . $totalSum . ' грн.' . $p;
     $message .= 'Адреса доставки: ' . $address . $p;
     $message .= 'Дата і час замовлення: ' . $dateAndTime;
-
     if ($email !== '') {
         $sql = 'SELECT * FROM customers_emails WHERE email=\'' . $email . '\'';
         $result = $connection->query($sql);
+        $userTo = $email;
+        $userSubject = 'Ваше замовлення';
+        $userHeaders = 'From: Ungvar <no-reply@ungvar.uz.ua>';
+        $userMessage = 'Доброго дня, ' . $name . '!' . $p;
+        $userMessage .= 'Ви здійснили замовлення на сайті ungvar.uz.ua' . $p;
+        $userMessage .= 'Вашому замовленню присвоєно номер ' . $orderNumber . $p . $p;
+        $userMessage .= 'Незабаром з вами звяжеться наш адміністратор для уточнення деталей!' . $p;
+        $userMessage .= 'Дякуємо за довіру!';
+        mail($userTo, $userSubject, $userMessage, $userHeaders);
+
         if ($result->num_rows === 0) {
             $sql = 'INSERT INTO customers_emails VALUES(\'' . $email . '\')';
             $connection->query($sql);
         }
     }
-
     mail($to, $subject, $message, $headers);
-    echo $message;
+    $connection->close();
 }
