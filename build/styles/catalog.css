@@ -1055,7 +1055,7 @@ body footer .contacts .addresses ul
     {
         font-size: 2.4em;
 
-        top: -9%;
+        top: -2.7em;
         right: 3%;
 
         -webkit-box-sizing: border-box;
@@ -1063,7 +1063,7 @@ body footer .contacts .addresses ul
            -moz-box-sizing: border-box;
 
                 box-sizing: border-box;
-        height: 10%;
+        height: 3.2em;
         padding: 2%; 
 
         -webkit-border-radius: 20px; 
