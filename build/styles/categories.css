@@ -1175,7 +1175,7 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     {
         top: 7%; 
 
-        height: 2em;
+        height: 2.5em;
     }
     body .catalog-navigation #page .main-navigation > li #start-button img.categories,
     body .catalog-navigation #page .main-navigation > li #categories-button img.categories,
@@ -1190,6 +1190,8 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     body .catalog-navigation #page .main-navigation > li a img.start
     {
         height: 2em;
+
+        border-width: 0 !important;
     }
     body .catalog-navigation #page .main-navigation > li #start-button img.start,
     body .catalog-navigation #page .main-navigation > li #start-button img.categories,
@@ -1200,7 +1202,7 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     {
         margin-left: .3em; 
 
-        border-width: .3em;
+        border-width: .1em;
         border-style: solid;
         border-color: #830300;
     }
@@ -1208,7 +1210,7 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     {
         top: -1%;
 
-        overflow: visible;
+        overflow: scroll;
     }
     body .catalog-navigation #page .main-navigation > li .categories-nav li
     {

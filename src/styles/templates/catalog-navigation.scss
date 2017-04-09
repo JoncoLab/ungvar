@@ -340,7 +340,7 @@
             img {
 
               &.cart {
-                height: 2em;
+                height: 2.5em;
                 top: 7%;
               }
 
@@ -351,13 +351,13 @@
 
               &.start {
                 height: 2em;
-                //border-width: 0.1em !important;
+                border-width: 0 !important;
               }
 
               &.start,
               &.categories {
                 border: {
-                  width: 0.3em;
+                  width: 0.1em;
                   style: solid;
                   color: $red;
                 }
@@ -369,7 +369,7 @@
 
           .categories-nav {
             top: -1%;
-            overflow: visible;
+            overflow: scroll;
 
             li {
               width: 45em;
