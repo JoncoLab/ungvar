@@ -7,6 +7,7 @@
     <script src="scripts/js/jquery-3.1.1.js"></script>
     <script src="scripts/js/cart.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="scripts/js/common.js"></script>
 </head>
 <body>
 //= modules/header.html
@@ -206,6 +207,5 @@
     <aside class="add empty"></aside>
 </main>
 //= modules/footer.html
-<script src="scripts/js/common.js"></script>
 </body>
 </html>

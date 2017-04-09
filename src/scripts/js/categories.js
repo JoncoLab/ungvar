@@ -8,6 +8,7 @@ var main = function () {
         categoriesButton = $('#categories-button'),
         categoriesNav = $('.categories-nav'),
         catalogNavMenu = $('.main-navigation'),
+        categoriesNavItems = categoriesNav.children('li'),
         items = $('.items .item'),
         currentCategoryName = $('html').data('category'),
         pageTitle = $('head title'),
@@ -62,7 +63,6 @@ var main = function () {
     });
 
     categoriesButton.click(function () {
-        var categoriesNavItems = categoriesNav.children('li');
         if (categoriesNav.css('display') === 'none') {
             categoriesNav.fadeIn();
             categoriesNavItems.css('opacity', '1');
@@ -112,12 +112,20 @@ var main = function () {
     });
 
     $(document).mouseup(function (e) {
-        var detailsBarToClose = $('.details');
+        var detailsBarToClose = $('.details'),
+            menuToClose = categoriesNav;
         if (detailsBarToClose.has(e.target).length === 0 && items.has(e.target).length === 0) {
             detailsBarToClose.hide(300, function () {
                 detailsBarToClose.remove();
                 $('.item.opened').removeClass('opened');
             });
+        }
+        if (menuToClose.has(e.target).length === 0 && categoriesNav.css('display') !== 'none') {
+            categoriesNavItems.css('opacity', '0');
+            setTimeout(function () {
+                categoriesNavItems.removeClass('backwards');
+                categoriesNav.fadeOut();
+            }, 800);
         }
     });
 };

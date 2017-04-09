@@ -7,6 +7,7 @@
     <script src="scripts/js/jquery-3.1.1.js"></script>
     <script src="scripts/js/cart.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="scripts/js/common.js"></script>
 </head>
 <body>
 <header id="main-header">
@@ -296,6 +297,5 @@
         <span>© 2017 ungvar.uz.ua</span>
     </div>
 </footer>
-<script src="scripts/js/common.js"></script>
 </body>
 </html>
