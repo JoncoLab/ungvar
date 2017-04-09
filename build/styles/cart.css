@@ -395,6 +395,106 @@ body #main-header #customers-info p .full-screen-feedback-button
 
     color: #830300;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+{
+    body #main-header
+    {
+        height: 8%;
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-shadow: 0 0 0 .2em #830300;
+
+                box-shadow: 0 0 0 .2em #830300; 
+
+        -webkit-box-pack: start; 
+
+        -webkit-justify-content: flex-start; 
+
+           -moz-box-pack: start; 
+
+            -ms-flex-pack: start; 
+
+                justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    body #main-header .logo
+    {
+        overflow: hidden; 
+
+        -webkit-box-sizing: border-box; 
+
+           -moz-box-sizing: border-box; 
+
+                box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body #main-header .logo h1
+    {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        width: 100%;
+
+        background-color: #faffd8;
+        -webkit-box-shadow: none;
+                box-shadow: none; 
+
+        -webkit-box-align: center; 
+
+        -webkit-align-items: center; 
+
+           -moz-box-align: center; 
+
+            -ms-flex-align: center; 
+
+                align-items: center;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+           -moz-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    body #main-header .logo h1 .title
+    {
+        font-size: 3.5em; 
+
+        display: inline-block;
+    }
+    body #main-header .logo h1 .title .dot
+    {
+        color: transparent;
+    }
+    body #main-header .logo h1 .corner
+    {
+        display: none;
+    }
+    body #main-header .logo > .corner
+    {
+        display: none;
+    }
+    body #main-header #customers-info
+    {
+        display: none;
+    }
+    body #main-header #customers-info p .label
+    {
+        background-image: -webkit-linear-gradient(top left, #eaff91 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
+        background-image: -moz-linear-gradient(top left, #eaff91 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
+        background-image: -o-linear-gradient(top left, #eaff91 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
+        background-image: linear-gradient(to bottom right, #eaff91 15px, transparent 15px), linear-gradient(to top right, rgba(234, 255, 145, .9) 15px, #830300 15px);
+    }
+}
 body main
 {
     position: relative;
@@ -1266,4 +1366,60 @@ body footer .contacts .addresses ul
     padding: 0;
 
     list-style: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+{
+    body footer
+    {
+        min-height: 14em !important;
+
+        -webkit-justify-content: space-around !important;
+
+            -ms-flex-pack: distribute !important;
+
+                justify-content: space-around !important;
+    }
+    body footer .jonco-lab
+    {
+        position: absolute;
+        bottom: 1%;
+        left: 6%;
+
+        max-width: 40% !important;
+    }
+    body footer .jonco-lab span
+    {
+        font-size: 1.6em;
+    }
+    body footer .contacts tbody tr
+    {
+        font-size: 2.5em;
+
+        position: relative; 
+
+        display: -webkit-box; 
+
+        display: -webkit-flex; 
+
+        display: -moz-box; 
+
+        display: -ms-flexbox; 
+
+        display: flex;
+    }
+    body footer .contacts tbody tr .name
+    {
+        display: none;
+    }
+    body footer .contacts tbody tr .icon
+    {
+        bottom: 0; 
+
+        margin-left: -2em;
+    }
+    body footer .contacts tbody tr .icon img
+    {
+        height: 1.2em;
+        margin-right: .4em;
+    }
 }

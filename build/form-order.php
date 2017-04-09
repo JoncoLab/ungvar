@@ -142,13 +142,14 @@ if ($connection->connect_error) {
     }
     function listItems() {
         $itemsList = null;
+        // на основі номерів отриманих з форми витягнути з бази даних продутки і перерахувати їх
         return $itemsList;
     }
     $dateAndTime = getUkDay() . ', ' . date("d") . ' ' . getUkMonth() . ' ' . date("Y") . ', о ' . get24hTime();
     $p = "\r\n";
     $to = 'nem97.sv@gmail.com';
     $subject = 'Замовлення №' . $orderNumber;
-    $headers = 'From: ' . ($email === '') ? ('joncolab@gmail.com') : $email;
+    $headers = 'From: ' . $name;
     $message = 'Нове замовлення!' . $p;
     $message .= '№ Замовлення: ' . $orderNumber . $p;
     $message .= 'Замовник: ' . $name . $p;

@@ -139,4 +139,58 @@ body {
   }
   @import "templates/footer";
 }
+@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+  body{
+    padding: 0;
+    main {
+      @include to-cart;
+      .add {
+        display: none;
+        &:first-of-type {
+        }
+
+        &:last-of-type {
+        }
+      }
+
+      .landing-nav {
+        width: 100% !important;
+        tr{
+          display: flex;
+          flex-wrap: wrap;
+          height: 35%;
+
+          justify-content: space-around;
+
+
+        .item {
+          width: 30%;
+          height: 11em;
+          margin-top: 2%;
+          margin-bottom: 2%;
+          vertical-align: middle !important;
+
+          a {
+            font: {
+              size: 3.8em;
+              family: Logo, "Palatino Linotype", sans-serif;
+              weight: normal;
+            }
+            height: 100%;
+            word-wrap: break-word;
+
+            padding: 0.1em;
+            background: {
+              color: transparentize($darkyellow, 0.2);
+            }
+          }
+        }
+        }
+      }
+
+      @import "templates/full-screen-feedback";
+
+    }
+  }
+}
 

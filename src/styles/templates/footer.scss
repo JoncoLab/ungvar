@@ -70,3 +70,57 @@ footer {
     }
   }
 }
+@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+  footer {
+    min-height: 14em !important;
+    justify-content: space-around !important;
+
+    .add {
+    }
+
+    .jonco-lab {
+      position: absolute;
+      bottom: 1%;
+      left: 6%;
+      max-width: 40% !important;
+
+      span{
+        font: {
+          size: 1.6em;
+        };
+      }
+    }
+
+    .contacts {
+      tbody {
+        tr {
+          display: flex;
+          //flex-direction: column;
+          font: {
+            size: 2.5em;
+          };
+          position: relative;
+          .name {
+            display: none;
+          }
+
+          .icon {
+            //position: absolute;
+            margin-left: -2em;
+            bottom: 0;
+            img {
+              height: 1.2em;
+              margin-right: 0.4em;
+
+            }
+          }
+
+          .addresses {
+            ul {
+            }
+          }
+        }
+      }
+    }
+  }
+}

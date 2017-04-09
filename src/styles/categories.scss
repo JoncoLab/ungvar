@@ -242,3 +242,170 @@ body {
 
   @import "templates/footer";
 }
+@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+  #main-header{
+    display: none !important;
+  }
+  main {
+    .add {
+      display: none !important;
+    }
+
+    .content {
+
+      .content-manage {
+
+        .heading {
+          position: relative;
+          width: 100%;
+          text: {
+            align: center;
+          }
+          padding: 0;
+          margin-left: 0 !important;
+          margin-top: 0.3em !important;
+
+          h2 {
+            background-color: $light;
+            padding: 1%;
+
+            font: {
+              size: 2.3em !important;
+              weight: normal !important;
+            };
+            border: {
+              color: $red;
+              width: 0.1em;
+              style: solid;
+              radius: 0.3em;
+            };
+            color: $red !important;
+          }
+
+          hr {
+            display: none;
+          }
+        }
+
+        .search {
+          margin-top: 3% !important;
+
+          width: 100%;
+          text-align: center;
+          label {
+            font: {
+              size: 2.3em !important;
+            }
+            color: $dark !important;
+          }
+
+          #search {
+            width: 60%;
+
+            font: {
+              size: 2.2em;
+            }
+            border-radius: 0.2em !important;
+          }
+
+          #search-button {
+            display: none;
+            font: {
+              size: 2em;
+            }
+          }
+        }
+      }
+
+      .items {
+        width: 100% !important;
+        margin-top: 2% !important;
+
+        .item {
+          box-sizing: border-box;
+
+          width: 30% !important;
+
+          &:nth-of-type(3n+2){
+            .details{
+              left: -75%;
+            }
+          }
+          &:nth-of-type(3n+3){
+            .details{
+              left: -150%;
+            }
+          }
+          &:nth-of-type(5n) .details{
+            transform: translateX(0%) !important;
+          }
+
+          .details {
+            img {
+            }
+
+            .buy-item {
+
+              .name {
+                font: {
+                  size: 2.8em !important;
+                }
+              }
+
+              .price {
+                width: 80% !important;
+                font: {
+                  size: 2.6em !important;
+                }
+                background-color: $yellow !important;
+              }
+
+              label {
+                font: {
+                  size: 2.6em !important;
+                }
+              }
+
+              #amount {
+                font: {
+                  size: 2.4em !important;
+                }
+                box-shadow: 0.01em 0.01em 0.05em 0.05em $dark !important;
+              }
+
+              .add-to-cart-button {
+                padding: 0.7em !important;
+                font: {
+                  size: 2.4em !important;
+                  weight: normal !important;
+
+                }
+              }
+            }
+          }
+
+          img {
+          }
+
+          .name {
+            font: {
+              size: 2.2em !important;
+            }
+          }
+
+          .price {
+            background-color: lighten($red, 35px) !important;
+
+            font: {
+              size: 2.4em !important;
+            };
+            text: {
+              shadow: 1px 1px 1px $light;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

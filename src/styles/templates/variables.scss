@@ -144,6 +144,35 @@ $red: #830300;
   flex-direction: column;
 }
 
+@mixin to-cart {
+  .to-cart {
+    height: 10%;
+
+    box-sizing: border-box;
+
+    top: -9%;
+    right: 3%;
+
+    border-radius: $line * 2;
+
+    font: {
+      size: 2.4em;
+    };
+
+    padding: 2%;
+
+    &:hover {
+    }
+
+    img {
+      height: 100%;
+    }
+    span{
+      display: none;
+    }
+  }
+}
+
 @keyframes shake {
   25% {
     transform: translateX($line / 2);
