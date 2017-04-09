@@ -1159,10 +1159,6 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
 
         text-align: left;
     }
-    body .catalog-navigation #page .main-navigation > li #start-button
-    {
-        margin-left: 40%;
-    }
     body .catalog-navigation #page .main-navigation > li #start-button span
     {
         display: none;
@@ -1179,21 +1175,21 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     {
         top: 7%; 
 
-        height: 65%;
+        height: 2em;
     }
     body .catalog-navigation #page .main-navigation > li #start-button img.categories,
     body .catalog-navigation #page .main-navigation > li #categories-button img.categories,
     body .catalog-navigation #page .main-navigation > li a img.categories
     {
+        height: 2em; 
+
         background-color: rgba(250, 255, 176, .9);
     }
     body .catalog-navigation #page .main-navigation > li #start-button img.start,
     body .catalog-navigation #page .main-navigation > li #categories-button img.start,
     body .catalog-navigation #page .main-navigation > li a img.start
     {
-        height: 40% !important;
-
-        border-width: .1em !important;
+        height: 2em;
     }
     body .catalog-navigation #page .main-navigation > li #start-button img.start,
     body .catalog-navigation #page .main-navigation > li #start-button img.categories,
@@ -1202,7 +1198,6 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     body .catalog-navigation #page .main-navigation > li a img.start,
     body .catalog-navigation #page .main-navigation > li a img.categories
     {
-        height: 65%;
         margin-left: .3em; 
 
         border-width: .3em;
