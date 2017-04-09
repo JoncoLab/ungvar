@@ -193,7 +193,7 @@
                     <label for="building">Будинок:</label>
                     <input type="number" id="building" name="building" min="1" max="500" required>
                 </fieldset>
-                <div class="g-recaptcha" data-sitekey="6Lf_WhgUAAAAAGpeD-cO3aEm4zT_GLC-9uuSmIon"></div>
+                <div class="g-recaptcha" data-sitekey="6LcRNxwUAAAAABLEZRjjQmlYRvktTzj2ktr6sJCK"></div>
                 <p>
                     Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення.
                 </p>

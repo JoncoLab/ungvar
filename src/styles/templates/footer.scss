@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background: {
     color: darken($red, 10%);
   }
@@ -11,16 +11,30 @@ footer {
   min-height: $line * 15;
 
   .add {
-    @include add(true, $line * 40, $line * 9.5);
-    margin-top: $line;
-    margin-left: $line;
-    position: relative;
+    @include add(false, $line * 46.8, $line * 6);
+    padding: 0;
+    position: absolute;
+    top: $line;
+    left: $line;
+
+    &:last-of-type {
+      position: absolute;
+      top: auto;
+      bottom: $line;
+      left: $line;
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  .jonco-lab {
+  .info {
     text-align: center;
     align-self: flex-end;
-    margin: $line auto;
+    margin: $line;
 
     max-width: $line * 27;
 
@@ -37,8 +51,11 @@ footer {
   }
 
   .contacts {
-    margin: $line $line $line $line;
+    margin: $line;
     color: $light;
+    position: absolute;
+    top: 0;
+    right: 0;
     font: {
       size: $line * 1.2;
     }

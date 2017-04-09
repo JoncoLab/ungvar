@@ -229,7 +229,7 @@
                     <label for="building">Будинок:</label>
                     <input type="number" id="building" name="building" min="1" max="500" required>
                 </fieldset>
-                <div class="g-recaptcha" data-sitekey="6Lf_WhgUAAAAAGpeD-cO3aEm4zT_GLC-9uuSmIon"></div>
+                <div class="g-recaptcha" data-sitekey="6LcRNxwUAAAAABLEZRjjQmlYRvktTzj2ktr6sJCK"></div>
                 <p>
                     Незабаром з вами зв'яжеться наш менеджер для уточнення деталей замовлення.
                 </p>
@@ -256,11 +256,16 @@
     <aside class="add empty"></aside>
 </main>
 <footer>
-    <aside class="add empty"></aside>
-    <div class="jonco-lab">
-        <span>Cайт озроблено кампанією "Joncolab"</span>
-        <span>© ПП Ярош О.О. 2017</span>
-    </div>
+    <aside class="add">
+        <a href="https://hashflare.io/r/EA5CFE8C-ungvar">
+            <img src="https://cdn.hashflare.eu/banners/ru/d4_g_468x60_ru.gif?v=4" alt="HashFlare">
+        </a>
+    </aside>
+    <aside class="add">
+        <a href="https://cryptopay.me/join/0388661c" target="_blank">
+            <img src="http://adv.cryptopay.me/referrals/RB_468x60_Animated.gif" width="460" height="60"/>
+        </a>
+    </aside>
     <table class="contacts">
         <tbody>
         <tr class="mail">
@@ -286,6 +291,10 @@
         </tr>
         </tbody>
     </table>
+    <div class="info">
+        <span>Cайт озроблено кампанією "Joncolab"</span>
+        <span>© 2017 ungvar.uz.ua</span>
+    </div>
 </footer>
 <script src="scripts/js/common.js"></script>
 </body>
