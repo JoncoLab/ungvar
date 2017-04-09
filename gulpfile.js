@@ -115,10 +115,10 @@ gulp.task('fonts:build', function () {
 });
 
 //Збірка сайту в архів для хостингу
-gulp.task('build:zip', function () {
+gulp.task('zip:build', function () {
     gulp.src(['build/*', 'build/**/*', 'build/**/**/*'])
         .pipe(zip('build.zip'))
-        .pipe(gulp.dest('tmp/'));
+        .pipe(gulp.dest('zip/'));
 });
 
 //Загальна збірка
