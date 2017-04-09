@@ -1210,7 +1210,7 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     {
         top: -1%;
 
-        overflow: scroll;
+        overflow: visible;
     }
     body .catalog-navigation #page .main-navigation > li .categories-nav li
     {
