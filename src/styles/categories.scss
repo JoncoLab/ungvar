@@ -394,11 +394,10 @@ body {
           }
 
           .price {
-            background-color: lighten($red, 35px) !important;
 
             font: {
               size: 2.4em !important;
-            };
+            }
             text: {
               shadow: 1px 1px 1px $light;
             }

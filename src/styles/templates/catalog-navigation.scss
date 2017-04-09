@@ -281,9 +281,7 @@
 }
 @media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
   .catalog-navigation {
-
     #page {
-
 
       .main-navigation {
         padding: 0;
@@ -331,16 +329,14 @@
           a {
             font: {
               size: 2em;
-            };
-
-            span{
-              //display: none;
             }
+
+            position: relative;
 
             img {
 
               &.cart {
-                height: 65%;
+                height: $line * 3;
                 top: 7%;
               }
 
@@ -348,14 +344,8 @@
                 background-color: $yellow;
               }
 
-              &.start {
-                height: 40% !important;
-                border-width: 0.1em !important;
-              }
-
               &.start,
               &.categories {
-                height: 65%;
                 border: {
                   width: 0.3em;
                   style: solid;
