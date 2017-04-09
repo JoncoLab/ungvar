@@ -187,4 +187,5 @@ if ($connection->connect_error) {
     }
     mail($to, $subject, $message, $headers);
     $connection->close();
+    header('Location: http://ungvar.uz.ua');
 }
