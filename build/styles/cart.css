@@ -97,7 +97,14 @@ body
 
     min-width: 740px;
 
-    background-image: url('../images/paper-1.png');
+    background-color: rgba(250, 255, 216, .4);
+    background-image: url('../images/bg.png');
+    background-attachment: fixed;
+    background-position: 0 0;
+    -o-background-size: 100% 100%;
+       background-size: 100% 100%;
+
+    background-blend-mode: overlay;
 }
 body #main-header
 {
@@ -117,7 +124,7 @@ body #main-header
     width: 100%;
     min-height: 100px;
 
-    background-color: #eaff91;
+    background-color: #faffb0;
 
     -webkit-box-pack: justify;
 
@@ -264,7 +271,7 @@ body #main-header .logo .corner
 }
 body #main-header .logo > .corner
 {
-    background-color: #eaff91;
+    background-color: #faffb0;
 }
 body #main-header .logo > .corner:nth-of-type(1)
 {
@@ -349,13 +356,13 @@ body #main-header #customers-info p .label
 
     cursor: pointer; 
 
-    background-image: -webkit-linear-gradient(top left, #eaff91 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px); 
+    background-image: -webkit-linear-gradient(top left, #faffb0 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
 
-    background-image: -moz-linear-gradient(top left, #eaff91 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px); 
+    background-image: -moz-linear-gradient(top left, #faffb0 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
 
-    background-image: -o-linear-gradient(top left, #eaff91 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px); 
+    background-image: -o-linear-gradient(top left, #faffb0 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
 
-    background-image: linear-gradient(to bottom right, #eaff91 15px, transparent 15px), linear-gradient(to top right, rgba(234, 255, 145, .9) 15px, #830300 15px);
+    background-image: linear-gradient(to bottom right, #faffb0 15px, transparent 15px), linear-gradient(to top right, rgba(250, 255, 176, .9) 15px, #830300 15px);
 }
 body #main-header #customers-info p:last-of-type
 {
@@ -489,10 +496,10 @@ body #main-header #customers-info p .full-screen-feedback-button
     }
     body #main-header #customers-info p .label
     {
-        background-image: -webkit-linear-gradient(top left, #eaff91 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
-        background-image: -moz-linear-gradient(top left, #eaff91 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
-        background-image: -o-linear-gradient(top left, #eaff91 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(234, 255, 145, .9) 15px, #830300 15px);
-        background-image: linear-gradient(to bottom right, #eaff91 15px, transparent 15px), linear-gradient(to top right, rgba(234, 255, 145, .9) 15px, #830300 15px);
+        background-image: -webkit-linear-gradient(top left, #faffb0 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px);
+        background-image: -moz-linear-gradient(top left, #faffb0 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px);
+        background-image: -o-linear-gradient(top left, #faffb0 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px);
+        background-image: linear-gradient(to bottom right, #faffb0 15px, transparent 15px), linear-gradient(to top right, rgba(250, 255, 176, .9) 15px, #830300 15px);
     }
 }
 body main
@@ -533,7 +540,7 @@ body main .to-catalog
             transition-duration: .15s;
     text-decoration: none;
 
-    color: rgba(234, 255, 145, .9);
+    color: rgba(250, 255, 176, .9);
     -webkit-border-bottom-left-radius: 20px;
             border-bottom-left-radius: 20px;
     background-color: #830300;
@@ -645,7 +652,7 @@ body main .content .items thead tr th
     text-align: center;
 
     border: 1px solid #830300;
-    background-color: rgba(234, 255, 145, .9);
+    background-color: rgba(250, 255, 176, .9);
 }
 body main .content .items thead tr th.num
 {
@@ -687,7 +694,7 @@ body main .content .items tbody tr:hover
             transition-duration: .3s;
 
     color: #830300;
-    background-color: rgba(234, 255, 145, .9);
+    background-color: rgba(250, 255, 176, .9);
 }
 body main .content .items tbody tr:last-of-type td
 {
@@ -813,7 +820,7 @@ body main .content .items tfoot td.button #submit-button
 
             transition-duration: .3s; 
 
-    color: rgba(234, 255, 145, .9);
+    color: rgba(250, 255, 176, .9);
     border: none;
     -webkit-border-radius: 20px;
             border-radius: 20px;
@@ -891,7 +898,7 @@ body main .content .full-screen-confirmation #confirmation fieldset legend
     font-size: 20px;
     font-weight: bold;
 
-    color: rgba(234, 255, 145, .9);
+    color: rgba(250, 255, 176, .9);
 }
 body main .content .full-screen-confirmation #confirmation fieldset legend small
 {
@@ -912,7 +919,7 @@ body main .content .full-screen-confirmation #confirmation fieldset#order-summar
     color: #0e0000;
     -webkit-border-radius: 10px;
             border-radius: 10px;
-    background-color: #eaff91;
+    background-color: #faffb0;
 }
 body main .content .full-screen-confirmation #confirmation fieldset#payment input
 {
@@ -997,9 +1004,9 @@ body main .content .full-screen-confirmation #confirmation fieldset#order-addres
     -webkit-border-radius: 5px;
             border-radius: 5px;
     outline: none;
-    background-color: #eaff91;
-    -webkit-box-shadow: 0 0 5px 1px #eaff91;
-            box-shadow: 0 0 5px 1px #eaff91;
+    background-color: #faffb0;
+    -webkit-box-shadow: 0 0 5px 1px #faffb0;
+            box-shadow: 0 0 5px 1px #faffb0;
 }
 body main .content .full-screen-confirmation #confirmation fieldset#contact-info input#building,
 body main .content .full-screen-confirmation #confirmation fieldset#order-address input#building
@@ -1082,7 +1089,7 @@ body main .content .full-screen-confirmation #confirmation > p
     margin: 5px 0;
     padding: 0;
 
-    color: rgba(234, 255, 145, .9);
+    color: rgba(250, 255, 176, .9);
 }
 body main .full-screen-feedback
 {
@@ -1155,9 +1162,9 @@ body main .full-screen-feedback #feedback textarea
     -webkit-border-radius: 5px;
             border-radius: 5px;
     outline: none;
-    background-color: #eaff91;
-    -webkit-box-shadow: 0 0 5px 1px #eaff91;
-            box-shadow: 0 0 5px 1px #eaff91;
+    background-color: #faffb0;
+    -webkit-box-shadow: 0 0 5px 1px #faffb0;
+            box-shadow: 0 0 5px 1px #faffb0;
 }
 body main .full-screen-feedback #feedback #feedback-message
 {

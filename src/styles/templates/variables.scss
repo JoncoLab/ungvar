@@ -3,7 +3,7 @@ $time: 0.3s;
 
 $background: #FFF063;
 $dark: #0E0000;
-$yellow: rgba(234,255,145, 0.9);
+$yellow: rgba(250, 255, 176, 0.9);
 $darkyellow: rgba(250, 255, 216, 0.8);
 $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
@@ -134,7 +134,12 @@ $red: #830300;
 
 @mixin body-style() {
   background:{
-    image: url("../images/paper-1.png");
+    color: transparentize($light, 0.5);
+    image: url("../images/bg.png");
+    position: 0 0;
+    size: 100% 100%;
+    attachment: fixed;
+    blend-mode: overlay;
   }
   min-width: $line * 74;
   font:{
@@ -157,7 +162,7 @@ $red: #830300;
 
     font: {
       size: 2.4em;
-    };
+    }
 
     padding: 2%;
 
