@@ -232,6 +232,8 @@ body {
         }
 
         tfoot {
+          display: none;
+
           td {
             padding: $line * 2 $line / 2;
             text: {
@@ -265,7 +267,8 @@ body {
         }
       }
 
-      .empty {
+      p.empty {
+        display: none;
         margin: $line auto;
         font: {
           weight: bold;

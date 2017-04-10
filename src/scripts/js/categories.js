@@ -51,12 +51,27 @@ var main = function () {
     };
 
     searchButton.click(function () {
-        var userSearch = searchBar.value.split(' ');
+        var userSearch = searchBar.value
+            .replace(/ "/g, ' ')
+            .replace(/-/g, ' ')
+            .replace(/" /g, ' ')
+            .toLowerCase()
+            .split(' ');
+        items.hide();
         items.each(function () {
-            var currentItem = $(this);
-            for (var i = 0; i < userSearch.length; i++) {
-                if (currentItem.is(':contains(' + userSearch[i] + ')') || currentItem.is(':contains(' + userSearch[i].toLowerCase() + ')') || currentItem.is(':contains(' + userSearch[i].toUpperCase() + ')')) {
-                    currentItem.show();
+            var currentItem = $(this),
+                currentNameWords = currentItem.children('.name').text()
+                    .toString()
+                    .replace(/ "/g, ' ')
+                    .replace(/-/g, ' ')
+                    .replace(/" /g, ' ')
+                    .toLowerCase()
+                    .split(' ');
+            for (var i = 0; i < currentNameWords.length; i++) {
+                for (var j = 0; j < userSearch.length; j++) {
+                    if (currentNameWords[i].includes(userSearch[j]) || userSearch[j].includes(currentNameWords[i])) {
+                        currentItem.show();
+                    }
                 }
             }
         });

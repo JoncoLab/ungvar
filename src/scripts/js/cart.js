@@ -39,9 +39,9 @@ var main = function () {
         header = $('#main-header');
 
     if (items.length === 0) {
-        orderSummary.css('display', 'none');
+        emptyError.show();
     } else {
-        emptyError.css('display', 'none');
+        orderSummary.css('display', 'table-footer-group');
     }
 
     removeButtons.click(function () {
@@ -50,6 +50,12 @@ var main = function () {
         item.remove();
         setNumbers();
         setSum();
+
+        var currentItemsAmount = $('.items tbody tr').length;
+        if (currentItemsAmount === 0) {
+            orderSummary.hide();
+            emptyError.show();
+        }
     });
 
     amountInputs.change(function () {

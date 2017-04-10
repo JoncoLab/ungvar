@@ -785,6 +785,10 @@ body main .content .items tbody tr td.remove img
 
     cursor: pointer;
 }
+body main .content .items tfoot
+{
+    display: none;
+}
 body main .content .items tfoot td
 {
     font-size: 20px; 
@@ -844,10 +848,12 @@ body main .content .items tfoot td.button #submit-button:hover
     -webkit-box-shadow: 2px 2px 0 0 #0e0000;
             box-shadow: 2px 2px 0 0 #0e0000;
 }
-body main .content .empty
+body main .content p.empty
 {
     font-size: 20px;
     font-weight: bold;
+
+    display: none;
 
     margin: 10px auto;
 
