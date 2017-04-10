@@ -101,7 +101,7 @@ body {
         list-style: none;
         justify-content: center;
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         flex-wrap: wrap;
 
         .item {
@@ -328,7 +328,7 @@ body {
 
           &:nth-of-type(3n+2){
             .details{
-              left: -75%;
+              left: -100%;
             }
           }
           &:nth-of-type(3n+3){

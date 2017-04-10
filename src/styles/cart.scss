@@ -463,3 +463,194 @@ body {
   }
   @import "templates/footer";
 }
+@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+  body {
+
+    main {
+      .to-catalog {
+        top: -6em;
+        span{
+          display: none;
+        }
+
+        &:hover {
+        }
+
+        img {
+          height: 6em;
+        }
+      }
+
+      .add {
+        display: none;
+
+        &:first-of-type {
+        }
+
+        &:last-of-type {
+        }
+      }
+
+      .content {
+
+        .items {
+
+          thead {
+            display: none;
+
+            tr {
+
+              th {
+                &.num {
+                }
+
+                &.img {
+                  }
+                }
+
+                &.name {
+                }
+
+                &.amount {
+                }
+
+                &.price {
+                }
+
+                &.remove {
+                }
+              }
+            }
+
+          }
+
+          tbody {
+
+            tr {
+
+              &:hover {
+              }
+
+              &:last-of-type {
+                td {
+                }
+              }
+
+              td {
+
+                &.num {
+                }
+
+
+                &.img {
+                  img {
+                  }
+                }
+
+                &.name {
+                  h3 {
+                    small {
+                    }
+                  }
+                }
+
+                &.amount {
+
+                  input {
+                  }
+                }
+
+                &.price {
+                }
+
+                &.remove {
+                  img {
+                  }
+                }
+              }
+            }
+          }
+
+          tfoot {
+
+            td {
+
+              &:first-of-type {
+              }
+
+              &.button {
+
+                #submit-button {
+
+                }
+              }
+            }
+          }
+        }
+
+        p.empty {
+        }
+
+        .full-screen-confirmation {
+
+          #confirmation {
+
+            fieldset {
+
+              legend {
+                small {
+                }
+              }
+
+              &#order-summary {
+
+                p {
+                }
+              }
+
+              &#payment {
+
+                input {
+
+                  + label {
+                  }
+
+                  &:checked + label {
+                  }
+                }
+              }
+
+              &#contact-info,
+              &#order-address {
+
+                label {
+                }
+
+                input {
+
+                  &#building {
+                  }
+                }
+              }
+            }
+
+            #submit {
+
+              + label {
+              }
+            }
+
+            .close {
+
+              &:hover {
+              }
+            }
+
+            > p {
+            }
+          }
+        }
+      }
+    }
+  }
+
