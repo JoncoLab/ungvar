@@ -170,20 +170,20 @@ if ($connection->connect_error) {
     if ($email !== '') {
         $sql = 'SELECT * FROM customers_emails WHERE email=\'' . $email . '\'';
         $result = $connection->query($sql);
+        if ($result->num_rows === 0) {
+            $sql = 'INSERT INTO customers_emails VALUES(\'' . $email . '\')';
+            $connection->query($sql);
+        }
+
         $userTo = $email;
         $userSubject = 'Ваше замовлення';
-        $userHeaders = 'From: Ungvar <no-reply@ungvar.uz.ua>';
+        $userHeaders = 'From: Ungvar Online <no-reply@ungvar.uz.ua>';
         $userMessage = 'Доброго дня, ' . $name . '!' . $p;
         $userMessage .= 'Ви здійснили замовлення на сайті ungvar.uz.ua' . $p;
         $userMessage .= 'Вашому замовленню присвоєно номер ' . $orderNumber . $p . $p;
         $userMessage .= 'Незабаром з вами звяжеться наш адміністратор для уточнення деталей!' . $p;
         $userMessage .= 'Дякуємо за довіру!';
         mail($userTo, $userSubject, $userMessage, $userHeaders);
-
-        if ($result->num_rows === 0) {
-            $sql = 'INSERT INTO customers_emails VALUES(\'' . $email . '\')';
-            $connection->query($sql);
-        }
     }
     mail($to, $subject, $message, $headers);
     $connection->close();

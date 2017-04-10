@@ -158,7 +158,7 @@
             </tfoot>
         </table>
         <div class="full-screen-confirmation">
-            <form id="confirmation" action="form-order.php" method="post">
+            <form id="confirmation" action="scripts/php/order.php" method="post">
                 <img class="close" src="SVG/cross.svg">
                 <fieldset id="order-summary">
                     <input type="hidden" id="total-sum" name="total-sum">

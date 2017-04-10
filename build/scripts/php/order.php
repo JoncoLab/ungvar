@@ -177,7 +177,7 @@ if ($connection->connect_error) {
 
         $userTo = $email;
         $userSubject = 'Ваше замовлення';
-        $userHeaders = 'From: Ungvar <no-reply@ungvar.uz.ua>';
+        $userHeaders = 'From: Ungvar Online <no-reply@ungvar.uz.ua>';
         $userMessage = 'Доброго дня, ' . $name . '!' . $p;
         $userMessage .= 'Ви здійснили замовлення на сайті ungvar.uz.ua' . $p;
         $userMessage .= 'Вашому замовленню присвоєно номер ' . $orderNumber . $p . $p;

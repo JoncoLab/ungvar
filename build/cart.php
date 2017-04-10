@@ -194,7 +194,7 @@
             </tfoot>
         </table>
         <div class="full-screen-confirmation">
-            <form id="confirmation" action="form-order.php" method="post">
+            <form id="confirmation" action="scripts/php/order.php" method="post">
                 <img class="close" src="SVG/cross.svg">
                 <fieldset id="order-summary">
                     <input type="hidden" id="total-sum" name="total-sum">
@@ -240,16 +240,19 @@
         </div>
     </section>
     <section class="full-screen-feedback">
-        <form id="feedback" action="scripts/php/confirm.php" method="post">
+        <form id="feedback" method="post" action="scripts/php/feedback.php">
             <img class="feedback-close" src="SVG/cross.svg">
             <label for="feedback-name">Прізвище та ім'я:</label>
             <input type="text" name="feedback-name" id="feedback-name" minlength="5" required pattern="^[А-Яа-яЁёІіЇї]+[\S\s]+[А-Яа-яЁёІіЇї]+$" placeholder="Олексій Ярош"><br>
-            <label for="feedback-tel">Контактний телефон:</label>
+            <label for="feedback-subject">Контактний телефон:</label>
             <input type="tel" name="feedback-tel" id="feedback-tel" pattern="[+]380[0-9]{9}" placeholder="+380954988273" required><br>
             <label for="feedback-email">Електронна пошта:</label>
             <input type="email" name="feedback-email" id="feedback-email" placeholder="example@ungvar.com" required><br>
+            <label for="feedback-tel">Тема:</label>
+            <input type="text" name="feedback-subject" id="feedback-subject" placeholder="Тема вашого повідомлення" maxlength="140" required><br>
             <label for="feedback-message">Ваше повідомлення:</label><br>
-            <textarea required id="feedback-message" name="feedback-massage" cols="50" rows="8" maxlength="500" placeholder="Текст вашого повідомлення..."></textarea>
+            <textarea required id="feedback-message" name="feedback-message" cols="50" rows="8" maxlength="500" placeholder="Текст вашого повідомлення..."></textarea>
+            <div class="g-recaptcha" data-sitekey="6LcRNxwUAAAAABLEZRjjQmlYRvktTzj2ktr6sJCK"></div>
             <input type="submit" name="feedback-submit" id="feedback-submit">
             <label for="feedback-submit">Підтвердити</label>
         </form>
@@ -293,7 +296,7 @@
         </tbody>
     </table>
     <div class="info">
-        <span>Cайт озроблено кампанією "Joncolab"</span>
+        <span>Cайт розроблено компанією "Joncolab"</span>
         <span>© 2017 ungvar.uz.ua</span>
     </div>
 </footer>

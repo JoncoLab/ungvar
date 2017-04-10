@@ -1761,6 +1761,8 @@ body main .full-screen-feedback #feedback textarea
 }
 body main .full-screen-feedback #feedback #feedback-message
 {
+    margin: 0 0 5px; 
+
     resize: none;
 }
 body main .full-screen-feedback #feedback #feedback-submit
@@ -1913,7 +1915,6 @@ body footer .add a
 }
 body footer .add:last-of-type
 {
-    position: absolute;
     top: auto;
     bottom: 10px;
     left: 10px;
@@ -1994,7 +1995,7 @@ body footer .contacts .addresses ul
 
                 justify-content: space-around !important;
     }
-    body footer .jonco-lab
+    body footer .info
     {
         position: absolute;
         bottom: 1%;
@@ -2002,7 +2003,7 @@ body footer .contacts .addresses ul
 
         max-width: 40% !important;
     }
-    body footer .jonco-lab span
+    body footer .info span
     {
         font-size: 1.6em;
     }

@@ -2,9 +2,10 @@
 var commonSettings = function () {
     var adds = $('aside.add'),
         mainHeaderSliders = $('#main-header').find('p'),
-        fullScreenFeedbackForm = $('.full-screen-feedback'),
+        fullScreenFeedbackBar = $('.full-screen-feedback'),
+        fullScreenFeedbackForm = $('#feedback'),
         fullScreenFeedbackButton = $('.full-screen-feedback-button'),
-        fullScreenFeedbackCloseButton = $('#feedback').find('.feedback-close'),
+        fullScreenFeedbackCloseButton = fullScreenFeedbackForm.find('.feedback-close'),
         toFooterButton = $('.to-footer');
 
     adds.each(function () {
@@ -32,16 +33,45 @@ var commonSettings = function () {
     });
 
     fullScreenFeedbackButton.click(function () {
-        fullScreenFeedbackForm.fadeIn({
+        fullScreenFeedbackBar.fadeIn({
             duration: 300,
             start: function () {
-                fullScreenFeedbackForm.css('display', 'flex');
+                fullScreenFeedbackBar.css('display', 'flex');
             }
         });
     });
 
     fullScreenFeedbackCloseButton.click(function () {
-        fullScreenFeedbackForm.fadeOut(300);
+        fullScreenFeedbackBar.fadeOut(300);
+    });
+
+    fullScreenFeedbackForm.submit(function (event) {
+        var name = $('#feedback-name').val(),
+            tel = $('#feedback-tel').val(),
+            email = $('#feedback-email').val(),
+            subject = $('#feedback-subject').val(),
+            message = $('#feedback-message').val();
+            $.ajax({
+                url: 'scripts/php/feedback.php',
+                data: {
+                    name: name,
+                    tel: tel,
+                    email: email,
+                    subject: subject,
+                    message: message
+                },
+                method: 'post',
+                error: function () {
+                    alert('На жаль, сталася помилка! Спробуйте трохи згодом!');
+                },
+                success: function () {
+                    alert('Ваше звернення в службу підтримки успішно опрацьоване! Очікуйте на відповідь!');
+                },
+                complete: function () {
+                    fullScreenFeedbackBar.fadeOut(300);
+                }
+            });
+        event.preventDefault();
     });
 
     toFooterButton.click(function () {
@@ -51,4 +81,3 @@ var commonSettings = function () {
     });
 };
 $(document).ready(commonSettings);
-
