@@ -66,115 +66,28 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td class="num">1</td>
-                <td class="img">
-                    <img src="images/IMG_9979.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross-dark.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="img">
-                    <img src="images/IMG_9979.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross-dark.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="img">
-                    <img src="images/IMG_9979.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross-dark.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="img">
-                    <img src="images/IMG_9979.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross-dark.svg">
-                </td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="img">
-                    <img src="images/IMG_9979.png">
-                </td>
-                <td class="name">
-                    <h3>
-                        <span>Пиво "Корона Екстра"</span><br>
-                        <small>0.5 л.</small>
-                    </h3>
-
-                </td>
-                <td class="amount">
-                    <input type="number" min="1" maxlength="3" value="1">
-                </td>
-                <td class="price">
-                    <strong data-price="22.5"></strong>
-                </td>
-                <td class="remove">
-                    <img class="remove-icon" src="SVG/cross-dark.svg">
-                </td>
-            </tr>
+<!--            <tr>-->
+<!--                <td class="num">1</td>-->
+<!--                <td class="img">-->
+<!--                    <img src="images/IMG_9979.png">-->
+<!--                </td>-->
+<!--                <td class="name">-->
+<!--                    <h3>-->
+<!--                        <span>Пиво "Корона Екстра"</span><br>-->
+<!--                        <small>0.5 л.</small>-->
+<!--                    </h3>-->
+<!---->
+<!--                </td>-->
+<!--                <td class="amount">-->
+<!--                    <input type="number" min="1" maxlength="3" value="1">-->
+<!--                </td>-->
+<!--                <td class="price">-->
+<!--                    <strong data-price="22.5"></strong>-->
+<!--                </td>-->
+<!--                <td class="remove">-->
+<!--                    <img class="remove-icon" src="SVG/cross-dark.svg">-->
+<!--                </td>-->
+<!--            </tr>-->
             </tbody>
             <tfoot>
             <tr>
@@ -193,6 +106,7 @@
             </tr>
             </tfoot>
         </table>
+        <p class="empty">Ви ще нічого не обрали!</p>
         <div class="full-screen-confirmation">
             <form id="confirmation" action="scripts/php/order.php" method="post">
                 <img class="close" src="SVG/cross.svg">

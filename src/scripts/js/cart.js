@@ -6,6 +6,8 @@ var main = function () {
         amountInputs = $('.amount input'),
         removeButtons = $('.items .remove img'),
         prices = $('.items .price strong'),
+        emptyError = $('p.empty'),
+        orderSummary = $('.items tfoot'),
         setPrices = function () {
             prices.each(function () {
                 var cell = $(this).parentsUntil(items),
@@ -35,6 +37,12 @@ var main = function () {
         fullScreenConfirmation = $('.content .full-screen-confirmation'),
         fullScreenConfirmationCloseButton = $('.full-screen-confirmation .close'),
         header = $('#main-header');
+
+    if (items.length === 0) {
+        orderSummary.css('display', 'none');
+    } else {
+        emptyError.css('display', 'none');
+    }
 
     removeButtons.click(function () {
         var cell = $(this).parents('td'),

@@ -265,6 +265,17 @@ body {
         }
       }
 
+      .empty {
+        margin: $line auto;
+        font: {
+          weight: bold;
+          size: $line * 2;
+        }
+        text: {
+          align: center;
+        }
+      }
+
       .full-screen-confirmation {
         display: none;
         background: {

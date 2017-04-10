@@ -844,6 +844,15 @@ body main .content .items tfoot td.button #submit-button:hover
     -webkit-box-shadow: 2px 2px 0 0 #0e0000;
             box-shadow: 2px 2px 0 0 #0e0000;
 }
+body main .content .empty
+{
+    font-size: 20px;
+    font-weight: bold;
+
+    margin: 10px auto;
+
+    text-align: center;
+}
 body main .content .full-screen-confirmation
 {
     position: fixed;
