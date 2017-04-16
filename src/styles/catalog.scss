@@ -45,6 +45,10 @@ body {
       display: flex;
       align-items: center;
 
+      -webkit-box-shadow:  -1px 1px $line / 15 $grey-text;
+      -moz-box-shadow:  -1px 1px $line / 15 $grey-text;
+      box-shadow:  -1px 1px $line / 15 $grey-text
+
       &:hover {
         padding-right: $line * 2;
       }
@@ -91,7 +95,7 @@ body {
 
         height: $line * 15;
 
-        box-shadow: $line / 10 0  $line / 2 $line / 10 $dark;
+        box-shadow: $line / 10 $line / 10  $line / 5 0 $grey-text;
 
         border: {
           radius: $line * 2;

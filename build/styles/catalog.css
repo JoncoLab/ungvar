@@ -119,20 +119,24 @@ body #main-header
     display: -ms-flexbox;
 
     display: flex;
-    overflow: hidden; 
+    overflow: hidden;
 
     width: 100%;
     min-height: 100px;
 
+    border-bottom: 2px solid #830300;
     background-color: #faffb0;
+    -webkit-box-shadow: 0 1px 3px #463c33;
+       -moz-box-shadow: 0 1px 3px #463c33;
+            box-shadow: 0 1px 3px #463c33; 
 
-    -webkit-box-pack: justify;
+    -webkit-box-pack: justify; 
 
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: space-between; 
 
-       -moz-box-pack: justify;
+       -moz-box-pack: justify; 
 
-        -ms-flex-pack: justify;
+        -ms-flex-pack: justify; 
 
             justify-content: space-between;
     -webkit-box-align: center;
@@ -551,18 +555,21 @@ body main .to-cart
     -webkit-border-bottom-left-radius: 20px;
             border-bottom-left-radius: 20px;
     background-color: #830300;
+    -webkit-box-shadow: -1px 1px .66667px #463c33;
+       -moz-box-shadow: -1px 1px .66667px #463c33;
+            box-shadow: -1px 1px .66667px #463c33 body main .to-cart; 
 
-    -webkit-box-align: center;
+    -webkit-box-align: center; 
 
-    -webkit-align-items: center;
+    -webkit-align-items: center; 
 
-       -moz-box-align: center;
+       -moz-box-align: center; 
 
-        -ms-flex-align: center;
+        -ms-flex-align: center; 
 
             align-items: center;
 }
-body main .to-cart:hover
+body main .to-cart :hover
 {
     padding-right: 20px;
 }
@@ -651,8 +658,8 @@ body main .landing-nav .item
     background-image: url('../images/374728-svetik.png');
     -o-background-size: 100% 100%;
        background-size: 100% 100%;
-    -webkit-box-shadow: 1px 0 5px 1px #0e0000;
-            box-shadow: 1px 0 5px 1px #0e0000;
+    -webkit-box-shadow: 1px 1px 2px 0 #463c33;
+            box-shadow: 1px 1px 2px 0 #463c33;
 }
 body main .landing-nav .item a
 {
@@ -835,8 +842,8 @@ body main .full-screen-feedback #feedback #feedback-submit + label:active
 }
 body main .full-screen-feedback #feedback #feedback-submit + label:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .full-screen-feedback #feedback .feedback-close
 {
@@ -1278,8 +1285,8 @@ body footer .contacts .addresses ul
     }
     body main .full-screen-feedback #feedback #feedback-submit + label:hover
     {
-        -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-                box-shadow: 2px 2px 0 0 #0e0000;
+        -webkit-box-shadow: 0 0 5px 0 #0e0000;
+                box-shadow: 0 0 5px 0 #0e0000;
     }
     body main .full-screen-feedback #feedback .feedback-close
     {

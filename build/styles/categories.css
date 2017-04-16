@@ -119,20 +119,24 @@ body #main-header
     display: -ms-flexbox;
 
     display: flex;
-    overflow: hidden; 
+    overflow: hidden;
 
     width: 100%;
     min-height: 100px;
 
+    border-bottom: 2px solid #830300;
     background-color: #faffb0;
+    -webkit-box-shadow: 0 1px 3px #463c33;
+       -moz-box-shadow: 0 1px 3px #463c33;
+            box-shadow: 0 1px 3px #463c33; 
 
-    -webkit-box-pack: justify;
+    -webkit-box-pack: justify; 
 
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: space-between; 
 
-       -moz-box-pack: justify;
+       -moz-box-pack: justify; 
 
-        -ms-flex-pack: justify;
+        -ms-flex-pack: justify; 
 
             justify-content: space-between;
     -webkit-box-align: center;
@@ -1232,6 +1236,10 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
         font-weight: bold;
     }
 }
+body #main-header
+{
+    border-bottom: none;
+}
 body main
 {
     -webkit-transition-timing-function: linear;
@@ -1322,7 +1330,7 @@ body main .content .content-manage .heading
     display: -ms-flexbox;
     display: flex;
 
-    width: 60%;
+    width: 35%;
     margin: 0 auto; 
 
     -webkit-box-align: center; 
@@ -1342,19 +1350,21 @@ body main .content .content-manage .heading h2
 
     margin: 0 15px;
 
-    color: #830300;
+    color: #463c33;
 }
 body main .content .content-manage .heading hr
 {
-    border-color: #830300; 
+    width: 30px; 
 
-    -webkit-box-flex: 1; 
+    border-color: #830300;
 
-    -webkit-flex-grow: 1; 
+    -webkit-box-flex: 1;
 
-       -moz-box-flex: 1; 
+    -webkit-flex-grow: 1;
 
-        -ms-flex-positive: 1; 
+       -moz-box-flex: 1;
+
+        -ms-flex-positive: 1;
 
             flex-grow: 1;
 }
@@ -1425,8 +1435,8 @@ body main .content .content-manage .search #search-button:active
 }
 body main .content .content-manage .search #search-button:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .content .items
 {
@@ -1549,12 +1559,16 @@ body main .content .items .item .details
 
             border-radius: 20px;
     background-color: rgba(250, 255, 216, .9);
-    -webkit-box-shadow: 1px 1px 5px 1px #0e0000;
-            box-shadow: 1px 1px 5px 1px #0e0000;
+    -webkit-box-shadow: 0 0 5px 2px #0e0000;
+            box-shadow: 0 0 5px 2px #0e0000;
 }
 body main .content .items .item .details img
 {
     width: 50%;
+
+    -webkit-box-shadow: 0 0 0 #0e0000;
+       -moz-box-shadow: 0 0 0 #0e0000;
+            box-shadow: 0 0 0 #0e0000;
 }
 body main .content .items .item .details .buy-item
 {
@@ -1587,7 +1601,7 @@ body main .content .items .item .details .buy-item .price
     font-weight: bold;
 
     width: 50%; 
-    margin: 0 auto 10px;
+    margin: 20px auto 10px;
 }
 body main .content .items .item .details .buy-item label
 {
@@ -1648,8 +1662,8 @@ body main .content .items .item .details .buy-item .add-to-cart-button:active
 }
 body main .content .items .item .details .buy-item .add-to-cart-button:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .content .items .item img
 {
@@ -1682,8 +1696,8 @@ body main .content .items .item .price
     -webkit-border-radius: 20px;
             border-radius: 20px;
     background-color: rgba(250, 255, 216, .9);
-    -webkit-box-shadow: 1px 1px 1px 1px #0e0000;
-            box-shadow: 1px 1px 1px 1px #0e0000;
+    -webkit-box-shadow: 1px 1px 1px 0 #0e0000;
+            box-shadow: 1px 1px 1px 0 #0e0000;
 }
 body main .full-screen-feedback
 {
@@ -1811,8 +1825,8 @@ body main .full-screen-feedback #feedback #feedback-submit + label:active
 }
 body main .full-screen-feedback #feedback #feedback-submit + label:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .full-screen-feedback #feedback .feedback-close
 {

@@ -13,6 +13,10 @@ body {
   @import "templates/header";
   @import "templates/catalog-navigation";
 
+  #main-header {
+    border-bottom: none;
+  }
+
   main {
     transition: {
       duration: $time;
@@ -35,13 +39,13 @@ body {
         width: 100%;
 
         .heading {
-          width: 60%;
+          width: 35%;
           display: flex;
           align-items: center;
           margin: 0 auto;
 
           h2 {
-            color: $red;
+            color: $grey-text;
             margin: 0 $line * 1.5;
 
             font: {
@@ -55,6 +59,7 @@ body {
             border: {
               color: $red;
             }
+            width: $line * 3;
           }
         }
 
@@ -135,7 +140,7 @@ body {
               color: $light;
             }
 
-            box-shadow: $line / 10 $line / 10 $line / 2 $line / 10 $dark;
+            box-shadow: 0 0  $line / 2 $line / 5 $dark;
             padding: $line;
             z-index: 20;
 
@@ -147,6 +152,9 @@ body {
 
             img {
               width: 50%;
+              -webkit-box-shadow:  0 0 0 $dark;
+              -moz-box-shadow:  0 0 0 $dark;
+              box-shadow:  0 0 0 $dark;
             }
 
             .buy-item {
@@ -171,7 +179,7 @@ body {
                 font: {
                   weight: bold;
                 }
-                margin: 0 auto $line;
+                margin: $line * 2 auto $line;
                 width: 50%;
               }
 

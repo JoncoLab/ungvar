@@ -11,6 +11,12 @@
   align-items: center;
   overflow: hidden;
 
+  border-bottom: $line / 5 solid $red;
+
+  -webkit-box-shadow:  0 1px 3px $grey-text;
+  -moz-box-shadow:  0 1px 3px $grey-text;
+  box-shadow:  0 1px 3px $grey-text;
+
   .logo {
     display: flex;
     justify-content: center;

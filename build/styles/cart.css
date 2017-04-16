@@ -119,20 +119,24 @@ body #main-header
     display: -ms-flexbox;
 
     display: flex;
-    overflow: hidden; 
+    overflow: hidden;
 
     width: 100%;
     min-height: 100px;
 
+    border-bottom: 2px solid #830300;
     background-color: #faffb0;
+    -webkit-box-shadow: 0 1px 3px #463c33;
+       -moz-box-shadow: 0 1px 3px #463c33;
+            box-shadow: 0 1px 3px #463c33; 
 
-    -webkit-box-pack: justify;
+    -webkit-box-pack: justify; 
 
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: space-between; 
 
-       -moz-box-pack: justify;
+       -moz-box-pack: justify; 
 
-        -ms-flex-pack: justify;
+        -ms-flex-pack: justify; 
 
             justify-content: space-between;
     -webkit-box-align: center;
@@ -849,8 +853,8 @@ body main .content .items tfoot td.button #submit-button:active
 }
 body main .content .items tfoot td.button #submit-button:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .content p.empty
 {
@@ -985,8 +989,8 @@ body main .content .full-screen-confirmation #confirmation fieldset#payment inpu
 }
 body main .content .full-screen-confirmation #confirmation fieldset#payment input + label:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .content .full-screen-confirmation #confirmation fieldset#payment input:checked + label
 {
@@ -1075,8 +1079,8 @@ body main .content .full-screen-confirmation #confirmation #submit + label:activ
 }
 body main .content .full-screen-confirmation #confirmation #submit + label:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .content .full-screen-confirmation #confirmation .close
 {
@@ -1239,8 +1243,8 @@ body main .full-screen-feedback #feedback #feedback-submit + label:active
 }
 body main .full-screen-feedback #feedback #feedback-submit + label:hover
 {
-    -webkit-box-shadow: 2px 2px 0 0 #0e0000;
-            box-shadow: 2px 2px 0 0 #0e0000;
+    -webkit-box-shadow: 0 0 5px 0 #0e0000;
+            box-shadow: 0 0 5px 0 #0e0000;
 }
 body main .full-screen-feedback #feedback .feedback-close
 {

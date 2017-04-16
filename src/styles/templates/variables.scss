@@ -7,6 +7,7 @@ $yellow: rgba(250, 255, 176, 0.9);
 $darkyellow: rgba(250, 255, 216, 0.8);
 $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
+$grey-text: #463c33;
 
 @mixin button($color: $yellow, $text-color: black) {
   font: {
@@ -35,7 +36,7 @@ $red: #830300;
   }
 
   &:hover {
-    box-shadow: $line / 5 $line / 5 0 0 $dark;
+    box-shadow: 0 0 $line / 2 0 $dark;
   }
 }
 
@@ -67,7 +68,7 @@ $red: #830300;
   border:{
     radius: $line * 2;
   }
-  box-shadow: $line / 10 $line / 10 $line / 10 $line / 10 $dark;
+  box-shadow: $line / 10 $line / 10 $line / 10 0 $dark;
 
   background:{
     color: $light;
