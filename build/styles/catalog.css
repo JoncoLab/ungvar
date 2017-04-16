@@ -352,7 +352,7 @@ body #main-header #customers-info p .label
     display: block;
 
     width: 40px;
-    height: 50%;
+    height: 47%;
 
     cursor: pointer; 
 
@@ -406,6 +406,12 @@ body #main-header #customers-info p .full-screen-feedback-button
 {
     body #main-header
     {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+
         height: 8%;
         margin: 0;
         padding: 0;
@@ -414,15 +420,15 @@ body #main-header #customers-info p .full-screen-feedback-button
 
                 box-shadow: 0 0 0 .2em #830300; 
 
-        -webkit-box-pack: start; 
+        -webkit-box-pack: start !important; 
 
-        -webkit-justify-content: flex-start; 
+        -webkit-justify-content: flex-start !important; 
 
-           -moz-box-pack: start; 
+           -moz-box-pack: start !important; 
 
-            -ms-flex-pack: start; 
+            -ms-flex-pack: start !important; 
 
-                justify-content: flex-start;
+                justify-content: flex-start !important;
         -webkit-box-align: start;
         -webkit-align-items: flex-start;
            -moz-box-align: start;
@@ -438,7 +444,7 @@ body #main-header #customers-info p .full-screen-feedback-button
            -moz-box-sizing: border-box; 
 
                 box-sizing: border-box;
-        width: 100%;
+        width: inherit;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -450,8 +456,6 @@ body #main-header #customers-info p .full-screen-feedback-button
         display: -moz-box;
         display: -ms-flexbox;
         display: flex;
-
-        width: 100%;
 
         background-color: #faffd8;
         -webkit-box-shadow: none;
@@ -1011,6 +1015,8 @@ body footer .contacts .addresses ul
 {
     body footer
     {
+        bottom: 0;
+
         min-height: 14em !important;
 
         -webkit-justify-content: space-around !important;
