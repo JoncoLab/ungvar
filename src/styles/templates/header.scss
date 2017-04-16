@@ -172,8 +172,8 @@
 
         background: {
           image:
-                  linear-gradient(to bottom right, opacify($yellow,0.1) $line * 1.5, transparent $line * 1.5),
-                  linear-gradient(to top right, $yellow $line * 1.5, $red $line * 1.5);
+                  linear-gradient(to bottom right, opacify($yellow,0.1) $line * 1.35, $dark $line * 1.45, transparent $line * 1.8),
+                  linear-gradient(to top right, $yellow $line * 1.35, $dark $line * 1.45, $red $line * 1.8);
         }
 
         cursor: pointer;

@@ -360,13 +360,13 @@ body #main-header #customers-info p .label
 
     cursor: pointer; 
 
-    background-image: -webkit-linear-gradient(top left, #faffb0 15px, transparent 15px), -webkit-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
+    background-image: -webkit-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -webkit-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
 
-    background-image: -moz-linear-gradient(top left, #faffb0 15px, transparent 15px), -moz-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
+    background-image: -moz-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -moz-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
 
-    background-image: -o-linear-gradient(top left, #faffb0 15px, transparent 15px), -o-linear-gradient(bottom left, rgba(250, 255, 176, .9) 15px, #830300 15px); 
+    background-image: -o-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -o-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
 
-    background-image: linear-gradient(to bottom right, #faffb0 15px, transparent 15px), linear-gradient(to top right, rgba(250, 255, 176, .9) 15px, #830300 15px);
+    background-image: linear-gradient(to bottom right, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), linear-gradient(to top right, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px);
 }
 body #main-header #customers-info p:last-of-type
 {
@@ -1164,17 +1164,17 @@ body main .full-screen-feedback #feedback
 }
 body main .full-screen-feedback #feedback label
 {
-    font-weight: bold; 
+    font-weight: bold;
 
     display: inline-block;
 
     margin: 5px 0;
     padding: 5px;
 
+    color: #faffd8;
     -webkit-border-radius: 5px;
-
             border-radius: 5px;
-    background-color: #fff063;
+    text-shadow: 1.25px 1.25px 0 #0e0000;
 }
 body main .full-screen-feedback #feedback input,
 body main .full-screen-feedback #feedback textarea
@@ -1183,17 +1183,23 @@ body main .full-screen-feedback #feedback textarea
 
     padding: 4px;
 
-    color: #0e0000;
+    color: #0e0000; 
     border-top: none;
     border-right: none;
     border-bottom: none;
     border-left: none;
-    -webkit-border-radius: 5px;
-            border-radius: 5px;
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
     outline: none;
-    background-color: #faffb0;
-    -webkit-box-shadow: 0 0 5px 1px #faffb0;
-            box-shadow: 0 0 5px 1px #faffb0;
+    background-color: rgba(250, 255, 216, .6);
+}
+body main .full-screen-feedback #feedback textarea
+{
+    background-color: rgba(250, 255, 176, .9);
+}
+body main .full-screen-feedback #feedback input
+{
+    border-bottom: 1.66667px solid rgba(250, 255, 176, .9);
 }
 body main .full-screen-feedback #feedback #feedback-message
 {
@@ -1211,13 +1217,13 @@ body main .full-screen-feedback #feedback #feedback-submit + label
 
     display: block;
 
-    padding: 10px; 
+    padding: 10px;
 
-    -webkit-transition-duration: .3s; 
+    -webkit-transition-duration: .3s;
 
-       -moz-transition-duration: .3s; 
+       -moz-transition-duration: .3s;
 
-         -o-transition-duration: .3s; 
+         -o-transition-duration: .3s;
 
             transition-duration: .3s;
     text-align: center;
@@ -1232,6 +1238,7 @@ body main .full-screen-feedback #feedback #feedback-submit + label
     background-image: -moz-linear-gradient(#fff27d, #ffee4a);
     background-image: -o-linear-gradient(#fff27d, #ffee4a);
     background-image: linear-gradient(#fff27d, #ffee4a);
+    text-shadow: none;
 }
 body main .full-screen-feedback #feedback #feedback-submit + label:active
 {

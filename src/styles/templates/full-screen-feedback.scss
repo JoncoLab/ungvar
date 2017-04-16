@@ -34,7 +34,7 @@
     label {
       display: inline-block;
       background: {
-        color: $background;
+        //color: $background;
       }
       padding: $line / 2;
       margin: $line / 2 0;
@@ -44,15 +44,19 @@
       font: {
         weight: bold;
       }
+      color: opacify($light, 0.2);
+      text: {
+        shadow: $line / 8 $line / 8 0 $dark;
+      }
     }
 
     input,
     textarea {
       background: {
-        color: opacify($yellow, 0.2);
+        color: transparentize($light, 0.3);
       }
       border: {
-        radius: $line / 2;
+        radius: $line / 2 $line / 2 0 0;
         top: none;
         left: none;
         bottom: none;
@@ -65,7 +69,15 @@
       }
       color: $dark;
 
-      box-shadow: 0 0 $line / 2 $line / 10 opacify($yellow, 0.2);
+      //box-shadow: 0 0 $line / 2 $line / 10 opacify($grey-text, 0.5);
+    }
+
+    textarea {
+      background-color: opacify($yellow, 0);
+    }
+
+    input{
+      border-bottom: $line / 6 solid $yellow;
     }
 
     #feedback-message {
@@ -83,6 +95,7 @@
         }
         @include button($background);
         padding: $line;
+        text-shadow: none;
       }
     }
 
