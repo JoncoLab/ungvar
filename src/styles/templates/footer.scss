@@ -93,6 +93,9 @@ footer {
     justify-content: space-around !important;
 
     .add {
+      &:last-of-type{
+        display: none;
+      }
     }
 
     .info {
@@ -102,8 +105,10 @@ footer {
       max-width: 40% !important;
 
       span{
+        text-shadow: 3px 3px 2px $dark;
         font: {
-          size: 1.6em;
+          size: 2em;
+          weight: bold;
         }
       }
     }
@@ -111,9 +116,10 @@ footer {
     .contacts {
       tbody {
         tr {
+          text-shadow: 3px 3px 2px $dark;
           display: flex;
           font: {
-            size: 2.5em;
+            size: 2.6em;
           }
           position: relative;
           .name {
