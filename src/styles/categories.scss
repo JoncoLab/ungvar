@@ -42,6 +42,7 @@ body {
           width: 35%;
           display: flex;
           align-items: center;
+          justify-content: center;
           margin: 1.5% auto 0.5% auto;
 
           h2 {
@@ -52,9 +53,11 @@ body {
               weight: bold;
               size: $line * 3;
             }
+            text-shadow: 1px 1px 2px $dark;
           }
 
           hr {
+            display: none;
             flex-grow: 1;
             border: {
               color: $grey-text;
@@ -274,22 +277,24 @@ body {
 
         .heading {
           position: relative;
-          width: 100%;
+          width: 100% !important;
           text: {
             align: center;
           }
           padding: 0;
           margin-left: 0 !important;
           margin-top: 0.3em !important;
+          justify-content: flex-start !important;
 
           h2 {
             background-color: $light;
             padding: 1%;
 
             font: {
-              size: 2.3em !important;
+              size: 2.5em !important;
               weight: normal !important;
             };
+            text-shadow: none !important;
             border: {
               color: $red;
               width: 0.1em;
@@ -317,7 +322,7 @@ body {
           }
 
           #search {
-            width: 60%;
+            width: 40%;
 
             font: {
               size: 2.2em;
@@ -326,10 +331,17 @@ body {
           }
 
           #search-button {
-            display: none;
+            //display: none;
             font: {
               size: 2em;
             }
+            padding: 0.6em !important;
+            border-radius: 0.4em !important;
+            margin-left: 0.4em !important;
+            -webkit-box-shadow:  0 0 0.3em $red;
+            -moz-box-shadow:  0 0 0.3em $red;
+            box-shadow:  0 0 0.3em $red;
+            color: $red !important;
           }
         }
       }

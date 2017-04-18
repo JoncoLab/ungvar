@@ -95,7 +95,7 @@ body
         -ms-flex-direction: column;
             flex-direction: column; 
 
-    min-width: 740px;
+    min-width: 800px;
 
     background-color: rgba(250, 255, 216, .4);
     background-image: url('../images/bg.png');
@@ -126,9 +126,9 @@ body #main-header
 
     border-bottom: 2px solid #830300;
     background-color: #faffb0;
-    -webkit-box-shadow: 0 1px 3px #463c33;
-       -moz-box-shadow: 0 1px 3px #463c33;
-            box-shadow: 0 1px 3px #463c33; 
+    -webkit-box-shadow: 0 1px 3px #5c5143;
+       -moz-box-shadow: 0 1px 3px #5c5143;
+            box-shadow: 0 1px 3px #5c5143; 
 
     -webkit-box-pack: justify; 
 
@@ -1342,21 +1342,29 @@ body main .content .content-manage .heading
         -ms-flex-align: center; 
 
             align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 body main .content .content-manage .heading h2
 {
-    font-size: 30px; 
+    font-size: 30px;
     font-weight: bold;
 
     margin: 0 15px;
 
-    color: #463c33;
+    color: #5c5143;
+    text-shadow: 1px 1px 2px #0e0000;
 }
 body main .content .content-manage .heading hr
 {
+    display: none;
+
     max-width: 20px; 
 
-    border-color: #463c33;
+    border-color: #5c5143;
 
     -webkit-box-flex: 1;
 
@@ -2027,6 +2035,10 @@ body footer .contacts .addresses ul
 
                 justify-content: space-around !important;
     }
+    body footer .add:last-of-type
+    {
+        display: none;
+    }
     body footer .info
     {
         position: absolute;
@@ -2037,11 +2049,14 @@ body footer .contacts .addresses ul
     }
     body footer .info span
     {
-        font-size: 1.6em;
+        font-size: 2em;
+        font-weight: bold; 
+
+        text-shadow: 3px 3px 2px #0e0000;
     }
     body footer .contacts tbody tr
     {
-        font-size: 2.5em;
+        font-size: 2.6em;
 
         position: relative; 
 
@@ -2054,6 +2069,8 @@ body footer .contacts .addresses ul
         display: -ms-flexbox; 
 
         display: flex;
+
+        text-shadow: 3px 3px 2px #0e0000;
     }
     body footer .contacts tbody tr .name
     {
@@ -2086,16 +2103,26 @@ body footer .contacts .addresses ul
     {
         position: relative;
 
-        width: 100%;
-        margin-top: .3em !important; 
+        width: 100% !important;
+        margin-top: .3em !important;
         margin-left: 0 !important;
         padding: 0;
 
         text-align: center;
+
+        -webkit-box-pack: start !important;
+
+        -webkit-justify-content: flex-start !important;
+
+           -moz-box-pack: start !important;
+
+            -ms-flex-pack: start !important;
+
+                justify-content: flex-start !important;
     }
     main .content .content-manage .heading h2
     {
-        font-size: 2.3em !important;
+        font-size: 2.5em !important;
         font-weight: normal !important;
 
         padding: 1%;
@@ -2107,6 +2134,7 @@ body footer .contacts .addresses ul
         -webkit-border-radius: .3em;
                 border-radius: .3em;
         background-color: rgba(250, 255, 216, .9);
+        text-shadow: none !important;
     }
     main .content .content-manage .heading hr
     {
@@ -2129,7 +2157,7 @@ body footer .contacts .addresses ul
     {
         font-size: 2.2em;
 
-        width: 60%;
+        width: 40%;
 
         -webkit-border-radius: .2em !important;
 
@@ -2137,9 +2165,17 @@ body footer .contacts .addresses ul
     }
     main .content .content-manage .search #search-button
     {
-        font-size: 2em; 
+        font-size: 2em;
 
-        display: none;
+        margin-left: .4em !important;
+        padding: .6em !important;
+
+        color: #830300 !important; 
+        -webkit-border-radius: .4em !important; 
+                border-radius: .4em !important;
+        -webkit-box-shadow: 0 0 .3em #830300;
+           -moz-box-shadow: 0 0 .3em #830300;
+                box-shadow: 0 0 .3em #830300;
     }
     main .content .items
     {

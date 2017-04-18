@@ -292,6 +292,7 @@
         background: {
           color: opacify($darkyellow, 0.2);
         }
+        overflow: scroll;
 
 
         > li {

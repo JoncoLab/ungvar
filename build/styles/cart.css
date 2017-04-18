@@ -95,7 +95,7 @@ body
         -ms-flex-direction: column;
             flex-direction: column; 
 
-    min-width: 740px;
+    min-width: 800px;
 
     background-color: rgba(250, 255, 216, .4);
     background-image: url('../images/bg.png');
@@ -126,9 +126,9 @@ body #main-header
 
     border-bottom: 2px solid #830300;
     background-color: #faffb0;
-    -webkit-box-shadow: 0 1px 3px #463c33;
-       -moz-box-shadow: 0 1px 3px #463c33;
-            box-shadow: 0 1px 3px #463c33; 
+    -webkit-box-shadow: 0 1px 3px #5c5143;
+       -moz-box-shadow: 0 1px 3px #5c5143;
+            box-shadow: 0 1px 3px #5c5143; 
 
     -webkit-box-pack: justify; 
 
@@ -899,6 +899,8 @@ body main .content .full-screen-confirmation #confirmation
 {
     position: relative;
 
+    overflow: scroll !important; 
+
     margin: 30px auto;
     padding: 10px 60px;
 
@@ -1440,6 +1442,10 @@ body footer .contacts .addresses ul
 
                 justify-content: space-around !important;
     }
+    body footer .add:last-of-type
+    {
+        display: none;
+    }
     body footer .info
     {
         position: absolute;
@@ -1450,11 +1456,14 @@ body footer .contacts .addresses ul
     }
     body footer .info span
     {
-        font-size: 1.6em;
+        font-size: 2em;
+        font-weight: bold; 
+
+        text-shadow: 3px 3px 2px #0e0000;
     }
     body footer .contacts tbody tr
     {
-        font-size: 2.5em;
+        font-size: 2.6em;
 
         position: relative; 
 
@@ -1467,6 +1476,8 @@ body footer .contacts .addresses ul
         display: -ms-flexbox; 
 
         display: flex;
+
+        text-shadow: 3px 3px 2px #0e0000;
     }
     body footer .contacts tbody tr .name
     {
@@ -1487,9 +1498,19 @@ body footer .contacts .addresses ul
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px)
 {
+    body main
+    {
+        width: 100% !important;
+    }
     body main .to-catalog
     {
         top: -6em;
+
+        padding: 1.2em !important; 
+
+        -webkit-border-radius: 1em !important; 
+
+                border-radius: 1em !important;
     }
     body main .to-catalog span
     {
@@ -1497,14 +1518,177 @@ body footer .contacts .addresses ul
     }
     body main .to-catalog img
     {
-        height: 6em;
+        height: 5em;
     }
     body main .add
     {
         display: none;
     }
+    body main .content
+    {
+        max-width: 95% !important; 
+        margin-top: 2.5em;
+    }
+    body main .content .items
+    {
+        width: 100%;
+    }
     body main .content .items thead
     {
         display: none;
+    }
+    body main .content tbody tr td
+    {
+        font-size: 2.3em;
+
+        height: 2.5em !important; 
+        padding-top: .5em !important;
+        padding-bottom: .5em !important;
+
+        border: none !important;
+        background-color: rgba(250, 255, 216, .8);
+    }
+    body main .content tbody tr td:first-of-type
+    {
+        -webkit-border-radius: 1em 0 0 1em;
+                border-radius: 1em 0 0 1em;
+        background-color: rgba(250, 255, 176, .9);
+    }
+    body main .content tbody tr td:last-of-type
+    {
+        -webkit-border-radius: 0 1em 1em 0;
+                border-radius: 0 1em 1em 0;
+    }
+    body main .content tbody tr td.num
+    {
+        font-size: 4em;
+
+        text-shadow: 3px 3px 0 rgba(250, 255, 216, .9);
+    }
+    body main .content tbody tr td.img
+    {
+        padding-left: 3%;
+    }
+    body main .content tbody tr td.img img
+    {
+        height: 5em !important;
+
+        -webkit-border-radius: 1em !important;
+
+                border-radius: 1em !important;
+    }
+    body main .content tbody tr td.name
+    {
+        width: 30% !important;
+
+        text-align: center;
+    }
+    body main .content tbody tr td.name h3
+    {
+        text-align: center;
+    }
+    body main .content tbody tr td.amount
+    {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    body main .content tbody tr td.amount input
+    {
+        font-size: 1.4em !important;
+
+        width: 80% !important;
+
+        border: .07em solid #830300 !important;
+    }
+    body main .content tbody tr td.price
+    {
+        font-size: 3em;
+
+        color: #830300;
+    }
+    body main .content tbody tr td.remove
+    {
+        padding-right: 2%;
+    }
+    body main .content tbody tr td.remove img
+    {
+        height: 2.5em !important;
+    }
+    body main .content tfoot td
+    {
+        font-size: 2.8em !important;
+        font-weight: bold;
+    }
+    body main .content tfoot td.button
+    {
+        padding: 0;
+    }
+    body main .content tfoot td.button #submit-button
+    {
+        font-size: 1em;
+        font-weight: normal !important;
+
+        width: 100% !important;
+        height: inherit !important;
+        padding: .5em;
+
+        color: white !important;
+        -webkit-box-shadow: .1em .1em .1em #5c5143;
+           -moz-box-shadow: .1em .1em .1em #5c5143;
+                box-shadow: .1em .1em .1em #5c5143; 
+        text-shadow: 2px 2px 5px #0e0000;
+    }
+    body main .full-screen-confirmation
+    {
+        padding: 0 !important;
+    }
+    body main .full-screen-confirmation #confirmation
+    {
+        overflow: scroll; 
+
+        height: 85%;
+        margin-top: 0 !important;
+        padding-top: 3em !important;
+    }
+    body main .full-screen-confirmation #confirmation fieldset
+    {
+        font-size: 2.3em;
+    }
+    body main .full-screen-confirmation #confirmation fieldset legend
+    {
+        font-size: 1.2em !important;
+    }
+    body main .full-screen-confirmation #confirmation fieldset#order-summary p
+    {
+        font-size: 1.2em !important;
+    }
+    body main .full-screen-confirmation #confirmation fieldset#contact-info label,
+    body main .full-screen-confirmation #confirmation fieldset#order-address label
+    {
+        margin-top: .4em !important;
+    }
+    body main .full-screen-confirmation #confirmation fieldset#contact-info input,
+    body main .full-screen-confirmation #confirmation fieldset#order-address input
+    {
+        font-size: 1.2em !important;
+    }
+    body main .full-screen-confirmation #confirmation #submit + label
+    {
+        font-size: 2.8em; 
+
+        padding: .4em !important;
+    }
+    body main .full-screen-confirmation #confirmation .close
+    {
+        height: 4.5em !important;
+    }
+    body main .full-screen-confirmation #confirmation > p
+    {
+        font-size: 2.3em;
+        font-weight: normal !important; 
+
+        margin-top: 1.5em !important;
+
+        text-align: center;
     }
 }

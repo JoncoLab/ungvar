@@ -312,6 +312,8 @@ body {
 
           box-shadow: $line / 5 $line / 5 0 0 $dark;
 
+          overflow: scroll !important;
+
           fieldset {
             border: none;
             margin: $line / 2 0 0 0;
@@ -467,8 +469,13 @@ body {
   body {
 
     main {
+      width: 100% !important;
       .to-catalog {
         top: -6em;
+
+        border-radius: 1em !important;
+
+        padding: 1.2em !important;
         span{
           display: none;
         }
@@ -477,7 +484,7 @@ body {
         }
 
         img {
-          height: 6em;
+          height: 5em;
         }
       }
 
@@ -492,8 +499,11 @@ body {
       }
 
       .content {
+        margin-top: 2.5em;
+        max-width: 95% !important;
 
         .items {
+          width: 100%;
 
           thead {
             display: none;
@@ -528,43 +538,89 @@ body {
 
             tr {
 
+
               &:hover {
               }
 
               &:last-of-type {
                 td {
+                  //border: none !important;
                 }
               }
 
               td {
+                $border-radius: 1em;
+
+                background-color: transparentize($light, 0.1);
+                border: none !important;
+                font: {
+                  size: 2.3em;
+                }
+                padding: {
+                  bottom: 0.5em !important;
+                  top: 0.5em !important;
+                }
+                height: 2.5em !important;
+                &:first-of-type {
+                  border-radius: $border-radius 0 0 $border-radius;
+                  background-color: $yellow;
+                }
+                &:last-of-type{
+                  border-radius: 0 $border-radius $border-radius 0;
+                }
 
                 &.num {
+                  font: {
+                    size: 4em;
+                  };
+                  text-shadow: 3px 3px 0 $light;
                 }
 
 
                 &.img {
+                  padding-left: 3%;
                   img {
+                    height: 5em !important;
+                    border-radius: $border-radius !important;
                   }
                 }
 
                 &.name {
+                  width: 30% !important;
+                  text-align: center;
                   h3 {
+                    text-align: center;
                     small {
                     }
                   }
                 }
 
                 &.amount {
+                  padding: {
+                    right: 3%;
+                    left: 3%;
+                  }
 
                   input {
+                    width: 80% !important;
+                    font: {
+                      size: 1.4em !important;
+                    };
+                    border: 0.07em solid $red !important;
                   }
                 }
 
                 &.price {
+                  font: {
+                    size: 3em;
+                  }
+                  color: $red;
                 }
 
                 &.remove {
+                  padding-right: 2%;
                   img {
+                    height: 2.5em !important;
                   }
                 }
               }
@@ -574,14 +630,32 @@ body {
           tfoot {
 
             td {
+              font: {
+                size: 2.8em !important;
+                weight: bold;
+              };
 
               &:first-of-type {
               }
 
               &.button {
+                padding: 0;
 
                 #submit-button {
+                  width: 100% !important;
+                  height: inherit !important;
+                  padding: 0.5em;
 
+                  font: {
+                    size: 1em;
+                    weight: normal !important;
+                  }
+                  text-shadow: 2px 2px 5px $dark;
+                  color: white !important;
+
+                  -webkit-box-shadow:  0.1em 0.1em 0.1em $grey-text;
+                  -moz-box-shadow:  0.1em 0.1em 0.1em $grey-text;
+                  box-shadow:  0.1em 0.1em 0.1em $grey-text;
                 }
               }
             }
@@ -592,12 +666,26 @@ body {
         }
 
         .full-screen-confirmation {
+          padding: 0 !important;
 
           #confirmation {
+            margin-top: 0 !important;
+            height: 85% ;
+            padding-top: 3em !important;
+            overflow: scroll;
+
 
             fieldset {
 
+              font: {
+                size: 2.3em;
+              }
+
               legend {
+                font: {
+                  size: 1.2em !important;
+                }
+
                 small {
                 }
               }
@@ -605,16 +693,17 @@ body {
               &#order-summary {
 
                 p {
+                  font: {
+                    size: 1.2em !important;
+                  }
                 }
               }
 
               &#payment {
 
                 input {
-
                   + label {
                   }
-
                   &:checked + label {
                   }
                 }
@@ -624,9 +713,13 @@ body {
               &#order-address {
 
                 label {
+                  margin-top: 0.4em !important;
                 }
 
                 input {
+                  font: {
+                    size: 1.2em !important;
+                  }
 
                   &#building {
                   }
@@ -637,16 +730,29 @@ body {
             #submit {
 
               + label {
+                padding: 0.4em !important;
+                font: {
+                  size: 2.8em;
+                };
               }
             }
 
             .close {
+              height: 4.5em !important;
 
               &:hover {
               }
             }
 
             > p {
+              margin-top: 1.5em !important;
+              text-align: center;
+              font: {
+                size: 2.3em;
+                weight: normal !important;
+              }
+            }
+            > .g-recaptcha{
             }
           }
         }

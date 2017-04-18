@@ -7,7 +7,7 @@ $yellow: rgba(250, 255, 176, 0.9);
 $darkyellow: rgba(250, 255, 216, 0.8);
 $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
-$grey-text: #463c33;
+$grey-text: #5c5143;
 
 @mixin button($color: $yellow, $text-color: black) {
   font: {
@@ -142,7 +142,7 @@ $grey-text: #463c33;
     attachment: fixed;
     blend-mode: overlay;
   }
-  min-width: $line * 74;
+  min-width: $line * 80;
   font:{
     family: Arial;
   }
