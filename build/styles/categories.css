@@ -406,7 +406,7 @@ body #main-header #customers-info p .full-screen-feedback-button
 
     color: #830300;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body #main-header
     {
@@ -797,7 +797,6 @@ body .catalog-navigation #page .main-navigation > li .categories-nav
     left: -60px;
 
     display: none;
-    overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1132,10 +1131,12 @@ body .catalog-navigation #page .main-navigation > li .categories-nav li a
     width: 100%;
     height: 100%;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body .catalog-navigation #page .main-navigation
     {
+        overflow: visible; 
+
         height: 7em;
         padding: 0;
         padding-top: 1%;
@@ -2021,13 +2022,13 @@ body footer .contacts .addresses ul
 
     list-style: none;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body footer
     {
         bottom: 0;
 
-        min-height: 14em !important;
+        min-height: 14.3em !important;
 
         -webkit-justify-content: space-around !important;
 
@@ -2089,7 +2090,7 @@ body footer .contacts .addresses ul
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     #main-header
     {

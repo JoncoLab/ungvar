@@ -406,7 +406,7 @@ body #main-header #customers-info p .full-screen-feedback-button
 
     color: #830300;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body #main-header
     {
@@ -1049,13 +1049,13 @@ body footer .contacts .addresses ul
 
     list-style: none;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body footer
     {
         bottom: 0;
 
-        min-height: 14em !important;
+        min-height: 14.3em !important;
 
         -webkit-justify-content: space-around !important;
 
@@ -1117,7 +1117,7 @@ body footer .contacts .addresses ul
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px)
 {
     body
     {
@@ -1146,11 +1146,15 @@ body footer .contacts .addresses ul
 
                 justify-content: space-between;
     }
+    body main
+    {
+        margin-top: 1.3em;
+    }
     body main .to-cart
     {
         font-size: 2.4em;
 
-        top: -3.5em;
+        top: -3.1em;
         right: 0;
 
         -webkit-box-sizing: border-box;

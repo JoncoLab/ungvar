@@ -465,11 +465,12 @@ body {
   }
   @import "templates/footer";
 }
-@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+@media only screen and(min-device-width: 320px) and(max-device-width: 768px) {
   body {
 
     main {
       width: 100% !important;
+      margin-bottom: 2em;
       .to-catalog {
         top: -6em;
 
@@ -669,10 +670,16 @@ body {
           padding: 0 !important;
 
           #confirmation {
+            border: 1em solid $light;
             margin-top: 0 !important;
-            height: 85% ;
+            height: 90% ;
             padding-top: 3em !important;
+            padding-bottom: 3em !important;
             overflow: scroll;
+
+            background: {
+              image: linear-gradient(to bottom, $dark 90%, $grey-text) !important;
+            };
 
 
             fieldset {
@@ -714,6 +721,9 @@ body {
 
                 label {
                   margin-top: 0.4em !important;
+                  font: {
+                    size: 1.2em !important;
+                  }
                 }
 
                 input {
@@ -745,7 +755,7 @@ body {
             }
 
             > p {
-              margin-top: 1.5em !important;
+              margin-top: 2.7em !important;
               text-align: center;
               font: {
                 size: 2.3em;
@@ -753,6 +763,8 @@ body {
               }
             }
             > .g-recaptcha{
+              transform: scale(2.1);
+              transform-origin: top left;
             }
           }
         }

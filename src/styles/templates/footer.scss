@@ -86,10 +86,10 @@ footer {
     }
   }
 }
-@media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
+@media only screen and(min-device-width: 320px) and(max-device-width: 768px) {
   footer {
     bottom: 0;
-    min-height: 14em !important;
+    min-height: 14.3em !important;
     justify-content: space-around !important;
 
     .add {
