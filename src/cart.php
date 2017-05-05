@@ -10,7 +10,9 @@
     <script src="scripts/js/common.js"></script>
 </head>
 <body>
-//= modules/header.html
+<?php
+include "modules/header.html";
+?>
 <main>
     <a class="to-catalog" href="index.html">
         <img src="SVG/catalog.svg">
@@ -117,9 +119,13 @@
             </form>
         </div>
     </section>
-    //= modules/full-screen-feedback.html
+    <?php
+    include "modules/full-screen-feedback.html";
+    ?>
     <aside class="add empty"></aside>
 </main>
-//= modules/footer.html
+<?php
+include "modules/footer.html";
+?>
 </body>
 </html>

@@ -26,6 +26,14 @@ var gulp = require("gulp"),
                 'build/*',
                 'build/**/*',
                 'build/**/**/*'
+            ],
+            modules: [
+                'src/modules/*.html',
+                'src/modules/*.php'
+            ],
+            products: [
+                'src/products/**/?????.JPG',
+                '!src/products/*no-category*/*'
             ]
         },
 
@@ -37,7 +45,9 @@ var gulp = require("gulp"),
             svg: 'build/SVG/',
             font: 'build/fonts/',
             js: 'build/scripts/js/',
-            zip: 'zip/'
+            zip: 'zip/',
+            modules: 'build/modules',
+            products: 'build/products/'
         },
 
         watch: {
@@ -67,7 +77,9 @@ var gulp = require("gulp"),
             img: '/images/',
             svg: '/SVG/',
             font: '/fonts/',
-            js: '/scripts/js/'
+            js: '/scripts/js/',
+            modules: '/modules/',
+            products: '/products'
         },
 
         clean: 'build*'
@@ -94,6 +106,24 @@ gulp.task('php:build', function () {
         .pipe(connectToFtp.newer(path.ftp.php))
         .pipe(connectToFtp.dest(path.ftp.php))
         .pipe(gulp.dest(path.build.php));
+});
+
+//Збірка модулів
+gulp.task('modules:build', function () {
+    gulp.src(path.src.modules)
+        .pipe(rigger())
+        .pipe(connectToFtp.newer(path.ftp.modules))
+        .pipe(connectToFtp.dest(path.ftp.modules))
+        .pipe(gulp.dest(path.build.modules));
+});
+
+//Збірка фотографій продукції
+gulp.task('products:build', function () {
+    gulp.src(path.src.products)
+        .pipe(image())
+        .pipe(connectToFtp.newer(path.ftp.products))
+        .pipe(connectToFtp.dest(path.ftp.products))
+        .pipe(gulp.dest(path.build.products));
 });
 
 //Збірка JS
@@ -163,13 +193,16 @@ gulp.task('project:build', [
     'img:build',
     'svg:build',
     'php:build',
-    'fonts:build'
+    'fonts:build',
+    'modules:build',
+    'products:build'
 ]);
 
 gulp.task('watch', function () {
     gulp.watch(path.watch.pages, [
         'html:build',
-        'fonts:build'
+        'fonts:build',
+        'modules:build'
     ]);
     gulp.watch(path.watch.styles, ['css:build']);
     gulp.watch(path.watch.scripts, [

@@ -10,9 +10,6 @@ var main = function () {
         catalogNavMenu = $('.main-navigation'),
         categoriesNavItems = categoriesNav.children('li'),
         items = $('.items .item'),
-        currentCategoryName = $('html').data('category'),
-        pageTitle = $('head title'),
-        pageHeading = $('.heading h2'),
         setPaddingForMain = function () {
             var main = $('main'),
                 navHeight = catalogNavMenu.css('height'),
@@ -25,8 +22,6 @@ var main = function () {
         'transform': 'none'
     });
     setPaddingForMain();
-    pageTitle.append(' - ' + currentCategoryName);
-    pageHeading.text(currentCategoryName);
 
     window.onscroll = function() {
         if (avatarElem.classList.contains('fixed') && window.pageYOffset < avatarSourceTop) {

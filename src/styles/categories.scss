@@ -144,13 +144,12 @@ body {
             top: 0;
             left: 0;
             width: 250%;
-            height: 100%;
+            height: 110%;
 
             background: {
               color: $light;
             }
 
-            box-shadow: 0 0  0 $line / 5 $background;
             padding: $line;
             z-index: 20;
 
@@ -161,10 +160,9 @@ body {
             cursor: default;
 
             img {
-              width: 50%;
-              -webkit-box-shadow:  0 0 0 $dark;
-              -moz-box-shadow:  0 0 0 $dark;
-              box-shadow:  0 0 0 $dark;
+              height: 100%;
+              width: auto;
+              box-shadow: none;
             }
 
             .buy-item {

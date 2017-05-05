@@ -10,43 +10,9 @@
     <script src="scripts/js/common.js"></script>
 </head>
 <body>
-<header id="main-header">
-    <a class="logo" href="index.html">
-        <h1>
-            <span class="corner"></span>
-            <span class="corner"></span>
-            <span class="corner"></span>
-            <span class="corner"></span>
-            <span class="title">
-                <small class="dot">⦁</small>
-                <span>UNGVAR</span>
-                <small class="dot">⦁</small>
-                <span>ONLINE</span>
-                <small class="dot">⦁</small>
-            </span>
-        </h1>
-        <div class="corner"></div>
-        <div class="corner"></div>
-        <div class="corner"></div>
-        <div class="corner"></div>
-    </a>
-    <nav id="customers-info">
-        <p>
-            <span class="label"></span>
-            <span>Звертаємо увагу користувачів те, що за умови </span>
-            <strong>замовлення на суму від 200 грн. - доставка безкоштовна!</strong><br>
-            <span>Приємних покупок в</span>
-            <strong class="ungvar">Ungvar!</strong>
-        </p>
-        <p>
-            <span class="label"></span>
-            <span>Якщо у вас виникли запитання, скарги, чи пропозиції, зв'яжіться з нами за допомогою</span>
-            <b class="full-screen-feedback-button">електронної форми</b>,
-            <span>або скористайтеся одним з контактів, які ви знайдете у</span>
-            <b class="to-footer">підвалі сайту</b>.
-        </p>
-    </nav>
-</header>
+<?php
+include "modules/header.html";
+?>
 <main>
     <a class="to-catalog" href="index.html">
         <img src="SVG/catalog.svg">
@@ -153,66 +119,13 @@
             </form>
         </div>
     </section>
-    <section class="full-screen-feedback">
-        <form id="feedback" method="post" action="scripts/php/feedback.php">
-            <img class="feedback-close" src="SVG/cross.svg">
-            <label for="feedback-name">Прізвище та ім'я:</label>
-            <input type="text" name="feedback-name" id="feedback-name" minlength="5" required pattern="^[А-Яа-яЁёІіЇї]+[\S\s]+[А-Яа-яЁёІіЇї]+$" placeholder="Олексій Ярош"><br>
-            <label for="feedback-subject">Контактний телефон:</label>
-            <input type="tel" name="feedback-tel" id="feedback-tel" pattern="[+]380[0-9]{9}" placeholder="+380954988273" required><br>
-            <label for="feedback-email">Електронна пошта:</label>
-            <input type="email" name="feedback-email" id="feedback-email" placeholder="example@ungvar.com" required><br>
-            <label for="feedback-tel">Тема:</label>
-            <input type="text" name="feedback-subject" id="feedback-subject" placeholder="Тема вашого повідомлення" maxlength="140" required><br>
-            <label for="feedback-message">Ваше повідомлення:</label><br>
-            <textarea required id="feedback-message" name="feedback-message" cols="50" rows="8" maxlength="500" placeholder="Текст вашого повідомлення..."></textarea>
-            <div class="g-recaptcha" data-sitekey="6LcRNxwUAAAAABLEZRjjQmlYRvktTzj2ktr6sJCK"></div>
-            <input type="submit" name="feedback-submit" id="feedback-submit">
-            <label for="feedback-submit">Підтвердити</label>
-        </form>
-    </section>
+    <?php
+    include "modules/full-screen-feedback.html";
+    ?>
     <aside class="add empty"></aside>
 </main>
-<footer>
-    <aside class="add">
-        <a href="https://hashflare.io/r/EA5CFE8C-ungvar">
-            <img src="https://cdn.hashflare.eu/banners/ru/d4_g_468x60_ru.gif?v=4" alt="HashFlare">
-        </a>
-    </aside>
-    <aside class="add">
-        <a href="https://cryptopay.me/join/0388661c" target="_blank">
-            <img src="http://adv.cryptopay.me/referrals/RB_468x60_Animated.gif" width="460" height="60"/>
-        </a>
-    </aside>
-    <table class="contacts">
-        <tbody>
-        <tr class="mail">
-            <td class="name">Електронна пошта:</td>
-            <td class="icon"><img src="SVG/email.svg"></td>
-            <td class="value">info@ungvar.com</td>
-        </tr>
-        <tr class="tel">
-            <td class="name">Телефон:</td>
-            <td class="icon"><img src="SVG/tel.svg"></td>
-            <td class="value">+380 (95) 498 82 73 (Олексій)</td>
-        </tr>
-        <tr class="addresses">
-            <td class="name">Адреси:</td>
-            <td class="icon"><img src="SVG/address.svg"></td>
-            <td class="value">
-                <ul>
-                    <li>Ужгород, вул. Донського, 1</li>
-                    <li>Ужгород, просп. Свободи, 50</li>
-                    <li>Ужгород, вул. Минайська, 2</li>
-                </ul>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <div class="info">
-        <span>Cайт розроблено компанією "Joncolab"</span>
-        <span>© 2017 ungvar.uz.ua</span>
-    </div>
-</footer>
+<?php
+include "modules/footer.html";
+?>
 </body>
 </html>
