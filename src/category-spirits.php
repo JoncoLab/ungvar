@@ -18,6 +18,9 @@ $connection->set_charset('utf8');
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="JoncoLab">
+    <meta name="description" content="Замовлення продуктів онлайн та їх безкоштовна доставка в місті Ужгороді уже сьогодні.">
+    <meta name="keywords" content="<?php print $category_name . ', ' . $category;?>, замовлення, продукти, доставка, безкоштовна доставка, Ужгород, Ungvar, Online, заказ, продукты, бесплатная оставка">
     <title>Ungvar Online - <?php print $category_name;?></title>
     <link href="styles/categories.css" rel="stylesheet">
     <script src="scripts/js/jquery-3.1.1.js"></script>
@@ -50,7 +53,7 @@ include "modules/catalog-navigation.html";
             $items = $connection->query($sql);
             while ($item = $items->fetch_assoc()) {
                 echo
-                '<li class="item">' .
+                '<li class="item" data-id="' . $item["id"] . '">' .
                 '<img src="products/' . $category . '/' . $item["id"] . '.JPG">' .
                 '<h4 class="name">' . $item["name"] . '</h4>' .
                 '<h4 class="price button">' . $item["cost"] . ' грн.</h4>' .

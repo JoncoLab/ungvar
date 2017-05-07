@@ -556,8 +556,7 @@ body main .to-cart
             border-bottom-left-radius: 20px;
     background-color: #830300;
     -webkit-box-shadow: -1px 1px .66667px #5c5143;
-       -moz-box-shadow: -1px 1px .66667px #5c5143;
-            box-shadow: -1px 1px .66667px #5c5143 body main .to-cart; 
+            box-shadow: -1px 1px .66667px #5c5143; 
 
     -webkit-box-align: center; 
 
@@ -569,7 +568,7 @@ body main .to-cart
 
             align-items: center;
 }
-body main .to-cart :hover
+body main .to-cart:hover
 {
     padding-right: 20px;
 }
@@ -679,7 +678,7 @@ body main .landing-nav .item
     -webkit-border-radius: 20px; 
 
             border-radius: 20px;
-    background-image: url('../images/374728-svetik.png');
+    background-image: url('../images/form-bg.png');
     -o-background-size: 100% 100%;
        background-size: 100% 100%;
     -webkit-box-shadow: 1px 1px 2px 0 #5c5143;

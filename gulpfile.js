@@ -33,7 +33,7 @@ var gulp = require("gulp"),
             ],
             products: [
                 'src/products/**/?????.JPG',
-                '!src/products/*no-category*/*'
+                '!src/products/_*/*'
             ]
         },
 

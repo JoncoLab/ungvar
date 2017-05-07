@@ -45,9 +45,7 @@ body {
       display: flex;
       align-items: center;
 
-      -webkit-box-shadow:  -1px 1px $line / 15 $grey-text;
-      -moz-box-shadow:  -1px 1px $line / 15 $grey-text;
-      box-shadow:  -1px 1px $line / 15 $grey-text
+      box-shadow:  -1px 1px $line / 15 $grey-text;
 
       &:hover {
         padding-right: $line * 2;
@@ -94,7 +92,7 @@ body {
         width: 13%;
 
         background: {
-          image: url("../images/374728-svetik.png");
+          image: url("../images/form-bg.png");
           size: 100% 100%;
         }
 
