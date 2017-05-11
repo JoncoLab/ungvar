@@ -92,18 +92,21 @@ body {
         width: 13%;
 
         background: {
-          image: url("../images/form-bg.png");
-          size: 100% 100%;
-        }
+          image: url("../SVG/cakes.svg");
+          size: 50% 50%;
+          repeat: no-repeat;
+          position: center;
 
-        margin: 1%;
+          color: lighten(transparentize($grey-text, 0.3), $line * 3);
+        }
 
         height: $line * 15;
 
         box-shadow: $line / 10 $line / 10  $line / 5 0 $grey-text;
 
         border: {
-          radius: $line * 2;
+          //radius: $line * 2;
+          bottom: $line / 5 solid $grey-text;
         }
 
         vertical-align: bottom;

@@ -670,17 +670,17 @@ body main .landing-nav .item
 
     width: 13%;
     height: 150px;
-    margin: 1%;
 
     cursor: pointer;
     vertical-align: bottom; 
 
-    -webkit-border-radius: 20px; 
-
-            border-radius: 20px;
-    background-image: url('../images/form-bg.png');
-    -o-background-size: 100% 100%;
-       background-size: 100% 100%;
+    border-bottom: 2px solid #5c5143;
+    background-color: rgba(172, 158, 140, .7);
+    background-image: url('../SVG/cakes.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -o-background-size: 50% 50%;
+       background-size: 50% 50%;
     -webkit-box-shadow: 1px 1px 2px 0 #5c5143;
             box-shadow: 1px 1px 2px 0 #5c5143;
 }

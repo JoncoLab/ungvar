@@ -8,6 +8,7 @@ $darkyellow: rgba(250, 255, 216, 0.8);
 $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
 $grey-text: #5c5143;
+$grey-item: rgba(182, 175, 242, 0.74);
 
 @mixin button($color: $yellow, $text-color: black) {
   font: {
