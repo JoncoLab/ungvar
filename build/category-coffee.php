@@ -70,6 +70,7 @@ include "modules/catalog-navigation.html";
 </main>
 <?php
 include "modules/footer.html";
+include "modules/preloader.html";
 ?>
 </body>
 </html>

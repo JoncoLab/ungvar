@@ -126,6 +126,7 @@ include "modules/header.html";
 </main>
 <?php
 include "modules/footer.html";
+include "modules/preloader.html";
 ?>
 </body>
 </html>

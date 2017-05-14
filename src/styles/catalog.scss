@@ -58,6 +58,7 @@ body {
 
     .add {
       @include add();
+      display: none;
 
       top: $line * 16;
 
@@ -90,14 +91,15 @@ body {
         cursor: pointer;
 
         width: 13%;
+        display: flex;
+        flex-direction: column-reverse;
 
         background: {
-          image: url("../SVG/cakes.svg");
           size: 50% 50%;
           repeat: no-repeat;
-          position: center;
+          position: center 20%;
 
-          color: lighten(transparentize($grey-text, 0.3), $line * 3);
+          color: lighten(transparentize($light, 0.3), $line * 3);
         }
 
         height: $line * 15;
@@ -108,8 +110,6 @@ body {
           //radius: $line * 2;
           bottom: $line / 5 solid $grey-text;
         }
-
-        vertical-align: bottom;
 
         a {
           text: {
@@ -126,23 +126,84 @@ body {
           align-items: center;
           justify-content: center;
 
-          transition: {
-            duration: $time / 2;
-            timing-function: linear;
-          }
-
           font: {
             weight: bold;
+            family: "Belfast Heavy SF";
             size: $line * 1.7;
           }
         }
 
         &:hover {
+          transition: {
+            duration: $time / 2;
+            timing-function: linear;
+          }
+          background: {
+            position: center;
+          };
 
           a {
             height: 100%;
             color: $red;
+            font: {
+              //weight: bold;
+            }
           }
+        }
+
+        &.water{
+          background-image: url("../SVG/water.svg");
+        }
+        &.juice{
+          background-image: url("../SVG/juice.svg");
+        }
+        &.drinks{
+          background-image: url("../SVG/drinks.svg");
+        }
+        &.tea{
+          background-image: url("../SVG/tea.svg");
+        }
+        &.coffee{
+          background-image: url("../SVG/coffee.svg");
+        }
+        &.confectionery{
+          background-image: url("../SVG/cakes.svg");
+        }
+        &.snacks{
+          background-image: url("../SVG/snack.svg");
+        }
+        &.bread{
+          background-image: url("../SVG/bread.svg");
+        }
+        &.meat{
+          background-image: url("../SVG/meat.svg");
+        }
+        &.seafood{
+          background-image: url("../SVG/fish.svg");
+        }
+        &.grocery{
+          background-image: url("../SVG/grocery.svg");
+        }
+        &.cheese{
+          background-image: url("../SVG/cheese.svg");
+        }
+        &.dairy{
+          background-image: url("../SVG/dairy.svg");
+        }
+        &.vegetables{
+          background-image: url("../SVG/vegetables.svg");
+        }
+        &.frozen{
+          background-image: url("../SVG/frozen.svg");
+        }
+        &.domestic{
+          background-image: url("../SVG/domestic.svg");
+        }
+        &.spirits{
+          background-image: url("../SVG/spirits.svg");
+        }
+        &.tobacco{
+          background-image: url("../SVG/tobacco.svg");
         }
       }
     }
@@ -226,6 +287,7 @@ body {
       }
 
       @import "templates/full-screen-feedback";
+
 
     }
   }

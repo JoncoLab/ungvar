@@ -54,58 +54,58 @@
   </a>
   <aside class="add empty"></aside>
   <div class="landing-nav">
-    <div class="item">
+    <div class="item water">
       <a href="category-water.php">Вода</a>
     </div>
-    <div class="item">
+    <div class="item juice">
       <a href="category-juice.php">Cоки</a>
     </div>
-    <div class="item">
+    <div class="item drinks">
       <a href="category-drinks.php">Інші напої</a>
     </div>
-    <div class="item">
+    <div class="item tea">
       <a href="category-tea.php">Чай</a>
     </div>
-    <div class="item">
+    <div class="item coffee">
       <a href="category-coffee.php">Кава</a>
     </div>
-    <div class="item">
+    <div class="item confectionery">
       <a href="category-confectionery.php">Кондитерські вироби</a>
     </div>
-    <div class="item">
+    <div class="item snacks">
       <a href="category-snacks.php">Снеки</a>
     </div>
-    <div class="item">
+    <div class="item bread">
       <a href="category-bread.php">Хліб</a>
     </div>
-    <div class="item">
+    <div class="item meat">
       <a href="category-meat.php">М'ясні вироби</a>
     </div>
-    <div class="item">
+    <div class="item seafood">
       <a href="category-seafood.php">Риба та морепродукти</a>
     </div>
-    <div class="item">
+    <div class="item grocery">
       <a href="category-grocery.php">Бакалія</a>
     </div>
-    <div class="item">
+    <div class="item cheese">
       <a href="category-cheese.php">Сири</a>
     </div>
-    <div class="item">
+    <div class="item dairy">
       <a href="category-dairy.php">Молочна продукція</a>
     </div>
-    <div class="item">
+    <div class="item vegetables">
       <a href="category-vegetables.php">Овочі та фрукти</a>
     </div>
-    <div class="item">
-      <a href="category-frozen.php">Напів- фабрикати</a>
+    <div class="item frozen">
+      <a href="category-frozen.php">Напівфабрикати</a>
     </div>
-    <div class="item">
+    <div class="item domestic">
       <a href="category-domestic.php">Товари для дому та засоби  гігієни</a>
     </div>
-    <div class="item">
+    <div class="item spirits">
       <a href="category-spirits.php">Міцні напої</a>
     </div>
-    <div class="item">
+    <div class="item tobacco">
       <a href="category-tobacco.php">Тютюнові вироби</a>
     </div>
   </div>
@@ -169,5 +169,47 @@
         <span>© 2017 ungvar.uz.ua</span>
     </div>
 </footer>
+<style type="text/css">
+    #hellopreloader>p {
+        display: none;
+    }
+    #hellopreloader_preload {
+        display: block;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+        background: #FFF063 url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;
+        background-size:41px;
+    }
+</style>
+<div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+    <p>
+        <a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a>
+    </p>
+</div>
+<script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+
+    function fadeOutnojquery(el) {
+        el.style.opacity = 1;
+        var interhellopreloader = setInterval(function () {
+            el.style.opacity = el.style.opacity - 0.05;
+            if (el.style.opacity <= 0.05) {
+                clearInterval(interhellopreloader);
+                hellopreloader.style.display = "none";
+            }
+        }, 0);
+    }
+    window.onload = function () {
+        setTimeout(function () {
+            fadeOutnojquery(hellopreloader);
+        }, 50);
+    };
+</script>
 </body>
 </html>

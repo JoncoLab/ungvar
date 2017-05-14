@@ -590,6 +590,7 @@ body main .add
     display: -ms-flexbox; 
 
     display: flex;
+    display: none;
 
     width: 100px;
     max-width: 100px;
@@ -666,19 +667,29 @@ body main .landing-nav
 }
 body main .landing-nav .item
 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
     overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
 
     width: 13%;
     height: 150px;
 
     cursor: pointer;
-    vertical-align: bottom; 
 
-    border-bottom: 2px solid #5c5143;
-    background-color: rgba(172, 158, 140, .7);
-    background-image: url('../SVG/cakes.svg');
+    border-bottom: 2px solid #5c5143; 
+    background-color: rgba(255, 255, 255, .6);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 20%;
     -o-background-size: 50% 50%;
        background-size: 50% 50%;
     -webkit-box-shadow: 1px 1px 2px 0 #5c5143;
@@ -686,6 +697,7 @@ body main .landing-nav .item
 }
 body main .landing-nav .item a
 {
+    font-family: 'Belfast Heavy SF';
     font-size: 17px; 
     font-weight: bold;
 
@@ -702,17 +714,6 @@ body main .landing-nav .item a
     height: 50px;
     padding: 0 5px;
 
-    -webkit-transition-timing-function: linear;
-
-       -moz-transition-timing-function: linear;
-
-         -o-transition-timing-function: linear;
-
-            transition-timing-function: linear;
-    -webkit-transition-duration: .15s;
-       -moz-transition-duration: .15s;
-         -o-transition-duration: .15s;
-            transition-duration: .15s;
     text-decoration: none;
 
     color: #0e0000;
@@ -733,11 +734,96 @@ body main .landing-nav .item a
         -ms-flex-pack: center;
             justify-content: center;
 }
+body main .landing-nav .item:hover
+{
+    -webkit-transition-timing-function: linear;
+       -moz-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+    -webkit-transition-duration: .15s;
+       -moz-transition-duration: .15s;
+         -o-transition-duration: .15s;
+            transition-duration: .15s;
+
+    background-position: center;
+}
 body main .landing-nav .item:hover a
 {
     height: 100%;
 
     color: #830300;
+}
+body main .landing-nav .item.water
+{
+    background-image: url('../SVG/water.svg');
+}
+body main .landing-nav .item.juice
+{
+    background-image: url('../SVG/juice.svg');
+}
+body main .landing-nav .item.drinks
+{
+    background-image: url('../SVG/drinks.svg');
+}
+body main .landing-nav .item.tea
+{
+    background-image: url('../SVG/tea.svg');
+}
+body main .landing-nav .item.coffee
+{
+    background-image: url('../SVG/coffee.svg');
+}
+body main .landing-nav .item.confectionery
+{
+    background-image: url('../SVG/cakes.svg');
+}
+body main .landing-nav .item.snacks
+{
+    background-image: url('../SVG/snack.svg');
+}
+body main .landing-nav .item.bread
+{
+    background-image: url('../SVG/bread.svg');
+}
+body main .landing-nav .item.meat
+{
+    background-image: url('../SVG/meat.svg');
+}
+body main .landing-nav .item.seafood
+{
+    background-image: url('../SVG/fish.svg');
+}
+body main .landing-nav .item.grocery
+{
+    background-image: url('../SVG/grocery.svg');
+}
+body main .landing-nav .item.cheese
+{
+    background-image: url('../SVG/cheese.svg');
+}
+body main .landing-nav .item.dairy
+{
+    background-image: url('../SVG/dairy.svg');
+}
+body main .landing-nav .item.vegetables
+{
+    background-image: url('../SVG/vegetables.svg');
+}
+body main .landing-nav .item.frozen
+{
+    background-image: url('../SVG/frozen.svg');
+}
+body main .landing-nav .item.domestic
+{
+    background-image: url('../SVG/domestic.svg');
+}
+body main .landing-nav .item.spirits
+{
+    background-image: url('../SVG/spirits.svg');
+}
+body main .landing-nav .item.tobacco
+{
+    background-image: url('../SVG/tobacco.svg');
 }
 body main .full-screen-feedback
 {
