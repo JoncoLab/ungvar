@@ -120,8 +120,8 @@ gulp.task('modules:build', function () {
 //Збірка фотографій продукції
 gulp.task('products:build', function () {
     gulp.src(path.src.products)
-        .pipe(image())
         .pipe(connectToFtp.newer(path.ftp.products))
+        .pipe(image())
         .pipe(connectToFtp.dest(path.ftp.products))
         .pipe(gulp.dest(path.build.products));
 });
@@ -129,13 +129,13 @@ gulp.task('products:build', function () {
 //Збірка JS
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
+        .pipe(connectToFtp.newer(path.ftp.js))
         .pipe(jsMinify({
             ext: {
                 min: '.js'
             },
             noSource: '*.js'
         }))
-        .pipe(connectToFtp.newer(path.ftp.js))
         .pipe(connectToFtp.dest(path.ftp.js))
         .pipe(gulp.dest(path.build.js));
 });
@@ -157,8 +157,8 @@ gulp.task('css:build', function () {
 //Збірка картинок
 gulp.task('img:build', function () {
     gulp.src(path.src.img)
-        .pipe(image())
         .pipe(connectToFtp.newer(path.ftp.img))
+        .pipe(image())
         .pipe(connectToFtp.dest(path.ftp.img))
         .pipe(gulp.dest(path.build.img));
 });

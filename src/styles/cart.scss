@@ -464,13 +464,16 @@ body {
     @import "templates/full-screen-feedback";
   }
   @import "templates/footer";
+  @import "templates/preloader";
 }
+
 @media only screen and(min-device-width: 320px) and(max-device-width: 768px) {
   body {
 
     main {
       width: 100% !important;
       margin-bottom: 2em;
+
       .to-catalog {
         top: -6em;
 
@@ -516,259 +519,261 @@ body {
                 }
 
                 &.img {
-                  }
                 }
+              }
 
-                &.name {
-                }
+              &.name {
+              }
 
-                &.amount {
-                }
+              &.amount {
+              }
 
-                &.price {
-                }
+              &.price {
+              }
 
-                &.remove {
-                }
+              &.remove {
               }
             }
-
           }
 
-          tbody {
+        }
 
-            tr {
+        tbody {
+
+          tr {
 
 
-              &:hover {
-              }
+            &:hover {
+            }
 
-              &:last-of-type {
-                td {
-                  //border: none !important;
-                }
-              }
-
+            &:last-of-type {
               td {
-                $border-radius: 1em;
-
-                background-color: transparentize($light, 0.1);
-                border: none !important;
-                font: {
-                  size: 2.3em;
-                }
-                padding: {
-                  bottom: 0.5em !important;
-                  top: 0.5em !important;
-                }
-                height: 2.5em !important;
-                &:first-of-type {
-                  border-radius: $border-radius 0 0 $border-radius;
-                  background-color: $yellow;
-                }
-                &:last-of-type{
-                  border-radius: 0 $border-radius $border-radius 0;
-                }
-
-                &.num {
-                  font: {
-                    size: 4em;
-                  };
-                  text-shadow: 3px 3px 0 $light;
-                }
-
-
-                &.img {
-                  padding-left: 3%;
-                  img {
-                    height: 5em !important;
-                    border-radius: $border-radius !important;
-                  }
-                }
-
-                &.name {
-                  width: 30% !important;
-                  text-align: center;
-                  h3 {
-                    text-align: center;
-                    small {
-                    }
-                  }
-                }
-
-                &.amount {
-                  padding: {
-                    right: 3%;
-                    left: 3%;
-                  }
-
-                  input {
-                    width: 80% !important;
-                    font: {
-                      size: 1.4em !important;
-                    };
-                    border: 0.07em solid $red !important;
-                  }
-                }
-
-                &.price {
-                  font: {
-                    size: 3em;
-                  }
-                  color: $red;
-                }
-
-                &.remove {
-                  padding-right: 2%;
-                  img {
-                    height: 2.5em !important;
-                  }
-                }
+                //border: none !important;
               }
             }
-          }
-
-          tfoot {
 
             td {
-              font: {
-                size: 2.8em !important;
-                weight: bold;
-              };
+              $border-radius: 1em;
 
+              background-color: transparentize($light, 0.1);
+              border: none !important;
+              font: {
+                size: 2.3em;
+              }
+              padding: {
+                bottom: 0.5em !important;
+                top: 0.5em !important;
+              }
+              height: 2.5em !important;
               &:first-of-type {
+                border-radius: $border-radius 0 0 $border-radius;
+                background-color: $yellow;
+              }
+              &:last-of-type{
+                border-radius: 0 $border-radius $border-radius 0;
               }
 
-              &.button {
-                padding: 0;
+              &.num {
+                font: {
+                  size: 4em;
+                };
+                text-shadow: 3px 3px 0 $light;
+              }
 
-                #submit-button {
-                  width: 100% !important;
-                  height: inherit !important;
-                  padding: 0.5em;
 
-                  font: {
-                    size: 1em;
-                    weight: normal !important;
+              &.img {
+                padding-left: 3%;
+                img {
+                  height: 5em !important;
+                  border-radius: $border-radius !important;
+                }
+              }
+
+              &.name {
+                width: 30% !important;
+                text-align: center;
+                h3 {
+                  text-align: center;
+                  small {
                   }
-                  text-shadow: 2px 2px 5px $dark;
-                  color: white !important;
+                }
+              }
 
-                  -webkit-box-shadow:  0.1em 0.1em 0.1em $grey-text;
-                  -moz-box-shadow:  0.1em 0.1em 0.1em $grey-text;
-                  box-shadow:  0.1em 0.1em 0.1em $grey-text;
+              &.amount {
+                padding: {
+                  right: 3%;
+                  left: 3%;
+                }
+
+                input {
+                  width: 80% !important;
+                  font: {
+                    size: 1.4em !important;
+                  };
+                  border: 0.07em solid $red !important;
+                }
+              }
+
+              &.price {
+                font: {
+                  size: 3em;
+                }
+                color: $red;
+              }
+
+              &.remove {
+                padding-right: 2%;
+                img {
+                  height: 2.5em !important;
                 }
               }
             }
           }
         }
 
-        p.empty {
-        }
+        tfoot {
 
-        .full-screen-confirmation {
-          padding: 0 !important;
-
-          #confirmation {
-            border: 1em solid $light;
-            margin-top: 0 !important;
-            height: 90% ;
-            padding-top: 3em !important;
-            padding-bottom: 3em !important;
-            overflow: scroll;
-
-            background: {
-              image: linear-gradient(to bottom, $dark 90%, $grey-text) !important;
+          td {
+            font: {
+              size: 2.8em !important;
+              weight: bold;
             };
 
+            &:first-of-type {
+            }
 
-            fieldset {
+            &.button {
+              padding: 0;
 
-              font: {
-                size: 2.3em;
-              }
+              #submit-button {
+                width: 100% !important;
+                height: inherit !important;
+                padding: 0.5em;
 
-              legend {
                 font: {
-                  size: 1.2em !important;
+                  size: 1em;
+                  weight: normal !important;
                 }
+                text-shadow: 2px 2px 5px $dark;
+                color: white !important;
 
-                small {
-                }
+                -webkit-box-shadow:  0.1em 0.1em 0.1em $grey-text;
+                -moz-box-shadow:  0.1em 0.1em 0.1em $grey-text;
+                box-shadow:  0.1em 0.1em 0.1em $grey-text;
               }
-
-              &#order-summary {
-
-                p {
-                  font: {
-                    size: 1.2em !important;
-                  }
-                }
-              }
-
-              &#payment {
-
-                input {
-                  + label {
-                  }
-                  &:checked + label {
-                  }
-                }
-              }
-
-              &#contact-info,
-              &#order-address {
-
-                label {
-                  margin-top: 0.4em !important;
-                  font: {
-                    size: 1.2em !important;
-                  }
-                }
-
-                input {
-                  font: {
-                    size: 1.2em !important;
-                  }
-
-                  &#building {
-                  }
-                }
-              }
-            }
-
-            #submit {
-
-              + label {
-                padding: 0.4em !important;
-                font: {
-                  size: 2.8em;
-                };
-              }
-            }
-
-            .close {
-              height: 4.5em !important;
-
-              &:hover {
-              }
-            }
-
-            > p {
-              margin-top: 2.7em !important;
-              text-align: center;
-              font: {
-                size: 2.3em;
-                weight: normal !important;
-              }
-            }
-            > .g-recaptcha{
-              transform: scale(2.1);
-              transform-origin: top left;
             }
           }
         }
       }
+
+      p.empty {
+      }
+
+      .full-screen-confirmation {
+        padding: 0 !important;
+
+        #confirmation {
+          border: 1em solid $light;
+          margin-top: 0 !important;
+          height: 90% ;
+          padding-top: 3em !important;
+          padding-bottom: 3em !important;
+          overflow: scroll;
+
+          background: {
+            image: linear-gradient(to bottom, $dark 90%, $grey-text) !important;
+          };
+
+
+          fieldset {
+
+            font: {
+              size: 2.3em;
+            }
+
+            legend {
+              font: {
+                size: 1.2em !important;
+              }
+
+              small {
+              }
+            }
+
+            &#order-summary {
+
+              p {
+                font: {
+                  size: 1.2em !important;
+                }
+              }
+            }
+
+            &#payment {
+
+              input {
+                + label {
+                }
+                &:checked + label {
+                }
+              }
+            }
+
+            &#contact-info,
+            &#order-address {
+
+              label {
+                margin-top: 0.4em !important;
+                font: {
+                  size: 1.2em !important;
+                }
+              }
+
+              input {
+                font: {
+                  size: 1.2em !important;
+                }
+
+                &#building {
+                }
+              }
+            }
+          }
+
+          #submit {
+
+            + label {
+              padding: 0.4em !important;
+              font: {
+                size: 2.8em;
+              };
+            }
+          }
+
+          .close {
+            height: 4.5em !important;
+
+            &:hover {
+            }
+          }
+
+          > p {
+            margin-top: 2.7em !important;
+            text-align: center;
+            font: {
+              size: 2.3em;
+              weight: normal !important;
+            }
+          }
+          > .g-recaptcha{
+            transform: scale(2.1);
+            transform-origin: top left;
+          }
+        }
+      }
     }
+
+    @import "templates/preloader";
   }
+}
 
