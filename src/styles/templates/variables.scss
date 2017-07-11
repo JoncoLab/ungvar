@@ -9,6 +9,7 @@ $light: rgba(250, 255, 216, 0.9);
 $red: #830300;
 $grey-text: #5c5143;
 $grey-item: rgba(182, 175, 242, 0.74);
+$privat24: rgb(92, 154, 34);
 
 @mixin button($color: $yellow, $text-color: black) {
   font: {
@@ -21,13 +22,14 @@ $grey-item: rgba(182, 175, 242, 0.74);
   border: {
     radius: $line * 2;
   }
+  box-shadow: 0 0 $line / 5 0 black;
 
   background: {
     image: linear-gradient(lighten($color, 5%), darken($color, 5%));
   }
 
   transition: {
-    duration: $time;
+    duration: $time / 5;
   }
 
   &:active {
@@ -37,7 +39,6 @@ $grey-item: rgba(182, 175, 242, 0.74);
   }
 
   &:hover {
-    box-shadow: 0 0 $line / 2 0 $dark;
   }
 }
 
@@ -136,7 +137,7 @@ $grey-item: rgba(182, 175, 242, 0.74);
 
 @mixin body-style() {
   background:{
-    color: transparentize($light, 0.5);
+    color: transparentize($light, 1);
     image: url("../images/bg.png");
     position: 0 0;
     size: 100% 100%;

@@ -28,14 +28,14 @@ include "modules/header.html";
                 <th class="name">Найменування</th>
                 <th class="amount">Кількість</th>
                 <th class="price">Вартість, грн.</th>
-                <th class="remove">Видалити</th>
+                <th class="remove"></th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td class="num">1</td>
                 <td class="img">
-                    <img src="images/IMG_9979.png">
+                    <img src="products/coffee/29122.JPG">
                 </td>
                 <td class="name">
                     <h3>
@@ -58,7 +58,7 @@ include "modules/header.html";
             <tfoot>
             <tr>
                 <td colspan="3">
-                    <span>Загальна вартість:</span><br>
+                    <span class="value">Загальна вартість:</span><br>
                 </td>
                 <td colspan="2">
                     <strong class="sum"></strong><span> грн.</span>

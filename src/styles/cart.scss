@@ -69,8 +69,8 @@ body {
       flex: {
         grow: 1;
       }
-      max-width: 70%;
-      margin: $line auto 0;
+      max-width: 60%;
+      margin: $line * 2 auto 0;
       padding: $line 0;
 
       text: {
@@ -91,10 +91,18 @@ body {
                 align: center;
               }
               background: {
-                color: $yellow;
+                color: $light;
               }
-              border: $line / 10 solid $red;
+              border: $line / 5 solid $light;
               padding: $line / 2;
+
+              &:first-of-type,
+              &:last-of-type{
+                border: {
+                  left: none;
+                  right: none;
+                }
+              }
 
               &.num {
                 width: 10%;
@@ -133,6 +141,7 @@ body {
         tbody {
 
           tr {
+            border-bottom: $line / 5 solid $light;
 
             &:hover {
               color: $red;
@@ -147,22 +156,17 @@ body {
             }
 
             &:last-of-type {
-              td {
-                border: $line / 10 solid $red;
-                border: {
-                  bottom-width: $line / 5;
-                }
-              }
             }
 
             td {
-              border: $line / 10 solid $red;
 
               padding: 0;
+              padding-top: $line / 2;
 
               text: {
                 align: center;
               }
+              background-color: transparentize($light, 0.35);
 
               &.num {
                 width: 10%;
@@ -221,9 +225,11 @@ body {
               }
 
               &.remove {
+                background-color: white;
                 width: 10%;
+                padding: $line;
                 img {
-                  height: $line * 2;
+                  height: $line * 4;
                   cursor: pointer;
                 }
               }
@@ -241,6 +247,25 @@ body {
             }
             font: {
               size: $line * 2;
+            }
+
+            >span.value {
+              font: {
+                size: $line * 2.5;
+                weight: bold;
+              }
+            }
+            .sum {
+              color: saturate($red, 10%);
+              font: {
+                size: $line * 3;
+              }
+              &~span{
+                font: {
+                  size: $line * 2;
+                  style: italic;
+                };
+              }
             }
 
             &:first-of-type {
@@ -301,9 +326,10 @@ body {
           margin: $line * 3 auto;
           padding: $line $line * 6;
           background: {
-            image: url("../images/form-bg.png");
+            image: none;
             position: 0 0;
             size: 100% 100%;
+            color: white;
           }
           border: {
             radius: $line * 5;
@@ -312,19 +338,26 @@ body {
 
           box-shadow: $line / 5 $line / 5 0 0 $dark;
 
-          overflow: scroll !important;
+          //overflow: scroll !important;
 
           fieldset {
-            border: none;
-            margin: $line / 2 0 0 0;
-            padding-left: 0;
+            border: $line / 8 solid $grey-item;
+            margin: $line / 2 0 $line 0;
+            //padding-left: $line;
+            padding-bottom: $line * 2;
+
+            border: {
+              radius: $line;
+            };
+
+
 
             legend {
               font: {
                 weight: bold;
-                size: $line * 2;
+                size: $line * 1.8;
               }
-              color: $yellow;
+              //color: $yellow;
 
               small {
                 font: {
@@ -335,38 +368,53 @@ body {
 
             &#order-summary {
               text-align: center;
+              border: none;
+              padding-bottom: 0;
 
               p {
                 margin: 0;
-                background: {
-                  color: opacify($yellow, 0.2);
-                }
-                color: $dark;
                 padding: $line;
                 border: {
                   radius: $line;
                 }
                 font: {
-                  size: $line * 2;
-                  weight: bold;
+                  size: $line * 2.5;
+                  //weight: bold;
+                }
+                .total-sum{
+                  color: lighten($red, 10%);
                 }
               }
             }
 
             &#payment {
 
+
               input {
                 display: none;
 
                 + label {
-                  @include button($background);
+                  @include button($light);
                   display: inline-block;
                   padding: $line;
                   margin: 0 $line * 2 0 0;
+
+                  &:last-of-type{
+                    @include button($privat24);
+                    color: white;
+                    text: {
+                      shadow: 1px 1px 1px $dark;
+                    }
+                    font: {
+                      weight: normal;
+                    };
+                  }
+
                 }
 
+
                 &:checked + label {
-                  transform: scale(1.2);
+                  transform: scale(1.1);
                 }
               }
             }
@@ -374,40 +422,51 @@ body {
             &#contact-info,
             &#order-address {
 
+              >legend {
+                >small {
+                  font:{
+                    style: italic;
+                    style: $line * 1.5;
+                  }
+                  color: grey;
+                }
+              }
+
               label {
                 display: inline-block;
                 background: {
-                  color: $background;
+                  //color: $background;
                 }
                 padding: $line / 2;
                 margin: $line / 2 0;
                 border: {
-                  radius: $line / 2;
+                  //radius: $line / 2;
                 }
                 font: {
-                  weight: bold;
+                  //weight: bold;
+                  size: $line * 1.5;
                 }
+                margin-left: $line * 2;
               }
 
               input {
                 background: {
-                  color: opacify($yellow, 0.2);
+                  //color: opacify($yellow, 0.2);
                 }
                 border: {
-                  radius: $line / 2;
                   top: none;
                   left: none;
-                  bottom: none;
+                  bottom: $line / 10 solid darkgrey;
                   right: none;
                 }
                 padding: $line / 2.5;
                 outline: none;
                 font: {
-                  weight: bold;
+                  //weight: bold;
                 }
-                color: $dark;
+                //color: $dark;
 
-                box-shadow: 0 0 $line / 2 $line / 10 opacify($yellow, 0.2);
+                //box-shadow: 0 0 $line / 2 $line / 10 opacify($yellow, 0.2);
 
                 &#building {
                   text: {
@@ -421,14 +480,25 @@ body {
           #submit {
             display: none;
 
+
+
             + label {
               display: block;
               text: {
                 align: center;
               }
               @include button($background);
+              box-shadow: 1px 1px 0 0 $dark;
+              width: 30%;
+              color: $dark;
+              font: {
+                weight: bold;
+                size: $line * 2.3;
+              }
               padding: $line;
               cursor: pointer;
+
+              margin-bottom: $line * 2;
             }
           }
 
@@ -453,7 +523,7 @@ body {
             margin: $line / 2 0;
             padding: 0;
             font: {
-              weight: bold;
+              //weight: bold;
             }
             color: $yellow;
           }
