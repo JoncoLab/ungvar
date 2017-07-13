@@ -119,10 +119,10 @@ body #main-header
     display: -ms-flexbox;
 
     display: flex;
-    overflow: hidden;
+    overflow: visible;
 
     width: 100%;
-    min-height: 100px;
+    min-height: 120px;
 
     border-bottom: 2px solid #830300;
     background-color: #faffb0;
@@ -203,7 +203,7 @@ body #main-header .logo h1
 body #main-header .logo h1 .title
 {
     font-family: Logo, 'Palatino Linotype', sans-serif;
-    font-size: 60px; 
+    font-size: 65px; 
 
     display: -webkit-box; 
 
@@ -297,11 +297,9 @@ body #main-header .logo > .corner:nth-of-type(4)
     bottom: -25px;
     left: -25px;
 }
-body #main-header #customers-info
+body #main-header #global-search
 {
-    position: relative;
-
-    margin: 0; 
+    text-align: center; 
 
     -webkit-align-self: stretch; 
 
@@ -310,23 +308,129 @@ body #main-header #customers-info
                 -ms-grid-row-align: stretch; 
 
             align-self: stretch;
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
 }
-body #main-header #customers-info p
+body #main-header #global-search .global-search
 {
-    position: absolute;
-    left: 100%;
+    font-size: 15px;
+
+    margin-bottom: 10px; 
+
+    text-align: center;
+}
+body #main-header #global-search label
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+body #main-header #global-search label button
+{
+    font-size: 15px;
+    font-weight: bold;
+    font-weight: bold;
+
+    padding: 10px;
+
+    -webkit-transition-duration: .06s;
+
+       -moz-transition-duration: .06s;
+
+         -o-transition-duration: .06s;
+
+            transition-duration: .06s;
+
+    color: black;
+    color: white;
+    border: none;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    outline: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9d0400), to(#6a0200));
+    background-image: -webkit-linear-gradient(#9d0400, #6a0200);
+    background-image: -moz-linear-gradient(#9d0400, #6a0200);
+    background-image: -o-linear-gradient(#9d0400, #6a0200);
+    background-image: linear-gradient(#9d0400, #6a0200);
+    -webkit-box-shadow: 0 0 2px 0 black;
+            box-shadow: 0 0 2px 0 black;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(182, 175, 242, .74);
+            box-shadow: 1px 1px 1px 0 rgba(182, 175, 242, .74);
+    text-shadow: 1px 1px 1px #0e0000;
+}
+body #main-header #global-search label button:active
+{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6a0200), to(#9d0400));
+    background-image: -webkit-linear-gradient(#6a0200, #9d0400);
+    background-image: -moz-linear-gradient(#6a0200, #9d0400);
+    background-image: -o-linear-gradient(#6a0200, #9d0400);
+    background-image: linear-gradient(#6a0200, #9d0400);
+}
+body #main-header #global-search input
+{
+    font-size: 15px;
 
     -webkit-box-sizing: border-box;
 
        -moz-box-sizing: border-box;
 
             box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    padding: 20px;
+    width: 60%;
+    padding: 6.66667px;
+
+    border: 2px solid rgba(182, 175, 242, .74);
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+body #main-header #global-search input:focus
+{
+    border: 2px solid #830300;
+    outline: none; 
+    -webkit-box-shadow: 0 0 2px 0 #830300; 
+            box-shadow: 0 0 2px 0 #830300;
+}
+body #main-header #global-search .ungvar
+{
+    font-family: Logo;
+    font-size: 25px;
+
+    color: #830300;
+}
+body #main-header #customers-info
+{
+    position: relative;
+
+    margin: 0 10px 0 0; 
+
+    -webkit-align-self: stretch; 
+
+        -ms-flex-item-align: stretch; 
+
+                -ms-grid-row-align: stretch; 
+
+            align-self: stretch;
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+}
+body #main-header #customers-info p.feedback
+{
+    font-size: 15px;
+
+    position: relative;
+    top: 0;
+    right: 40px; 
+    left: 0;
+
+    -webkit-box-sizing: border-box;
+
+       -moz-box-sizing: border-box;
+
+            box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
 
     -webkit-transition-timing-function: linear;
 
@@ -343,63 +447,13 @@ body #main-header #customers-info p
 
     -webkit-border-radius: 20px;
 
-            border-radius: 20px; 
-    background-color: rgba(250, 255, 216, .8);
-    -webkit-box-shadow: inset 0 0 0 2px #830300;
-            box-shadow: inset 0 0 0 2px #830300;
+            border-radius: 20px;
+    background-color: white;
+    -webkit-box-shadow: 1px .5px 2px 0 #830300;
+            box-shadow: 1px .5px 2px 0 #830300;
 }
-body #main-header #customers-info p .label
-{
-    position: absolute;
-    right: 100%;
-
-    display: block;
-
-    width: 40px;
-    height: 47%;
-
-    cursor: pointer; 
-
-    background-image: -webkit-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -webkit-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
-
-    background-image: -moz-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -moz-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
-
-    background-image: -o-linear-gradient(top left, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), -o-linear-gradient(bottom left, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px); 
-
-    background-image: linear-gradient(to bottom right, #faffb0 13.5px, #0e0000 14.5px, transparent 18px), linear-gradient(to top right, rgba(250, 255, 176, .9) 13.5px, #0e0000 14.5px, #830300 18px);
-}
-body #main-header #customers-info p:last-of-type
-{
-    -webkit-border-bottom-left-radius: 0;
-            border-bottom-left-radius: 0;
-}
-body #main-header #customers-info p:last-of-type .label
-{
-    bottom: 0;
-}
-body #main-header #customers-info p:first-of-type
-{
-    -webkit-border-top-left-radius: 0;
-            border-top-left-radius: 0;
-}
-body #main-header #customers-info p:first-of-type .label
-{
-    top: 0;
-}
-body #main-header #customers-info p.shown
-{
-    right: 40px; 
-    left: 0;
-}
-body #main-header #customers-info p .ungvar
-{
-    font-family: Logo;
-    font-size: 25px;
-
-    color: #830300;
-}
-body #main-header #customers-info p .to-footer,
-body #main-header #customers-info p .full-screen-feedback-button
+body #main-header #customers-info p.feedback .to-footer,
+body #main-header #customers-info p.feedback .full-screen-feedback-button
 {
     cursor: pointer;
     text-decoration: underline; 

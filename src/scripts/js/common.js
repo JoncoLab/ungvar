@@ -1,6 +1,6 @@
 var commonSettings = function () {
     var adds = $('aside.add'),
-        mainHeaderSliders = $('#main-header').find('p'),
+        // mainHeaderSliders = $('#main-header').find('p'),
         fullScreenFeedbackBar = $('.full-screen-feedback'),
         fullScreenFeedbackForm = $('#feedback'),
         fullScreenFeedbackButton = $('.full-screen-feedback-button'),
@@ -21,16 +21,16 @@ var commonSettings = function () {
         }
     });
 
-    mainHeaderSliders.click(function () {
-        var shown = $('.shown');
-        if (!$(this).is(shown)) {
-            shown.removeClass('shown');
-            $(this).addClass('shown');
-        } else {
-            shown.removeClass('shown');
-        }
-        shown.css('z-index', '10');
-    });
+    // mainHeaderSliders.click(function () {
+    //     var shown = $('.shown');
+    //     if (!$(this).is(shown)) {
+    //         shown.removeClass('shown');
+    //         $(this).addClass('shown');
+    //     } else {
+    //         shown.removeClass('shown');
+    //     }
+    //     shown.css('z-index', '10');
+    // });
 
     fullScreenFeedbackButton.click(function () {
         fullScreenFeedbackBar.fadeIn({
