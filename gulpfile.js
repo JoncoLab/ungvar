@@ -111,7 +111,6 @@ gulp.task('php:build', function () {
 //Збірка модулів
 gulp.task('modules:build', function () {
     gulp.src(path.src.modules)
-        .pipe(rigger())
         .pipe(connectToFtp.newer(path.ftp.modules))
         .pipe(connectToFtp.dest(path.ftp.modules))
         .pipe(gulp.dest(path.build.modules));
@@ -200,9 +199,9 @@ gulp.task('project:build', [
 
 gulp.task('watch', function () {
     gulp.watch(path.watch.pages, [
+        'modules:build',
         'html:build',
-        'fonts:build',
-        'modules:build'
+        'fonts:build'
     ]);
     gulp.watch(path.watch.styles, ['css:build']);
     gulp.watch(path.watch.scripts, [

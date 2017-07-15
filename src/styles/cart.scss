@@ -456,7 +456,7 @@ body {
                 border: {
                   top: none;
                   left: none;
-                  bottom: $line / 10 solid darkgrey;
+                  bottom: $line / 10 dotted darkgrey;
                   right: none;
                 }
                 padding: $line / 2.5;
