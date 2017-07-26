@@ -191,6 +191,54 @@ $privat24: rgb(92, 154, 34);
   }
 }
 
+@keyframes preloader {
+  from {
+
+  }
+
+  33% {
+    background: {
+      color: transparent;
+      blend-mode: overlay;
+      size: 0;
+    }
+    z-index: -1000;
+  }
+
+  66% {
+    background: {
+      color: transparent;
+      blend-mode: overlay;
+      size: 0;
+    }
+    z-index: -1000;
+    transform: scale(2);
+  }
+
+  99% {
+    background: {
+      color: transparent;
+      blend-mode: overlay;
+      size: 0;
+    }
+    z-index: -1000;
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  to {
+    background: {
+      color: transparent;
+      blend-mode: overlay;
+      size: 0;
+    }
+    z-index: -1000;
+    transform: scale(2);
+    opacity: 0;
+    display: none;
+  }
+}
+
 @font-face {
   font-family: Logo;
   src: url('../fonts/logo.ttf');

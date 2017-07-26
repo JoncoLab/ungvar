@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  @import "templates/preloader";
   @include body-style();
   @import "templates/header";
 
@@ -211,11 +212,11 @@ body {
     @import "templates/full-screen-feedback";
   }
   @import "templates/footer";
-  @import "templates/preloader";
 }
 
 @media only screen and(min-device-width: 320px) and(max-device-width: 768px) {
   body {
+    @import "templates/preloader";
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -290,7 +291,6 @@ body {
 
       @import "templates/full-screen-feedback";
     }
-    @import "templates/preloader";
   }
 }
 

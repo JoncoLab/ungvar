@@ -9,6 +9,7 @@ body {
 }
 
 body {
+  @import "templates/preloader";
   @include body-style();
   @import "templates/header";
   @import "templates/catalog-navigation";
@@ -259,10 +260,10 @@ body {
   }
 
   @import "templates/footer";
-  @import "templates/preloader";
 }
 
 @media only screen and(min-device-width: 320px) and(max-device-width: 768px) {
+  @import "templates/preloader";
   #main-header{
     display: none !important;
   }
@@ -435,6 +436,4 @@ body {
       }
     }
   }
-
-  @import "templates/preloader";
 }

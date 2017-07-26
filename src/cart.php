@@ -18,7 +18,7 @@ include "modules/header.html";
         <img src="SVG/catalog.svg">
         <span>Назад до покупок</span>
     </a>
-    <aside class="add empty"></aside>
+
     <section class="content">
         <table class="items">
             <thead>
@@ -122,7 +122,7 @@ include "modules/header.html";
     <?php
     include "modules/full-screen-feedback.html";
     ?>
-    <aside class="add empty"></aside>
+
 </main>
 <?php
 include "modules/footer.html";

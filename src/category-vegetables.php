@@ -66,7 +66,7 @@ include "modules/catalog-navigation.html";
     <?php
     include "modules/full-screen-feedback.html";
     ?>
-    <aside class="add empty"></aside>
+
 </main>
 <?php
 include "modules/footer.html";

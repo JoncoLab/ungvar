@@ -14,7 +14,9 @@ var main = function () {
             var main = $('main'),
                 navHeight = catalogNavMenu.css('height'),
                 navBorderWidth = catalogNavMenu.css('border-width'),
-                tagetPadding = parseInt(navHeight.substr(0, navHeight.length - 2)) + parseInt(navBorderWidth.substr(0, navBorderWidth.length - 2));
+                tagetPadding =
+                    parseInt(navHeight.substr(0, navHeight.length - 2)) +
+                    parseInt(navBorderWidth.substr(0, navBorderWidth.length - 2));
             main.css('padding-top', tagetPadding);
         };
 
@@ -93,6 +95,7 @@ var main = function () {
             var img = $(this).children('img').attr('src'),
                 name = $(this).children('.name').text(),
                 price = $(this).children('.price').text(),
+                id = $(this).getData('id'),
                 detailsBar = '' +
                     '<div class="details">' +
                     '<img src="' + img + '">' +
@@ -101,7 +104,7 @@ var main = function () {
                     '<h4 class="price">' + price + '</h4>' +
                     '<label for="amount">Кількість: </label>' +
                     '<input type="number" id="amount" name="1" min="1">' +
-                    '<button class="add-to-cart-button" type="button">В кошик</button>' +
+                    '<button class="add-to-cart-button" type="button" onclick="addToCart(' + id + ', ' + 'amount);">В кошик</button>' +
                     '</form>' +
                     '</div>',
                 openedDetailsBar = $('.details');
@@ -138,7 +141,29 @@ var main = function () {
             }, 800);
         }
     });
-};
+},
+    addToCart = function (id, amount) {
+        var counter = $('#cart-button .counter');
+        $.ajax({
+            url: 'scripts/php/addToCart.php',
+            data: {
+                id: id,
+                amount: amount
+            },
+            method: post,
+            dataType: 'text',
+            success: function (data) {
+                //data вертає к-ть продуктів в корзині
+                counter.text(data);
+            },
+            error: function () {
+                alert('ERROR!!!');
+            },
+            complete: function () {
+
+            }
+        });
+    };
 
 $(document).ready(main);
 

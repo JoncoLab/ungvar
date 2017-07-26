@@ -1,16 +1,29 @@
 #preloader {
-   display: block;
-   position: fixed;
-   z-index: 10000;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: {
-     color: $yellow;
-     image: url("../../SVG/preloader.svg");
-     position: center;
-     repeat: no-repeat;
-     size: cover;
-   }
- }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: {
+    color: opacify($yellow, 0.2);
+    image: url("../../SVG/preloader.svg");
+    position: center;
+    size: 10%;
+    repeat: no-repeat;
+  }
+  z-index: 1000;
+  transition: {
+    duration: $time;
+    timing-function: ease-out;
+  }
+  animation: {
+    duration: $time * 5;
+    timing-function: ease-in;
+    delay: $time * 5;
+    fill-mode: both;
+  }
+
+  &.loaded {
+    animation: {
+      name: preloader;
+    }
+  }
+}
