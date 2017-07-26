@@ -5,8 +5,7 @@ var commonSettings = function () {
         fullScreenFeedbackForm = $('#feedback'),
         fullScreenFeedbackButton = $('.full-screen-feedback-button'),
         fullScreenFeedbackCloseButton = fullScreenFeedbackForm.find('.feedback-close'),
-        toFooterButton = $('.to-footer'),
-        preloader = $('#preloader');
+        toFooterButton = $('.to-footer');
 
     adds.each(function () {
         if ($(this).is('.empty')) {
@@ -79,12 +78,13 @@ var commonSettings = function () {
             bottom = $('main').height();
         page.animate({scrollTop: bottom}, 2000, 'swing');
     });
-
-    // $(window).on('load', function () {
-    //     setTimeout(function () {
-    //         preloader.fadeOut(300);
-    //     }, 300);
-    // });
 };
 
 $(document).ready(commonSettings);
+
+window.onload = function () {
+    var preloader = document.getElementById('preloader'),
+        page = $('body');
+    preloader.classList.add('loaded');
+    page.addClass('visible');
+};

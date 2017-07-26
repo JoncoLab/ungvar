@@ -1,17 +1,16 @@
 #preloader {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: {
-    color: $yellow;
-    image: url("SVG/tail-spin.svg");
-    position: center center;
-    repeat: no-repeat;
-    size: $line * 5 $line * 5;
-    blend-mode: overlay;
-  }
-}
+   display: block;
+   position: fixed;
+   z-index: 10000;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: {
+     color: $yellow;
+     image: url("../../SVG/preloader.svg");
+     position: center;
+     repeat: no-repeat;
+     size: cover;
+   }
+ }

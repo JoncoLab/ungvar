@@ -137,7 +137,7 @@ $privat24: rgb(92, 154, 34);
 
 @mixin body-style() {
   background:{
-    color: transparentize($light, 1);
+    color: transparentize($light, 0.5);
     image: url("../images/bg.png");
     position: 0 0;
     size: 100% 100%;
@@ -146,7 +146,7 @@ $privat24: rgb(92, 154, 34);
   }
   min-width: $line * 80;
   font:{
-    family: Arial;
+    family: Arial, sans-serif;
   }
   display: flex;
   flex-direction: column;

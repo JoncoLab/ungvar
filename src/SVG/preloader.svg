@@ -1,0 +1,37 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#086402" stroke-width="3px" stroke-linecap="round" fill="none" width="256" height="256" viewBox="0 0 32 32">
+    <circle id="big" cx="16" cy="16" stroke-width="1px" r="15"/>
+    <circle id="small" cx="16" cy="16" stroke-width="1px" r="12"/>
+    <path d="
+             M 16,2.5 
+             c -6,0 -13.5,4.75 -13.5,13.5 
+             c -0,6.75 5.25,13.5 13.5,13.5
+             c 6,0 13.5,-4.75 13.5,-13.5
+             c 0,-6.75 -5.25,-13.5 -13.5,-13.50"
+          stroke="transparent"
+          id="path-large">
+    </path>
+    <path d="
+             M 16,2.5 
+             c 6,0 13.5,4.75 13.5,13.5 
+             c 0,6.75 -5.25,13.5 -13.5,13.5
+             c -6,0 -13.5,-4.75 -13.5,-13.5
+             c 0,-6.75 5.25,-13.5 13.5,-13.50"
+          stroke="transparent"
+          id="path-small">
+    </path>
+    <path d="M 0,0 c 6,0 13.5,4.75 13.5,13.5">
+        <animateMotion dur="1.5s" 
+                       repeatCount="indefinite"
+                       rotate="auto">
+            <mpath xlink:href="#path-small"></mpath>
+        </animateMotion>
+    </path>
+    <path d="M 0,0 c 3,-2.75 6,-3.5 9,-3.875 c 6,-0.5 14,4.75 13.875,13.5" transform="rotate(45)">
+        <animateMotion dur="1s"
+                       repeatCount="indefinite"
+                       rotate="auto-reverse"
+                       fill="remove">
+            <mpath xlink:href="#path-large"></mpath>
+        </animateMotion>
+    </path>
+</svg>
