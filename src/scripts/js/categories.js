@@ -160,7 +160,7 @@ var main = function () {
                 alert('ERROR!!!');
             },
             complete: function () {
-
+                //якась анімація
             }
         });
     };
