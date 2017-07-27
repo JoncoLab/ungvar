@@ -12,6 +12,7 @@ body {
   @import "templates/preloader";
   @include body-style();
   @import "templates/header";
+  @import "templates/cart-on-page";
 
   main {
     text-align: center;

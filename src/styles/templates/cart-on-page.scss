@@ -1,4 +1,11 @@
 #cart-section{
+  position: fixed;
+  z-index: 5;
+
+  left:50%;
+  top:50%;
+
+  transform: translate(-50%);
   header{
 
   }
@@ -6,11 +13,16 @@
   #cart-list{
 
     #cart-item{
+      display: flex;
 
+
+      #item-img{
+
+      }
       #item-name{
-        #item-img{
 
-        }
+      }
+      input#item-amount{
 
       }
       #item-price{
