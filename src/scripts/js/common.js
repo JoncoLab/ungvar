@@ -30,6 +30,17 @@ var commonSettings = function () {
     //     }
     //     shown.css('z-index', '10');
     // });
+    var cart = $('#cart-section');
+    var closeButton = $('.return-button');
+    var openButton = $('.to-cart');
+
+    closeButton.click(function () {
+        cart.toggleClass('closed');
+    })
+
+    openButton.click(function() {
+        cart.toggleClass("closed");
+    });
 
     fullScreenFeedbackButton.click(function () {
         fullScreenFeedbackBar.fadeIn({
@@ -78,6 +89,7 @@ var commonSettings = function () {
             bottom = $('main').height();
         page.animate({scrollTop: bottom}, 2000, 'swing');
     });
+
 };
 
 $(document).ready(commonSettings);

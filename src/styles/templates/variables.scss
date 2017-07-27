@@ -22,7 +22,7 @@ $privat24: rgb(92, 154, 34);
   border: {
     radius: $line * 2;
   }
-  box-shadow: 0 0 $line / 5 0 black;
+  box-shadow: $line / 10 $line / 10 $line / 5 0 $dark;
 
   background: {
     image: linear-gradient(lighten($color, 5%), darken($color, 5%));
