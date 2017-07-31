@@ -30,16 +30,18 @@ var commonSettings = function () {
     closeButton.click(function () {
         cart.fadeToggle();
         cartOverlay.fadeToggle();
+        cartOverlay.css('display', 'block');
     })
 
     openButton.click(function() {
-        cart.fadeToggle();
-        cartOverlay.fadeToggle();
+        cartOverlay.css('display', 'block');
+        cart.fadeIn();
+        cartOverlay.fadeIn();
     });
 
     $('.delete-item').click(function () {
-        this.parent($('#cart-item')).remove('fast');
-    });
+        this.parents($('#cart-item')).remove();
+    })
 
     //Скріпт фідбека
 
