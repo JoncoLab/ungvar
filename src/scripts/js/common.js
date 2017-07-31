@@ -20,27 +20,28 @@ var commonSettings = function () {
         }
     });
 
-    // mainHeaderSliders.click(function () {
-    //     var shown = $('.shown');
-    //     if (!$(this).is(shown)) {
-    //         shown.removeClass('shown');
-    //         $(this).addClass('shown');
-    //     } else {
-    //         shown.removeClass('shown');
-    //     }
-    //     shown.css('z-index', '10');
-    // });
-    var cart = $('#cart-section');
-    var closeButton = $('.return-button');
-    var openButton = $('.to-cart');
+    //Скріпт для корзини
+
+    var cart = $('#cart-section'),
+        closeButton = $('.сart-close-button'),
+        openButton = $('.cart-open-button'),
+        cartOverlay = $('.cart-overlay');
 
     closeButton.click(function () {
-        cart.toggleClass('closed');
+        cart.fadeToggle();
+        cartOverlay.fadeToggle();
     })
 
     openButton.click(function() {
-        cart.toggleClass("closed");
+        cart.fadeToggle();
+        cartOverlay.fadeToggle();
     });
+
+    $('.delete-item').click(function () {
+        this.parent($('#cart-item')).remove('fast');
+    });
+
+    //Скріпт фідбека
 
     fullScreenFeedbackButton.click(function () {
         fullScreenFeedbackBar.fadeIn({

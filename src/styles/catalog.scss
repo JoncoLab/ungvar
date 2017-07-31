@@ -133,13 +133,13 @@ body {
             family: "Belfast Heavy SF";
             size: $line * 1.7;
           }
-        }
-
-        &:hover {
           transition: {
             duration: $time / 2;
             timing-function: linear;
           }
+        }
+
+        &:hover {
           background: {
             position: center;
           };
